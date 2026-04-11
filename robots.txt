@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://modelayreforma.com/sitemap.xml
+
+# Block access to system/hidden files
+Disallow: /.git/
+Disallow: /System Volume Information/
