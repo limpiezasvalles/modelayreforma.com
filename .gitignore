@@ -1,0 +1,44 @@
+# === DOCUMENTACIÓN INTERNA (no subir al repo público) ===
+GUIA_PUBLICACION.md
+INFORME_SEGURIDAD.md
+INFORME_SEO.md
+
+# === IMÁGENES NO USADAS EN LA WEB ===
+# Carpetas de obra (fotos de proceso, no aparecen en la galería)
+"images/COPENHAGUEN 285/"
+"images/COPENHAGUEN 277/"
+images/VALLESVELL/
+"images/PLAZA ROMULO/"
+"images/RONDA EUROPA/"
+# NOSTRALLAR — solo se usa 53.jpg, el resto es obra
+images/NOSTRALLAR/12.jpg
+images/NOSTRALLAR/24.jpg
+images/NOSTRALLAR/7.jpg
+images/NOSTRALLAR/9.jpg
+images/NOSTRALLAR/13.jpg
+images/NOSTRALLAR/15.JPG
+images/NOSTRALLAR/17.jpg
+images/NOSTRALLAR/46.jpg
+images/NOSTRALLAR/47.jpg
+images/NOSTRALLAR/50.jpg
+images/NOSTRALLAR/51.jpg
+images/NOSTRALLAR/52.jpg
+# Renders 3D antiguos (reemplazados por IMG_0086/0096/0097)
+images/66ec630d-1632-402e-9437-5a2f24909cfd.JPG
+images/1cb04f9a-5e8e-4b4a-97d7-ee35e0d87c7d.JPG
+images/4a965caf-efc5-4390-98e9-ec746d171bfd.JPG
+images/a0897d42-52b4-458f-ad81-2cb253282459.JPG
+images/PHOTO-2025-03-05-16-22-27.jpg
+# Plano técnico (no apto para web)
+images/IMG_0090.JPG
+# IMG_0069 no incluida en galería
+images/IMG_0069.JPG
+# HEIC — formato no compatible con navegadores
+images/IMG_2051.HEIC
+images/IMG_2068.HEIC
+images/IMG_2071.HEIC
+
+# === SISTEMA ===
+.DS_Store
+Thumbs.db
+*.log
