@@ -303,6 +303,30 @@ function initSmoothScroll() {
 }
 
 /* ============================================================
+   MAP FACADE — load the Google Maps iframe only on click
+   ============================================================ */
+function initMapFacade() {
+  document.querySelectorAll('.map-facade').forEach(box => {
+    const btn = box.querySelector('.map-facade__btn');
+    const src = box.dataset.mapSrc;
+    if (!btn || !src) return;
+
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = src;
+      iframe.title = box.dataset.mapTitle || 'Mapa';
+      iframe.width = '100%';
+      iframe.height = '400';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'no-referrer-when-downgrade');
+      box.replaceChildren(iframe);
+      box.classList.add('is-loaded');
+      iframe.focus();
+    });
+  });
+}
+
+/* ============================================================
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -313,6 +337,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initLightbox();
   initScrollTop();
   initSmoothScroll();
+  initMapFacade();
 
   // Footer year
   const yearEl = document.getElementById('footer-year');

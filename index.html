@@ -1410,12 +1410,17 @@
               </p>
             </div>
 
-            <div class="map-wrapper" aria-label="Mapa de localización de Sabadell, Vallès Occidental">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.52684948055!2d2.0753897!3d41.5440369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49564a38bbbbb%3A0xba53edd58a4af0c7!2sSabadell%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                width="100%" height="400" allowfullscreen=""
-                loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-                title="Mapa de Sabadell - Zona de servicio de Modela y Reforma"></iframe>
+            <div class="map-wrapper map-facade" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.52684948055!2d2.0753897!3d41.5440369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49564a38bbbbb%3A0xba53edd58a4af0c7!2sSabadell%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+                 data-map-title="Mapa de Sabadell - Zona de servicio de Modela y Reforma">
+              <div class="map-facade__body">
+                <svg class="map-facade__pin" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <p class="map-facade__title">Mapa de la zona de servicio: Sabadell y Vallès Occidental</p>
+                <button class="btn btn--primary map-facade__btn" type="button">Ver mapa</button>
+                <p class="map-facade__note">
+                  Al pulsar «Ver mapa» se carga contenido de Google Maps (Google LLC), que recibe datos de tu navegador.
+                </p>
+                <a class="map-facade__link" href="https://www.google.com/maps/place/Sabadell,+Barcelona" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+              </div>
             </div>
 
             <div class="tag-list">

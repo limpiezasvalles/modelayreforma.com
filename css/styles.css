@@ -1364,6 +1364,36 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
 }
 
+/* Map facade: nothing from Google loads until the visitor clicks */
+.map-facade { min-height: 400px; background-color: #EEF2F8; }
+.map-facade__body {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  text-align: center;
+  background-image:
+    linear-gradient(rgba(43,94,167,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(43,94,167,0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.map-facade__pin { color: var(--color-primary); }
+.map-facade__title { font-weight: 600; color: var(--color-dark); }
+.map-facade__note {
+  max-width: 34ch;
+  font-size: var(--font-size-sm);
+  color: var(--color-body);
+}
+.map-facade__link {
+  font-size: var(--font-size-sm);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.map-facade.is-loaded { min-height: 0; background: none; }
+
 /* =============================================================
    CTA SECTION
    ============================================================= */
