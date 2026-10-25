@@ -135,7 +135,7 @@ function homeSection(live, data) {
         Obras reales en Sabadell, del derribo al resultado final.
       </p>
     </div>
-${indent(carousel(featured, 'Nuestras reformas en vídeo', { showText: false }), '    ')}
+${indent(carousel(featured, 'Vídeos destacados de reformas en Sabadell', { showText: false }), '    ')}
     <p class="video-more"><a class="btn btn--primary" href="videos.html">Ver todos los vídeos</a></p>
   </div>
 </section>`;
@@ -152,7 +152,7 @@ function serviceSection(live, data, serviceKey) {
       <h2 class="section__title" id="videos-title">${esc(svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(svc.sectionIntro)}</p>
     </div>
-${indent(carousel(mine, svc.sectionTitle, { showText: false }), '    ')}
+${indent(carousel(mine, `Vídeos del servicio: ${svc.name}`, { showText: false }), '    ')}
     <p class="video-more"><a class="btn btn--primary" href="videos.html">Ver todos los vídeos</a></p>
   </div>
 </section>`;
@@ -168,7 +168,7 @@ function videosMain(live, data) {
       <h2 class="section__title" id="videos-${g.key}-title">${esc(g.svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(g.svc.sectionIntro)} <a href="${esc(g.svc.url)}">Ver el servicio de ${esc(g.svc.name.toLowerCase())}</a>.</p>
     </div>
-${indent(carousel(g.items, g.svc.sectionTitle, { showText: true }), '    ')}
+${indent(carousel(g.items, `Lista de vídeos: ${g.svc.name}`, { showText: true }), '    ')}
   </div>
 </section>`).join('\n');
 }
