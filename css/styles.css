@@ -1354,14 +1354,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .footer__copy {
   font-size: var(--font-size-xs);
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
 }
 
 .footer__bottom-links { display: flex; gap: var(--space-4); }
 
 .footer__bottom-link {
   font-size: var(--font-size-xs);
-  color: rgba(255,255,255,0.4);
+  color: rgba(255,255,255,0.6);
 }
 
 .footer__bottom-link:hover { color: var(--color-white); }
