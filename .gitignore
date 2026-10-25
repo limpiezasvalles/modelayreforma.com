@@ -42,3 +42,24 @@ images/IMG_2071.HEIC
 .DS_Store
 Thumbs.db
 *.log
+
+# === VÍDEOS (nunca al repo; se suben a YouTube a mano) ===
+# Originales y trabajo viven fuera del repo en ~/Videos/modela_web/
+Videos/
+modela_web/_trabajo/
+modela_web/_originales_backup/
+*.mov
+*.MOV
+*.mp4
+*.MP4
+*.m4v
+*.webm
+*.wav
+*.mp3
+*.flac
+*.ogg
+
+# === HERRAMIENTAS DE AGENTES (skills instaladas con npx skills) ===
+.agents/
+.claude/
+skills-lock.json
