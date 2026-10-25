@@ -34,6 +34,13 @@ function isoDuration(sec) {
 function clock(sec) {
   return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
 }
+const gcd = (a, b) => (b ? gcd(b, a % b) : a);
+/** CSS class holding the exact display aspect ratio of a video, e.g. video-facade--ar-9-16 */
+function ratioClass(v) {
+  const { width, height } = v.display;
+  const g = gcd(width, height);
+  return `video-facade--ar-${width / g}-${height / g}`;
+}
 function indent(text, pad) {
   return text.split('\n').map((l) => (l ? pad + l : l)).join('\n');
 }
@@ -81,8 +88,8 @@ function card(v, data, { level = 3, serviceLink = true } = {}) {
   const svc = data.services[v.service];
   const h = `h${level}`;
   return `<article class="video-card">
-  <div class="video-facade" data-video-id="${esc(v.youtubeId)}" data-video-title="${esc(v.title)}">
-    <img class="video-facade__thumb" src="${esc(v.thumbnail)}" alt="${esc(v.thumbnailAlt)}" width="1280" height="720" loading="lazy" decoding="async">
+  <div class="video-facade ${ratioClass(v)}" data-video-id="${esc(v.youtubeId)}" data-video-title="${esc(v.title)}">
+    <img class="video-facade__thumb" src="${esc(v.thumbnail)}" alt="${esc(v.thumbnailAlt)}" width="${v.thumbnailWidth}" height="${v.thumbnailHeight}" loading="lazy" decoding="async">
     <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: ${esc(v.title)}">
       <span class="video-facade__icon" aria-hidden="true">
         <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 20 12 8 19 8 5"/></svg>
@@ -172,6 +179,12 @@ export function build(root, { preview = false } = {}) {
   const data = JSON.parse(fs.readFileSync(path.join(root, 'data/videos.json'), 'utf8'));
   const site = data.siteUrl;
   const { live, skipped } = loadVideos(data, preview);
+  const css = fs.readFileSync(path.join(root, 'css/styles.css'), 'utf8');
+  for (const v of live) {
+    if (!css.includes(`.${ratioClass(v)}`)) throw new Error(`css/styles.css has no .${ratioClass(v)} (video ${v.slug})`);
+    if (!v.thumbnailWidth || !v.thumbnailHeight) throw new Error(`video ${v.slug} has no thumbnailWidth/Height`);
+    if (Math.abs(v.thumbnailWidth / v.thumbnailHeight - v.display.width / v.display.height) > 0.003) throw new Error(`thumbnail ratio of ${v.slug} differs from the video ratio`);
+  }
   const active = live.length > 0;
   const out = new Map(); // relative path -> new content (null = must not exist)
   const warnings = skipped.map((v) => `skipped (needs youtubeId + uploadDate): ${v.slug}`);
