@@ -116,8 +116,22 @@
             <strong>Vídeos de YouTube</strong> (Google LLC, Estados Unidos). Se cargan al pulsar el botón de
             reproducir. Usamos el dominio <code>www.youtube-nocookie.com</code> (modo de privacidad mejorada), que
             según YouTube evita que las visualizaciones de vídeos incrustados se usen para personalizar tu navegación
-            en YouTube. Aun así, YouTube recibe tu dirección IP y datos del navegador.
-            <mark class="legal-pending">[PENDIENTE: medir las cookies y peticiones reales una vez publicados los vídeos y completar esta lista]</mark>
+            en YouTube. Antes de pulsar no se hace ninguna petición a YouTube. Lo que medimos al pulsar y reproducir
+            un vídeo (25/10/2026, Chrome 153 con un perfil nuevo, sin sesión de Google):
+            <ul class="legal-list">
+              <li><strong>Cookies:</strong> ninguna (ni en el navegador ni accesibles desde el reproductor).</li>
+              <li><strong>Almacenamiento local</strong> en el origen <code>www.youtube-nocookie.com</code>: las claves
+                <code>yt-icons-last-purged</code>, <code>yt-player-caption-persistence</code> y
+                <code>ytidb::LAST_RESULT_ENTRY_KEY</code> (esta última en alguna de las comprobaciones), y una base
+                de datos IndexedDB llamada <code>YtIdbMeta</code>. El almacenamiento de sesión queda vacío.</li>
+              <li><strong>Conexiones</strong> a <code>www.youtube-nocookie.com</code>, <code>www.google.com</code>,
+                <code>fonts.gstatic.com</code>, <code>i.ytimg.com</code>, <code>yt3.ggpht.com</code>,
+                <code>jnn-pa.googleapis.com</code> y a servidores de vídeo <code>*.googlevideo.com</code>, que reciben
+                tu dirección IP y datos del navegador.</li>
+            </ul>
+            El almacenamiento local y las bases de datos del navegador son tecnologías de almacenamiento en tu
+            dispositivo, aunque no sean cookies. No conocemos la finalidad exacta de cada dato: la decide YouTube.
+            Lo medido puede variar según tu navegador, tu país o si has iniciado sesión en Google.
           </li>
           <li>
             <strong>Formulario de contacto</strong> (Formspree, Inc., Estados Unidos). Los datos se envían al pulsar
@@ -132,8 +146,9 @@
 
         <h2 class="legal-title-2">4. Consentimiento</h2>
         <p>
-          No utilizamos cookies que requieran un consentimiento previo. El contenido de terceros del apartado 3
-          solo se carga cuando tú lo pides con un clic, y cada botón te avisa de que se cargará contenido del tercero.
+          Esta web no instala cookies propias. El contenido de terceros del apartado 3, que puede escribir datos en
+          tu navegador, solo se carga cuando tú lo pides con un clic, y cada botón te avisa de que se cargará
+          contenido del tercero.
         </p>
 
         <h2 class="legal-title-2">5. Cómo gestionar o eliminar cookies</h2>
