@@ -327,8 +327,17 @@ function initMapFacade() {
 }
 
 /* ============================================================
-   VIDEO FACADE — create the YouTube iframe only on click
+   VIDEO FACADE — create the YouTube iframe only on click.
+   Only one video plays at a time: starting another restores the
+   thumbnail and play button of the previous one.
    ============================================================ */
+function stopVideo(box) {
+  if (!box._facadeNodes) return;
+  box.replaceChildren(...box._facadeNodes);
+  box._facadeNodes = null;
+  box.classList.remove('is-playing');
+}
+
 function initVideoFacades() {
   document.querySelectorAll('.video-facade').forEach(box => {
     const btn = box.querySelector('.video-facade__play');
@@ -336,16 +345,76 @@ function initVideoFacades() {
     if (!btn || !/^[\w-]{11}$/.test(id)) return;
 
     btn.addEventListener('click', () => {
+      document.querySelectorAll('.video-facade.is-playing').forEach(stopVideo);
+
       const iframe = document.createElement('iframe');
       iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
       iframe.title = box.dataset.videoTitle || 'Vídeo';
       iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      box._facadeNodes = Array.from(box.childNodes);
       box.replaceChildren(iframe);
       box.classList.add('is-playing');
       iframe.focus();
     });
+  });
+}
+
+/* ============================================================
+   VIDEO CAROUSEL — native horizontal scroll (works without JS);
+   this adds prev/next buttons, end states and arrow keys.
+   ============================================================ */
+function initVideoCarousels() {
+  const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+  document.querySelectorAll('.video-carousel').forEach(carousel => {
+    const viewport = carousel.querySelector('.video-carousel__viewport');
+    const prev = carousel.querySelector('.video-carousel__btn--prev');
+    const next = carousel.querySelector('.video-carousel__btn--next');
+    if (!viewport || !prev || !next) return;
+
+    carousel.classList.add('has-js');
+
+    function step() {
+      const card = viewport.querySelector('.video-card');
+      const gap = parseFloat(getComputedStyle(viewport.firstElementChild).columnGap) || 16;
+      const one = card ? card.getBoundingClientRect().width + gap : 200;
+      // scroll by whole cards: as many as fit, at least one
+      return Math.max(one, Math.floor(viewport.clientWidth / one) * one);
+    }
+
+    function update() {
+      const max = viewport.scrollWidth - viewport.clientWidth;
+      carousel.classList.toggle('is-static', max <= 1);
+      prev.disabled = viewport.scrollLeft <= 1;
+      next.disabled = viewport.scrollLeft >= max - 1;
+    }
+
+    function scrollByDir(dir) {
+      viewport.scrollBy({ left: dir * step(), behavior: reduced.matches ? 'auto' : 'smooth' });
+    }
+
+    prev.addEventListener('click', () => scrollByDir(-1));
+    next.addEventListener('click', () => scrollByDir(1));
+
+    viewport.addEventListener('keydown', (e) => {
+      if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
+      if (e.altKey || e.ctrlKey || e.metaKey || e.shiftKey) return;
+      e.preventDefault();
+      scrollByDir(e.key === 'ArrowRight' ? 1 : -1);
+    });
+
+    let ticking = false;
+    viewport.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => { update(); ticking = false; });
+    }, { passive: true });
+
+    if ('ResizeObserver' in window) new ResizeObserver(update).observe(viewport);
+    window.addEventListener('resize', update);
+    update();
   });
 }
 
@@ -362,6 +431,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSmoothScroll();
   initMapFacade();
   initVideoFacades();
+  initVideoCarousels();
 
   // Footer year
   const yearEl = document.getElementById('footer-year');

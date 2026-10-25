@@ -1419,23 +1419,46 @@ h1, h2, h3, h4, h5, h6 {
 }
 .map-facade.is-loaded { min-height: 0; background: none; }
 
-/* Video cards + facade: the YouTube iframe is created on click (js/main.js) */
-.video-grid {
-  --video-gap: var(--space-3);
-  --video-cols: 2;
+/* Video carousel (horizontal, native scroll + scroll-snap) with cards whose
+   video height is the same in a row; the width comes from each video's real ratio.
+   The YouTube iframe is created on click (js/main.js). No inline styles (CSP). */
+.video-carousel {
+  --video-h: 21rem;
+  --video-gap: var(--space-4);
+  position: relative;
+}
+
+.video-carousel__viewport {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x proximity;
+  scroll-padding-inline: var(--space-1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-border) transparent;
+  padding: var(--space-1) var(--space-1) var(--space-4);
+}
+
+.video-carousel__viewport:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.video-carousel__track {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  gap: var(--space-5) var(--video-gap);
+  align-items: stretch;
+  justify-content: center; /* centred when everything fits; at the start when it overflows */
+  gap: var(--video-gap);
+  width: max-content;
+  min-width: 100%;
 }
 
 .video-card {
-  flex: 0 0 calc((100% - (var(--video-cols) - 1) * var(--video-gap)) / var(--video-cols));
-  min-width: 0;
-  max-width: 20rem;
+  flex: 0 0 auto;
+  position: relative; /* containing block of the visually hidden text, so scrolling clips it */
+  width: min-content; /* = width of the video (height x ratio) */
   display: flex;
   flex-direction: column;
+  scroll-snap-align: start;
   background: var(--color-white);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-xl);
@@ -1445,6 +1468,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .video-facade {
   position: relative;
+  height: var(--video-h);
   aspect-ratio: 9 / 16;
   background: var(--color-dark);
 }
@@ -1509,15 +1533,10 @@ h1, h2, h3, h4, h5, h6 {
 
 .video-card__body {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: var(--space-1);
   padding: var(--space-3) var(--space-3) var(--space-4);
-}
-
-.video-card__note,
-.video-card__meta {
-  font-size: var(--font-size-xs);
-  color: var(--color-muted);
 }
 
 .video-card__title {
@@ -1526,15 +1545,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .video-card__text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  overflow: hidden;
   font-size: var(--font-size-xs);
   line-height: 1.5;
   color: var(--color-body);
 }
 
 .video-card__links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-2) var(--space-4);
+  margin-top: auto;
   padding-top: var(--space-2);
   font-size: var(--font-size-xs);
   font-weight: 600;
@@ -1551,6 +1573,42 @@ h1, h2, h3, h4, h5, h6 {
   clip-path: inset(50%);
   white-space: nowrap;
 }
+
+/* Previous / next: overlaid (absolute) so showing or hiding them never shifts the layout.
+   Hidden without JS and when every card fits. */
+.video-carousel__btn {
+  display: none;
+  position: absolute;
+  top: calc(var(--video-h) / 2 + var(--space-1));
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+}
+
+.video-carousel__btn--prev { left: var(--space-2); }
+.video-carousel__btn--next { right: var(--space-2); }
+.video-carousel.has-js:not(.is-static) .video-carousel__btn { display: flex; }
+.video-carousel__btn:disabled { opacity: 0.35; cursor: default; box-shadow: none; }
+.video-carousel__btn:focus-visible { outline: 3px solid var(--color-primary); outline-offset: 2px; }
+
+/* One short notice per block of videos */
+.video-note {
+  margin-top: var(--space-2);
+  text-align: center;
+  font-size: var(--font-size-xs);
+  color: var(--color-muted);
+}
+
+.video-note a { text-decoration: underline; text-underline-offset: 2px; }
 
 .video-more {
   margin-top: var(--space-10);
@@ -1756,10 +1814,10 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE — TABLET (768px+)
    ============================================================= */
 @media (min-width: 768px) {
-  .video-grid { --video-cols: 3; --video-gap: var(--space-5); }
+  .video-carousel { --video-h: 24rem; --video-gap: var(--space-5); }
   .video-card__body { padding: var(--space-4) var(--space-4) var(--space-5); }
   .video-card__title { font-size: var(--font-size-base); }
-  .video-card__note, .video-card__meta, .video-card__text, .video-card__links { font-size: var(--font-size-sm); }
+  .video-card__text, .video-card__links, .video-note { font-size: var(--font-size-sm); }
 
   .section { padding: var(--space-20) 0; }
 
@@ -1794,7 +1852,6 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE — DESKTOP (1024px+)
    ============================================================= */
 @media (min-width: 1024px) {
-  .video-grid { --video-cols: 4; --video-gap: var(--space-6); }
 
   .nav__links { display: flex; }
   .nav__cta { display: inline-flex; }
@@ -1815,6 +1872,8 @@ h1, h2, h3, h4, h5, h6 {
    RESPONSIVE — LARGE (1280px+)
    ============================================================= */
 @media (min-width: 1280px) {
+  .video-carousel { --video-h: 26rem; }
+
   .container { padding: 0 var(--space-8); }
 
   .gallery__grid { grid-template-columns: repeat(4, 1fr); }
