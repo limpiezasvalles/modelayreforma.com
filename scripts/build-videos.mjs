@@ -159,18 +159,20 @@ ${indent(carousel(mine, `Vídeos del servicio: ${svc.name}`, { showText: false }
 }
 
 function videosMain(live, data) {
-  const groups = Object.keys(data.services)
-    .map((key) => ({ key, svc: data.services[key], items: live.filter((v) => v.service === key) }))
-    .filter((g) => g.items.length);
-  return groups.map((g, i) => `<section class="section ${i % 2 ? 'section--light' : 'section--white'}" aria-labelledby="videos-${g.key}-title">
+  const all = data.allVideos;
+  const links = Object.values(data.services)
+    .filter((svc) => live.some((v) => data.services[v.service] === svc))
+    .map((svc) => `<a href="${esc(svc.url)}">${esc(svc.name.toLowerCase())}</a>`)
+    .join(' y ');
+  return `<section class="section section--white" aria-labelledby="videos-all-title">
   <div class="container">
     <div class="section__header" data-animate="fade-up">
-      <h2 class="section__title" id="videos-${g.key}-title">${esc(g.svc.sectionTitle)}</h2>
-      <p class="section__subtitle">${esc(g.svc.sectionIntro)} <a href="${esc(g.svc.url)}">Ver el servicio de ${esc(g.svc.name.toLowerCase())}</a>.</p>
+      <h2 class="section__title" id="videos-all-title">${esc(all.sectionTitle)}</h2>
+      <p class="section__subtitle">${esc(all.sectionIntro)} Más información sobre ${links}.</p>
     </div>
-${indent(carousel(g.items, `Lista de vídeos: ${g.svc.name}`, { showText: true }), '    ')}
+${indent(carousel(live, 'Lista de todos los vídeos', { showText: true }), '    ')}
   </div>
-</section>`).join('\n');
+</section>`;
 }
 
 function breadcrumbLd(site) {
