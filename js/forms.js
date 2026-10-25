@@ -22,6 +22,8 @@ function sanitize(str) {
 /* ============================================================
    VALIDATION HELPERS
    ============================================================ */
+const CONSENT_ERROR = 'Para enviar la solicitud debes marcar la casilla de consentimiento.';
+
 const validators = {
   required:  (val) => val.trim().length > 0,
   email:     (val) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(val.trim()),
@@ -81,7 +83,7 @@ function validateField(field) {
 
   // Checkbox required (RGPD)
   if (type === 'checkbox' && field.required && !field.checked) {
-    showFieldError(field, 'Debes aceptar la política de privacidad.');
+    showFieldError(field, CONSENT_ERROR);
     return false;
   }
 
@@ -198,7 +200,7 @@ async function submitForm(form) {
   // RGPD checkbox
   const rgpd = form.querySelector('[name="rgpd"]');
   if (rgpd && !rgpd.checked) {
-    showFieldError(rgpd, 'Debes aceptar la política de privacidad.');
+    showFieldError(rgpd, CONSENT_ERROR);
     isValid = false;
   }
 
@@ -248,6 +250,9 @@ async function submitForm(form) {
    ============================================================ */
 function initForms() {
   document.querySelectorAll('form[data-ajax]').forEach(form => {
+    // Validation is ours when JS runs; without JS the browser's own required check still applies
+    form.noValidate = true;
+
     // Real-time validation on blur
     form.querySelectorAll('input, select, textarea').forEach(field => {
       field.addEventListener('blur', () => {

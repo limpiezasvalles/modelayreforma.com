@@ -1326,7 +1326,6 @@
                 action="https://formspree.io/f/xaqlrkel"
                 method="POST"
                 data-ajax
-                novalidate
                 aria-label="Formulario de contacto y solicitud de presupuesto"
               >
                 <!-- Honeypot anti-spam -->
@@ -1381,15 +1380,29 @@
                   </div>
 
                   <div class="form__group form__group--full">
+                    <p class="form__legal" id="c-rgpd-info">
+                      <strong>Información básica sobre protección de datos.</strong>
+                      <strong>Responsable:</strong> MODELA Y REFORMA S.L.
+                      <strong>Finalidad:</strong> atender tu solicitud de presupuesto.
+                      <strong>Destinatario:</strong> Formspree, Inc., proveedor del formulario, con servidores en
+                      Estados Unidos (transferencia internacional de datos).
+                      <strong>Derechos:</strong> acceso, rectificación, supresión, oposición, limitación,
+                      portabilidad y retirada del consentimiento, escribiendo a modelayreforma@gmail.com.
+                      Más información en la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.
+                    </p>
+                  </div>
+
+                  <div class="form__group form__group--full">
                     <div class="form__checkbox-group">
-                      <input class="form__checkbox" type="checkbox" id="c-rgpd" name="rgpd" required>
+                      <input class="form__checkbox" type="checkbox" id="c-rgpd" name="rgpd" required
+                        aria-describedby="c-rgpd-info c-rgpd-error">
                       <label class="form__checkbox-label" for="c-rgpd">
                         He leído y acepto la
                         <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
-                        y consiento el tratamiento de mis datos. <span class="form__required" aria-hidden="true">*</span>
+                        y consiento el tratamiento de mis datos para atender mi solicitud. <span aria-hidden="true" class="form__required">*</span>
                       </label>
                     </div>
-                    <span class="form__error" role="alert" aria-live="polite"></span>
+                    <span class="form__error" id="c-rgpd-error" role="alert" aria-live="polite"></span>
                   </div>
 
                   <div class="form__group form__group--full">
