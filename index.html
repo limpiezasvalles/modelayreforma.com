@@ -10,8 +10,8 @@
   <meta http-equiv="Content-Security-Policy" content="
     default-src 'self';
     script-src 'self';
-    style-src 'self' https://fonts.googleapis.com;
-    font-src 'self' https://fonts.gstatic.com;
+    style-src 'self';
+    font-src 'self';
     img-src 'self' data:;
     frame-src https://www.google.com/maps/;
     connect-src 'self' https://formspree.io;
@@ -42,10 +42,8 @@
   <meta name="twitter:description" content="Empresa de reformas integrales en Sabadell y el Vallès Occidental. 5 años de experiencia.">
   <meta name="twitter:image" content="https://modelayreforma.com/images/copenhaguen-277-07.webp">
 
-  <!-- PRECONNECT -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FONT (self-hosted) -->
+  <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- PRELOAD CRITICAL -->
   <link rel="preload" as="style" href="css/styles.css">
