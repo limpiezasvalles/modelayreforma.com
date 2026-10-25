@@ -1239,6 +1239,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .map-wrapper iframe {
   display: block;
+  border: 0;
   width: 100%;
   min-height: 300px;
 }
@@ -1251,6 +1252,95 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: var(--radius-full);
   background: rgba(43,94,167,0.08);
   color: var(--color-primary);
+}
+
+/* =============================================================
+   COMPONENTS MOVED FROM INLINE STYLES
+   The CSP (style-src without 'unsafe-inline') blocks style="..."
+   attributes, so these live here as classes.
+   ============================================================= */
+.btn--block { width: 100%; justify-content: center; }
+
+.section.section--page-header { padding-top: calc(var(--nav-height) + var(--space-16)); }
+.section.section--legal { padding-top: calc(var(--nav-height) + var(--space-12)); }
+.container.container--narrow { max-width: 860px; }
+.container.container--legal { max-width: 800px; }
+
+.breadcrumb {
+  margin-bottom: var(--space-6);
+  font-size: var(--font-size-sm);
+  color: var(--color-muted);
+}
+
+.content-title { margin: var(--space-12) 0 var(--space-6); }
+.content-title--first { margin-bottom: var(--space-6); }
+
+.link-row {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.text-body { color: var(--color-body); }
+.form__required { color: var(--color-error); }
+.footer__bottom--plain { border-top: none; padding-top: 0; }
+
+/* Zone / map block (home) */
+.zone-intro { margin-bottom: var(--space-6); }
+.zone-title {
+  font-size: var(--font-size-2xl);
+  margin-bottom: var(--space-2);
+  color: var(--color-dark);
+}
+.tag-list {
+  margin-top: var(--space-6);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+}
+
+/* FAQ (home) */
+.faq--narrow { max-width: 820px; margin: 0 auto; }
+.faq__item {
+  background: var(--color-white);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5) var(--space-6);
+  margin-bottom: var(--space-4);
+  box-shadow: var(--shadow-sm);
+}
+.faq__question {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--color-dark);
+  font-size: var(--font-size-lg);
+}
+.faq__answer { margin-top: var(--space-4); color: var(--color-body); }
+
+/* Legal pages */
+.legal-title { text-align: left; margin-bottom: var(--space-8); }
+.legal-title-2 {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--space-4);
+  margin-top: var(--space-8);
+}
+.legal-updated {
+  color: var(--color-muted);
+  margin-bottom: var(--space-8);
+  font-size: var(--font-size-sm);
+}
+.legal-list { list-style: disc; padding-left: var(--space-6); margin: var(--space-4) 0; }
+.legal-back {
+  margin-top: var(--space-12);
+  padding-top: var(--space-8);
+  border-top: 1px solid var(--color-border);
+}
+.legal-back__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-weight: 600;
 }
 
 /* =============================================================

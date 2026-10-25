@@ -254,7 +254,7 @@
         <li><a class="nav__mobile-link" href="#proceso">Proceso</a></li>
         <li><a class="nav__mobile-link" href="#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn--primary" href="#contacto" style="width:100%;justify-content:center;">Pide presupuesto</a>
+      <a class="btn btn--primary btn--block" href="#contacto">Pide presupuesto</a>
     </nav>
   </div>
 
@@ -1380,7 +1380,7 @@
                       <label class="form__checkbox-label" for="c-rgpd">
                         He leído y acepto la
                         <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
-                        y consiento el tratamiento de mis datos. <span aria-hidden="true" style="color:#dc2626;">*</span>
+                        y consiento el tratamiento de mis datos. <span class="form__required" aria-hidden="true">*</span>
                       </label>
                     </div>
                     <span class="form__error" role="alert" aria-live="polite"></span>
@@ -1402,11 +1402,11 @@
 
           <!-- MAP -->
           <div data-animate="fade-left">
-            <div style="margin-bottom:1.5rem;">
-              <h3 style="font-size:1.5rem;margin-bottom:.5rem;color:var(--color-dark);" id="zona-servicio-title">
+            <div class="zone-intro">
+              <h3 class="zone-title" id="zona-servicio-title">
                 Zona de servicio
               </h3>
-              <p style="color:var(--color-body);">
+              <p class="text-body">
                 Operamos en <strong>Sabadell</strong>, <strong>Terrassa</strong>,
                 <strong>Barberà del Vallès</strong>, <strong>Cerdanyola</strong>
                 y todo el <strong>Vallès Occidental</strong>.
@@ -1416,12 +1416,12 @@
             <div class="map-wrapper" aria-label="Mapa de localización de Sabadell, Vallès Occidental">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.52684948055!2d2.0753897!3d41.5440369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49564a38bbbbb%3A0xba53edd58a4af0c7!2sSabadell%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                width="100%" height="400" style="border:0;" allowfullscreen=""
+                width="100%" height="400" allowfullscreen=""
                 loading="lazy" referrerpolicy="no-referrer-when-downgrade"
                 title="Mapa de Sabadell - Zona de servicio de Modela y Reforma"></iframe>
             </div>
 
-            <div style="margin-top:1.5rem;display:flex;flex-wrap:wrap;gap:.5rem;">
+            <div class="tag-list">
               <span class="tag">Sabadell</span>
               <span class="tag">Terrassa</span>
               <span class="tag">Barberà del Vallès</span>
@@ -1469,45 +1469,45 @@
           </p>
         </div>
 
-        <div class="faq" data-animate="fade-up" style="max-width:820px;margin:0 auto;">
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Cuánto cuesta reformar una cocina en Sabadell?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">El precio depende del tamaño de la cocina, los materiales y los electrodomésticos elegidos. Una reforma de cocina en Sabadell suele partir desde unos 6.000 €. Tras una visita gratuita te entregamos un presupuesto cerrado y sin compromiso.</p>
+        <div class="faq faq--narrow" data-animate="fade-up">
+          <details class="faq__item">
+            <summary class="faq__question">¿Cuánto cuesta reformar una cocina en Sabadell?</summary>
+            <p class="faq__answer">El precio depende del tamaño de la cocina, los materiales y los electrodomésticos elegidos. Una reforma de cocina en Sabadell suele partir desde unos 6.000 €. Tras una visita gratuita te entregamos un presupuesto cerrado y sin compromiso.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Cuánto tiempo tarda una reforma de baño?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Una reforma de baño completa suele tardar entre 1 y 2 semanas, según el alcance y los acabados. Antes de empezar la obra te facilitamos un calendario con la fecha de entrega prevista.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Cuánto tiempo tarda una reforma de baño?</summary>
+            <p class="faq__answer">Una reforma de baño completa suele tardar entre 1 y 2 semanas, según el alcance y los acabados. Antes de empezar la obra te facilitamos un calendario con la fecha de entrega prevista.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Trabajáis en toda la provincia de Barcelona?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Trabajamos principalmente en Sabadell y el Vallès Occidental: Terrassa, Barberà del Vallès, Cerdanyola del Vallès, Sant Cugat y poblaciones cercanas. Para proyectos en otras zonas de la provincia de Barcelona, consúltanos sin compromiso.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Trabajáis en toda la provincia de Barcelona?</summary>
+            <p class="faq__answer">Trabajamos principalmente en Sabadell y el Vallès Occidental: Terrassa, Barberà del Vallès, Cerdanyola del Vallès, Sant Cugat y poblaciones cercanas. Para proyectos en otras zonas de la provincia de Barcelona, consúltanos sin compromiso.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Hacéis presupuesto sin compromiso?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso, junto con el diseño 3D de tu proyecto. Tú decides con total libertad.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Hacéis presupuesto sin compromiso?</summary>
+            <p class="faq__answer">Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso, junto con el diseño 3D de tu proyecto. Tú decides con total libertad.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Qué garantía tienen las reformas?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Todas nuestras reformas incluyen garantía sobre los trabajos realizados y los materiales instalados. Trabajamos con contrato y presupuesto cerrado, sin partidas ocultas ni sorpresas.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Qué garantía tienen las reformas?</summary>
+            <p class="faq__answer">Todas nuestras reformas incluyen garantía sobre los trabajos realizados y los materiales instalados. Trabajamos con contrato y presupuesto cerrado, sin partidas ocultas ni sorpresas.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Podéis hacer la reforma mientras vivimos en casa?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">En muchos casos sí, especialmente en reformas parciales o ejecutadas por fases. Planificamos la obra para minimizar las molestias y, cuando hay más de un baño, procuramos dejar siempre uno operativo.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Podéis hacer la reforma mientras vivimos en casa?</summary>
+            <p class="faq__answer">En muchos casos sí, especialmente en reformas parciales o ejecutadas por fases. Planificamos la obra para minimizar las molestias y, cuando hay más de un baño, procuramos dejar siempre uno operativo.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Incluye el diseño 3D en el presupuesto?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Sí, el diseño 3D va incluido en el presupuesto. Así puedes ver el resultado final de tu reforma y hacer todos los cambios que quieras antes de iniciar la obra.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Incluye el diseño 3D en el presupuesto?</summary>
+            <p class="faq__answer">Sí, el diseño 3D va incluido en el presupuesto. Así puedes ver el resultado final de tu reforma y hacer todos los cambios que quieras antes de iniciar la obra.</p>
           </details>
 
-          <details class="faq__item" style="background:var(--color-white);border:1px solid var(--color-border);border-radius:var(--radius-lg);padding:var(--space-5) var(--space-6);margin-bottom:var(--space-4);box-shadow:var(--shadow-sm);">
-            <summary style="cursor:pointer;font-weight:600;color:var(--color-dark);font-size:var(--font-size-lg);">¿Gestionáis los permisos y licencias?</summary>
-            <p style="margin-top:var(--space-4);color:var(--color-body);">Sí. Te asesoramos y nos encargamos de la tramitación de las comunicaciones y licencias de obra necesarias ante el ayuntamiento cuando el proyecto lo requiere.</p>
+          <details class="faq__item">
+            <summary class="faq__question">¿Gestionáis los permisos y licencias?</summary>
+            <p class="faq__answer">Sí. Te asesoramos y nos encargamos de la tramitación de las comunicaciones y licencias de obra necesarias ante el ayuntamiento cuando el proyecto lo requiere.</p>
           </details>
         </div>
       </div>
