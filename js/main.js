@@ -327,6 +327,29 @@ function initMapFacade() {
 }
 
 /* ============================================================
+   VIDEO FACADE — create the YouTube iframe only on click
+   ============================================================ */
+function initVideoFacades() {
+  document.querySelectorAll('.video-facade').forEach(box => {
+    const btn = box.querySelector('.video-facade__play');
+    const id = box.dataset.videoId || '';
+    if (!btn || !/^[\w-]{11}$/.test(id)) return;
+
+    btn.addEventListener('click', () => {
+      const iframe = document.createElement('iframe');
+      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.title = box.dataset.videoTitle || 'Vídeo';
+      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.setAttribute('allowfullscreen', '');
+      iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+      box.replaceChildren(iframe);
+      box.classList.add('is-playing');
+      iframe.focus();
+    });
+  });
+}
+
+/* ============================================================
    INIT
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
@@ -338,6 +361,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollTop();
   initSmoothScroll();
   initMapFacade();
+  initVideoFacades();
 
   // Footer year
   const yearEl = document.getElementById('footer-year');
