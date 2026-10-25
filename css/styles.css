@@ -1354,6 +1354,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: var(--font-size-sm);
 }
 .legal-list { list-style: disc; padding-left: var(--space-6); margin: var(--space-4) 0; }
+/* Visible marker for legal data still to be filled in by the owner */
+.legal-pending {
+  background: #FFF3C4;
+  color: #5B4600;
+  padding: 0 0.25em;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+}
+
 .legal-back {
   margin-top: var(--space-12);
   padding-top: var(--space-8);
