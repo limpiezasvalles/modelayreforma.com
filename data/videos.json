@@ -1,6 +1,6 @@
 {
   "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Videos stay hidden until \"published\" is true; only videos with a youtubeId and uploadDate are rendered.",
-  "published": false,
+  "published": true,
   "siteUrl": "https://modelayreforma.com",
   "services": {
     "integrales": {
@@ -20,8 +20,8 @@
     {
       "sourceFile": "007bf2f5-cea3-4342-8b2e-2a7000e78b01.mov",
       "slug": "reforma-integral-piso-resultado-final",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "-b69oOa1Xqw",
+      "uploadDate": "2026-10-25",
       "title": "Resultado final de una reforma integral de piso en Sabadell",
       "description": "Resultado final de la reforma integral de un piso en Sabadell. El vídeo recorre la vivienda una vez terminada la obra. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-integral-piso-resultado-final.webp",
@@ -44,8 +44,8 @@
     {
       "sourceFile": "0c5ede94-6ca9-4452-9a49-9aba12ab02c1.mov",
       "slug": "reforma-integral-piso-antes-despues",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "mWLYtcfAShw",
+      "uploadDate": "2026-10-25",
       "title": "Reforma integral de piso en Sabadell: del derribo al resultado",
       "description": "Reforma integral de un piso en Sabadell, del derribo al resultado final. El vídeo muestra cómo era la vivienda antes de la obra y cómo quedó. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-integral-piso-antes-despues.webp",
@@ -68,8 +68,8 @@
     {
       "sourceFile": "0dd2e1e4-a81b-4a27-b7f9-adc712c569e9.mov",
       "slug": "reforma-integral-piso-obra-resultado",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "78oxbNa0qCo",
+      "uploadDate": "2026-10-25",
       "title": "Reforma integral en Sabadell: obra y resultado final",
       "description": "Reforma integral de una vivienda en Sabadell, desde la obra en marcha hasta el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-integral-piso-obra-resultado.webp",
@@ -92,8 +92,8 @@
     {
       "sourceFile": "ca81da9f-f912-43e7-bd45-5eb937e07b0f.mov",
       "slug": "reforma-piso-proceso-obra-resultado",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "n1Eo8S25yzA",
+      "uploadDate": "2026-10-25",
       "title": "Reforma de piso en Sabadell: proceso de obra y resultado",
       "description": "Proceso de reforma de un piso en Sabadell, desde la obra hasta el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-piso-proceso-obra-resultado.webp",
@@ -116,8 +116,8 @@
     {
       "sourceFile": "IMG_0733.MOV",
       "slug": "derribo-bano-antes-reforma",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "ATQ1mEpkE_4",
+      "uploadDate": "2026-10-25",
       "title": "Derribo de un baño antes de reformar en Sabadell",
       "description": "El estado de un baño en obra en Sabadell antes de empezar su reforma. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/derribo-bano-antes-reforma.webp",
@@ -140,8 +140,8 @@
     {
       "sourceFile": "IMG_1206.MOV",
       "slug": "vivienda-reformada-recorrido",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "SKkP6xIVUWU",
+      "uploadDate": "2026-10-25",
       "title": "Vivienda reformada en Sabadell: recorrido del resultado",
       "description": "Recorrido por una vivienda reformada en Sabadell, una vez terminada la obra. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/vivienda-reformada-recorrido.webp",
@@ -164,8 +164,8 @@
     {
       "sourceFile": "IMG_3966.MOV",
       "slug": "reforma-bano-espejo-led",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "Q1zk0kSTizY",
+      "uploadDate": "2026-10-25",
       "title": "Reforma de baño moderno en Sabadell con espejo LED",
       "description": "Reforma de un baño en Sabadell: el resultado final de la obra. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-bano-espejo-led.webp",
@@ -188,8 +188,8 @@
     {
       "sourceFile": "OFICINAS NOSTRALLAR.MP4",
       "slug": "reforma-oficinas-obra-resultado",
-      "youtubeId": "",
-      "uploadDate": "",
+      "youtubeId": "mdwvkuUbEzY",
+      "uploadDate": "2026-10-25",
       "title": "Reforma de oficinas en Sabadell: de la obra al resultado",
       "description": "Reforma de unas oficinas en Sabadell, de la obra al resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
       "thumbnail": "images/videos/reforma-oficinas-obra-resultado.webp",
