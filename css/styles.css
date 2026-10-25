@@ -577,6 +577,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about__image-badge {
+  max-width: 11rem;
   position: absolute;
   bottom: var(--space-6);
   right: var(--space-6);
