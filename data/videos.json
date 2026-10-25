@@ -1,0 +1,133 @@
+{
+  "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Videos stay hidden until \"published\" is true; only videos with a youtubeId and uploadDate are rendered.",
+  "published": false,
+  "siteUrl": "https://modelayreforma.com",
+  "services": {
+    "integrales": {
+      "name": "Reformas integrales",
+      "url": "reformas-integrales-sabadell.html",
+      "sectionTitle": "Vídeos de reformas integrales en Sabadell",
+      "sectionIntro": "Obras reales de pisos y oficinas en Sabadell, desde el derribo hasta el resultado final."
+    },
+    "banos": {
+      "name": "Reforma de baños",
+      "url": "reforma-de-banos-sabadell.html",
+      "sectionTitle": "Vídeos de reformas de baños en Sabadell",
+      "sectionIntro": "Cómo empieza y cómo queda la reforma de un baño en Sabadell."
+    }
+  },
+  "videos": [
+    {
+      "sourceFile": "007bf2f5-cea3-4342-8b2e-2a7000e78b01.mov",
+      "slug": "reforma-integral-piso-resultado-final",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Resultado final de una reforma integral de piso en Sabadell",
+      "description": "Recorrido por un piso ya reformado en Sabadell: cocina con muebles blancos y encimera de granito, suelo laminado, baño con lavabo y ducha con revestimiento de mosaico. El vídeo muestra el resultado final de la obra.",
+      "thumbnail": "images/videos/reforma-integral-piso-resultado-final.webp",
+      "thumbnailAlt": "Cocina blanca con encimera de granito en un piso reformado en Sabadell",
+      "durationSeconds": 172,
+      "service": "integrales",
+      "featured": true,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "0c5ede94-6ca9-4452-9a49-9aba12ab02c1.mov",
+      "slug": "reforma-integral-piso-antes-despues",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Reforma integral de piso en Sabadell: del derribo al resultado",
+      "description": "Antes y después de una reforma integral en Sabadell: del derribo de los azulejos de un baño y la instalación del suelo laminado al resultado final, con cocina blanca de fregadero negro, pasillo y baño con espejo LED.",
+      "thumbnail": "images/videos/reforma-integral-piso-antes-despues.webp",
+      "thumbnailAlt": "Cocina blanca con fregadero negro de un piso reformado en Sabadell",
+      "durationSeconds": 102,
+      "service": "integrales",
+      "featured": true,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "0dd2e1e4-a81b-4a27-b7f9-adc712c569e9.mov",
+      "slug": "reforma-integral-piso-obra-resultado",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Reforma integral en Sabadell: obra y resultado final",
+      "description": "Una reforma integral en Sabadell desde la obra: derribo, trabajos de carpintería y montaje, hasta una cocina con electrodomésticos integrados e iluminación LED y un baño con espejo redondo retroiluminado y mueble de madera.",
+      "thumbnail": "images/videos/reforma-integral-piso-obra-resultado.webp",
+      "thumbnailAlt": "Baño con espejo redondo retroiluminado y mueble de madera tras una reforma integral en Sabadell",
+      "durationSeconds": 61,
+      "service": "integrales",
+      "featured": true,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "ca81da9f-f912-43e7-bd45-5eb937e07b0f.mov",
+      "slug": "reforma-piso-proceso-obra-resultado",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Reforma de piso en Sabadell: proceso de obra y resultado",
+      "description": "Seguimiento de una reforma de piso en Sabadell: baño y salón en obra con el suelo protegido, y el resultado final con ducha con mampara y cocina con campana.",
+      "thumbnail": "images/videos/reforma-piso-proceso-obra-resultado.webp",
+      "thumbnailAlt": "Ducha con mampara y rociador negro en un baño reformado en Sabadell",
+      "durationSeconds": 60,
+      "service": "integrales",
+      "featured": false,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "IMG_0733.MOV",
+      "slug": "derribo-bano-antes-reforma",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Derribo de un baño antes de reformar en Sabadell",
+      "description": "El estado de un baño en obra en Sabadell, con los azulejos picados y el escombro en el suelo, antes de empezar su reforma.",
+      "thumbnail": "images/videos/derribo-bano-antes-reforma.webp",
+      "thumbnailAlt": "Baño en obra con azulejos picados y escombros antes de su reforma en Sabadell",
+      "durationSeconds": 70,
+      "service": "banos",
+      "featured": false,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "IMG_1206.MOV",
+      "slug": "vivienda-reformada-recorrido",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Vivienda reformada en Sabadell: recorrido del resultado",
+      "description": "Recorrido por una vivienda ya reformada en Sabadell: cocina con placa de inducción e iluminación LED bajo el mueble, ventanal con persiana, pasillo de parquet y baño con toallero cromado.",
+      "thumbnail": "images/videos/vivienda-reformada-recorrido.webp",
+      "thumbnailAlt": "Cocina con placa de inducción negra e iluminación LED en una vivienda reformada en Sabadell",
+      "durationSeconds": 82,
+      "service": "integrales",
+      "featured": false,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "IMG_3966.MOV",
+      "slug": "reforma-bano-espejo-led",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Reforma de baño moderno en Sabadell con espejo LED",
+      "description": "Baño reformado en Sabadell: espejo con retroiluminación LED, mueble de madera con lavabo sobre encimera, ducha con mampara y toallero blanco.",
+      "thumbnail": "images/videos/reforma-bano-espejo-led.webp",
+      "thumbnailAlt": "Baño con espejo retroiluminado, mueble de madera y lavabo sobre encimera, reformado en Sabadell",
+      "durationSeconds": 37,
+      "service": "banos",
+      "featured": true,
+      "transcript": ""
+    },
+    {
+      "sourceFile": "OFICINAS NOSTRALLAR.MP4",
+      "slug": "reforma-oficinas-obra-resultado",
+      "youtubeId": "",
+      "uploadDate": "",
+      "title": "Reforma de oficinas en Sabadell: de la obra al resultado",
+      "description": "Reforma de unas oficinas en Sabadell: derribos, estructura de perfilería, instalación del suelo de madera y resultado final con los despachos amueblados.",
+      "thumbnail": "images/videos/reforma-oficinas-obra-resultado.webp",
+      "thumbnailAlt": "Despacho de oficina con suelo de madera tras la reforma de unas oficinas en Sabadell",
+      "durationSeconds": 120,
+      "service": "integrales",
+      "featured": false,
+      "transcript": ""
+    }
+  ]
+}
