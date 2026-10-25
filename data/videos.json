@@ -27,6 +27,14 @@
       "thumbnail": "images/videos/reforma-integral-piso-resultado-final.webp",
       "thumbnailAlt": "Cocina blanca con encimera de granito en un piso reformado en Sabadell",
       "durationSeconds": 172,
+      "display": {
+        "width": 464,
+        "height": 848,
+        "rotation": 0,
+        "ratio": 0.5472,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "integrales",
       "featured": true,
       "transcript": ""
@@ -41,6 +49,14 @@
       "thumbnail": "images/videos/reforma-integral-piso-antes-despues.webp",
       "thumbnailAlt": "Cocina blanca con fregadero negro de un piso reformado en Sabadell",
       "durationSeconds": 102,
+      "display": {
+        "width": 480,
+        "height": 832,
+        "rotation": 0,
+        "ratio": 0.5769,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "integrales",
       "featured": true,
       "transcript": ""
@@ -55,6 +71,14 @@
       "thumbnail": "images/videos/reforma-integral-piso-obra-resultado.webp",
       "thumbnailAlt": "Baño con espejo redondo retroiluminado y mueble de madera tras una reforma integral en Sabadell",
       "durationSeconds": 61,
+      "display": {
+        "width": 464,
+        "height": 832,
+        "rotation": 0,
+        "ratio": 0.5577,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "integrales",
       "featured": true,
       "transcript": ""
@@ -69,6 +93,14 @@
       "thumbnail": "images/videos/reforma-piso-proceso-obra-resultado.webp",
       "thumbnailAlt": "Ducha con mampara y rociador negro en un baño reformado en Sabadell",
       "durationSeconds": 60,
+      "display": {
+        "width": 480,
+        "height": 640,
+        "rotation": 0,
+        "ratio": 0.75,
+        "orientation": "vertical",
+        "nearestStandard": "3:4"
+      },
       "service": "integrales",
       "featured": false,
       "transcript": ""
@@ -83,6 +115,14 @@
       "thumbnail": "images/videos/derribo-bano-antes-reforma.webp",
       "thumbnailAlt": "Baño en obra con azulejos picados y escombros antes de su reforma en Sabadell",
       "durationSeconds": 70,
+      "display": {
+        "width": 1080,
+        "height": 1920,
+        "rotation": 270,
+        "ratio": 0.5625,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "banos",
       "featured": false,
       "transcript": ""
@@ -97,6 +137,14 @@
       "thumbnail": "images/videos/vivienda-reformada-recorrido.webp",
       "thumbnailAlt": "Cocina con placa de inducción negra e iluminación LED en una vivienda reformada en Sabadell",
       "durationSeconds": 82,
+      "display": {
+        "width": 2160,
+        "height": 3840,
+        "rotation": 270,
+        "ratio": 0.5625,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "integrales",
       "featured": false,
       "transcript": ""
@@ -111,6 +159,14 @@
       "thumbnail": "images/videos/reforma-bano-espejo-led.webp",
       "thumbnailAlt": "Baño con espejo retroiluminado, mueble de madera y lavabo sobre encimera, reformado en Sabadell",
       "durationSeconds": 37,
+      "display": {
+        "width": 320,
+        "height": 568,
+        "rotation": 270,
+        "ratio": 0.5634,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "banos",
       "featured": true,
       "transcript": ""
@@ -125,6 +181,14 @@
       "thumbnail": "images/videos/reforma-oficinas-obra-resultado.webp",
       "thumbnailAlt": "Despacho de oficina con suelo de madera tras la reforma de unas oficinas en Sabadell",
       "durationSeconds": 120,
+      "display": {
+        "width": 464,
+        "height": 848,
+        "rotation": 0,
+        "ratio": 0.5472,
+        "orientation": "vertical",
+        "nearestStandard": "9:16"
+      },
       "service": "integrales",
       "featured": false,
       "transcript": ""
