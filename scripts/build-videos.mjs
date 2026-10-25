@@ -31,9 +31,6 @@ function isoDuration(sec) {
   const m = Math.floor(sec / 60), s = sec % 60;
   return 'PT' + (m ? `${m}M` : '') + (s || !m ? `${s}S` : '');
 }
-function clock(sec) {
-  return `${Math.floor(sec / 60)}:${String(sec % 60).padStart(2, '0')}`;
-}
 const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 /** CSS class holding the exact display aspect ratio of a video, e.g. video-facade--ar-9-16 */
 function ratioClass(v) {
@@ -84,8 +81,7 @@ function videoLd(v, site) {
 }
 const ldScript = (obj) => `<script type="application/ld+json">\n${indent(jsonLd(obj), '  ')}\n</script>`;
 
-function card(v, data, { level = 3, serviceLink = true } = {}) {
-  const svc = data.services[v.service];
+function card(v, { level = 3, showText = false } = {}) {
   const h = `h${level}`;
   return `<article class="video-card">
   <div class="video-facade ${ratioClass(v)}" data-video-id="${esc(v.youtubeId)}" data-video-title="${esc(v.title)}">
@@ -97,20 +93,34 @@ function card(v, data, { level = 3, serviceLink = true } = {}) {
     </button>
   </div>
   <div class="video-card__body">
-    <p class="video-card__note">Al reproducir el vídeo se carga contenido de YouTube (Google).</p>
-    <${h} class="video-card__title">${esc(v.title)}</${h}>
-    <p class="video-card__meta">Duración: ${clock(v.durationSeconds)}</p>
-    <p class="video-card__text">${esc(v.description)}</p>
-    <p class="video-card__links">${serviceLink ? `
-      <a href="${esc(svc.url)}">Más sobre ${esc(svc.name.toLowerCase())}</a>` : ''}
+    <${h} class="video-card__title">${esc(v.title)}</${h}>${showText ? `
+    <p class="video-card__text">${esc(v.description)}</p>` : ''}
+    <p class="video-card__links">
       <a href="https://www.youtube.com/watch?v=${esc(v.youtubeId)}" target="_blank" rel="noopener noreferrer">Ver en YouTube<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
     </p>
   </div>
 </article>`;
 }
 
-function grid(videos, data, opts) {
-  return `<div class="video-grid">\n${indent(videos.map((v) => card(v, data, opts)).join('\n'), '  ')}\n</div>`;
+const CHEVRON = (d) => `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="${d}"/></svg>`;
+
+/** One horizontal carousel (native scroll-snap; prev/next buttons are enhanced by js/main.js)
+ *  followed by the single YouTube notice of the block. */
+function carousel(videos, label, opts) {
+  return `<div class="video-carousel">
+  <button class="video-carousel__btn video-carousel__btn--prev" type="button" aria-label="Vídeos anteriores" disabled>
+    ${CHEVRON('15 18 9 12 15 6')}
+  </button>
+  <div class="video-carousel__viewport" role="region" aria-roledescription="carrusel" aria-label="${esc(label)}" tabindex="0">
+    <div class="video-carousel__track">
+${indent(videos.map((v) => card(v, opts)).join('\n'), '      ')}
+    </div>
+  </div>
+  <button class="video-carousel__btn video-carousel__btn--next" type="button" aria-label="Vídeos siguientes">
+    ${CHEVRON('9 18 15 12 9 6')}
+  </button>
+</div>
+<p class="video-note">Al pulsar play se carga contenido de YouTube (Google). Más información en la <a href="politica-cookies.html">política de cookies</a>.</p>`;
 }
 
 function homeSection(live, data) {
@@ -125,7 +135,7 @@ function homeSection(live, data) {
         Obras reales en Sabadell, del derribo al resultado final.
       </p>
     </div>
-${indent(grid(featured, data, { level: 3 }), '    ')}
+${indent(carousel(featured, 'Nuestras reformas en vídeo', { showText: false }), '    ')}
     <p class="video-more"><a class="btn btn--primary" href="videos.html">Ver todos los vídeos</a></p>
   </div>
 </section>`;
@@ -142,7 +152,7 @@ function serviceSection(live, data, serviceKey) {
       <h2 class="section__title" id="videos-title">${esc(svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(svc.sectionIntro)}</p>
     </div>
-${indent(grid(mine, data, { level: 3, serviceLink: false }), '    ')}
+${indent(carousel(mine, svc.sectionTitle, { showText: false }), '    ')}
     <p class="video-more"><a class="btn btn--primary" href="videos.html">Ver todos los vídeos</a></p>
   </div>
 </section>`;
@@ -158,7 +168,7 @@ function videosMain(live, data) {
       <h2 class="section__title" id="videos-${g.key}-title">${esc(g.svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(g.svc.sectionIntro)} <a href="${esc(g.svc.url)}">Ver el servicio de ${esc(g.svc.name.toLowerCase())}</a>.</p>
     </div>
-${indent(grid(g.items, data, { level: 3, serviceLink: false }), '    ')}
+${indent(carousel(g.items, g.svc.sectionTitle, { showText: true }), '    ')}
   </div>
 </section>`).join('\n');
 }
