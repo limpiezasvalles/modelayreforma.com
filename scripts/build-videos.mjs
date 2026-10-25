@@ -207,7 +207,8 @@ export function build(root, { preview = false } = {}) {
   if (idx >= 0 && videosPageIsGenerated) jobs.splice(idx, 1);
   if (active) {
     let t = fs.readFileSync(templatePath, 'utf8');
-    t = t.replaceAll('{{OG_IMAGE}}', `${site}/${live[0].thumbnail}`).replace('<!doctype html>', `<!DOCTYPE html>\n${GENERATED}`);
+    // social-card image: the site's landscape photo (vertical thumbnails get cropped badly in shares)
+    t = t.replaceAll('{{OG_IMAGE}}', `${site}/images/copenhaguen-277-07.webp`).replace('<!doctype html>', `<!DOCTYPE html>\n${GENERATED}`);
     jobs.push({ rel: 'videos.html', text: t, generated: true });
   } else if (videosPageIsGenerated) {
     out.set('videos.html', null);
