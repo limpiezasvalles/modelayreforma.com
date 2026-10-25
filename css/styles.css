@@ -16,7 +16,7 @@
   /* Neutrals */
   --color-dark: #2D2D2D;
   --color-body: #555555;
-  --color-muted: #888888;
+  --color-muted: #6B6B6B;
   --color-border: #E2E5EA;
   --color-light: #F7F8FA;
   --color-white: #FFFFFF;
@@ -1270,6 +1270,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: var(--space-6);
   font-size: var(--font-size-sm);
   color: var(--color-muted);
+}
+
+.breadcrumb a,
+.section--legal p a,
+.section--legal li a {
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .content-title { margin: var(--space-12) 0 var(--space-6); }
