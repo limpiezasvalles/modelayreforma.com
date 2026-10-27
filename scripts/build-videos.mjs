@@ -54,7 +54,8 @@ function patch(text, name, content) {
 
 /* ---------- data ---------- */
 function loadVideos(data, preview) {
-  const list = data.videos.map((v, i) => ({ ...v }));
+  // "hidden": true keeps the entry in data/videos.json but removes it from the whole site
+  const list = data.videos.filter((v) => !v.hidden).map((v) => ({ ...v }));
   if (preview) {
     list.forEach((v, i) => { v.youtubeId = `PREVIEW${String(i).padStart(4, '0')}`; v.uploadDate = '2026-01-01'; });
   }

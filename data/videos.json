@@ -1,5 +1,5 @@
 {
-  "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Videos stay hidden until \"published\" is true; only videos with a youtubeId and uploadDate are rendered.",
+  "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Videos stay hidden until \"published\" is true; only videos with a youtubeId and uploadDate are rendered. A video with \"hidden\": true stays in this file but is not rendered anywhere.",
   "published": true,
   "siteUrl": "https://modelayreforma.com",
   "services": {
@@ -43,6 +43,7 @@
       },
       "service": "integrales",
       "featured": true,
+      "hidden": true,
       "transcript": ""
     },
     {
