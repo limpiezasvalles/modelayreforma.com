@@ -64,3 +64,10 @@ modela_web/_originales_backup/
 .agents/
 .claude/
 skills-lock.json
+
+# === CONTEXTO DE AGENTES (no publicar: GitHub Pages sirve todo el repo) ===
+CLAUDE.md
+PRODUCT.md
+DESIGN.md
+.impeccable/
+.taste-skill/

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-type="service">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,7 +13,7 @@
     style-src 'self';
     font-src 'self';
     img-src 'self' data:;
-    frame-src https://www.google.com/maps/ https://www.youtube-nocookie.com/embed/;
+    frame-src https://www.google.com/maps/ https://www.instagram.com/reel/;
     connect-src 'self' https://formspree.io;
     base-uri 'self';
     form-action https://formspree.io;
@@ -21,17 +21,19 @@
 
   <!-- SEO META -->
   <title>Reformas en Sabadell | Modela y Reforma · Cocinas y Baños</title>
-  <meta name="description" content="Reformas integrales de cocinas y baños en Sabadell y el Vallès Occidental. Diseño 3D y presupuesto sin compromiso. Equipo con más de 5 años de experiencia.">
-  <meta name="keywords" content="reformas Sabadell, reformas integrales Vallès Occidental, reforma cocina Sabadell, reforma baño Sabadell, empresa reformas Terrassa, diseño 3D reformas, albañilería Sabadell">
+  <meta name="description" content="Reformas integrales de cocinas y baños en Sabadell y el Vallès Occidental. Equipo con más de 5 años de experiencia. Pide presupuesto sin compromiso.">
   <meta name="author" content="Modela y Reforma">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a3a6b">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
   <link rel="canonical" href="https://modelayreforma.com/">
 
   <!-- OPEN GRAPH -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://modelayreforma.com/">
   <meta property="og:title" content="Modela y Reforma | Reformas integrales en Sabadell">
-  <meta property="og:description" content="Empresa de reformas integrales en Sabadell y el Vallès Occidental. Cocinas, baños, suelos, diseño 3D. Equipo con más de 5 años de experiencia.">
+  <meta property="og:description" content="Reformas de cocinas, baños y viviendas completas en Sabadell y el Vallès Occidental. Equipo con más de 5 años de experiencia.">
   <meta property="og:image" content="https://modelayreforma.com/images/copenhaguen-277-07.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Modela y Reforma">
@@ -39,14 +41,14 @@
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Modela y Reforma | Reformas integrales en Sabadell">
-  <meta name="twitter:description" content="Empresa de reformas integrales en Sabadell y el Vallès Occidental. Equipo con más de 5 años de experiencia.">
+  <meta name="twitter:description" content="Reformas de cocinas, baños y viviendas completas en Sabadell y el Vallès Occidental. Equipo con más de 5 años de experiencia.">
   <meta name="twitter:image" content="https://modelayreforma.com/images/copenhaguen-277-07.webp">
 
   <!-- FONT (self-hosted) -->
   <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/fraunces-latin.woff2" as="font" type="font/woff2" crossorigin>
 
-  <!-- PRELOAD CRITICAL -->
-  <link rel="preload" as="style" href="css/styles.css">
+  <!-- LCP IMAGE -->
   <link rel="preload" as="image" href="images/IMG_0057.webp" fetchpriority="high">
 
   <!-- STYLES -->
@@ -92,9 +94,11 @@
         "@type": "OpeningHoursSpecification",
         "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
         "opens": "08:00",
-        "closes": "20:00"
+        "closes": "17:30"
       }
     ],
+    "sameAs": ["https://www.instagram.com/modelayreforma/", "https://share.google/HfESZU33AaqXhA6Zc"],
+    "hasMap": "https://share.google/HfESZU33AaqXhA6Zc",
     "priceRange": "€€",
     "hasOfferCatalog": {
       "@type": "OfferCatalog",
@@ -127,14 +131,6 @@
       },
       {
         "@type": "Question",
-        "name": "¿Cuánto tiempo tarda una reforma de baño?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Una reforma de baño completa suele tardar entre 1 y 2 semanas, según el alcance y los acabados. Antes de empezar la obra te facilitamos un calendario con la fecha de entrega prevista."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "¿Trabajáis en toda la provincia de Barcelona?",
         "acceptedAnswer": {
           "@type": "Answer",
@@ -146,15 +142,7 @@
         "name": "¿Hacéis presupuesto sin compromiso?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso, junto con el diseño 3D de tu proyecto. Tú decides con total libertad."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué garantía tienen las reformas?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Todas nuestras reformas incluyen garantía sobre los trabajos realizados y los materiales instalados. Trabajamos con contrato y presupuesto cerrado, sin partidas ocultas ni sorpresas."
+          "text": "Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso. Tú decides con total libertad."
         }
       },
       {
@@ -163,14 +151,6 @@
         "acceptedAnswer": {
           "@type": "Answer",
           "text": "En muchos casos sí, especialmente en reformas parciales o ejecutadas por fases. Planificamos la obra para minimizar las molestias y, cuando hay más de un baño, procuramos dejar siempre uno operativo."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Incluye el diseño 3D en el presupuesto?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí, el diseño 3D va incluido en el presupuesto. Así puedes ver el resultado final de tu reforma y hacer todos los cambios que quieras antes de iniciar la obra."
         }
       },
       {
@@ -189,12 +169,11 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Reforma integral de piso en Sabadell: del derribo al resultado",
-      "description": "Reforma integral de un piso en Sabadell, del derribo al resultado final. El vídeo muestra cómo era la vivienda antes de la obra y cómo quedó. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnailUrl": "https://modelayreforma.com/images/videos/reforma-integral-piso-antes-despues.webp",
-      "uploadDate": "2026-10-25",
-      "duration": "PT1M42S",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/mWLYtcfAShw",
+      "name": "Reformas en Sabadell y el Vallès Occidental: del derribo al resultado",
+      "description": "Reel de Modela y Reforma sobre una reforma en Sabadell y el Vallès Occidental, del derribo al resultado.",
+      "thumbnailUrl": "https://modelayreforma.com/images/instagram/del-derribo-al-resultado.webp",
+      "uploadDate": "2026-11-02",
+      "embedUrl": "https://www.instagram.com/reel/DfP8M5MuJK8/embed/",
       "publisher": {
         "@type": "Organization",
         "name": "Modela y Reforma",
@@ -206,12 +185,11 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Reforma integral en Sabadell: obra y resultado final",
-      "description": "Reforma integral de una vivienda en Sabadell, desde la obra en marcha hasta el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnailUrl": "https://modelayreforma.com/images/videos/reforma-integral-piso-obra-resultado.webp",
-      "uploadDate": "2026-10-25",
-      "duration": "PT1M1S",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/78oxbNa0qCo",
+      "name": "Reforma de cocinas en Sabadell y el Vallès Occidental: así quedan",
+      "description": "Reel de Modela y Reforma con una cocina reformada en Sabadell y el Vallès Occidental.",
+      "thumbnailUrl": "https://modelayreforma.com/images/instagram/reforma-de-cocinas-asi-quedan.webp",
+      "uploadDate": "2026-11-03",
+      "embedUrl": "https://www.instagram.com/reel/DfSe_V4uku8/embed/",
       "publisher": {
         "@type": "Organization",
         "name": "Modela y Reforma",
@@ -223,12 +201,11 @@
     {
       "@context": "https://schema.org",
       "@type": "VideoObject",
-      "name": "Vivienda reformada en Sabadell: recorrido del resultado",
-      "description": "Recorrido por una vivienda reformada en Sabadell, una vez terminada la obra. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnailUrl": "https://modelayreforma.com/images/videos/vivienda-reformada-recorrido.webp",
-      "uploadDate": "2026-10-25",
-      "duration": "PT1M22S",
-      "embedUrl": "https://www.youtube-nocookie.com/embed/SKkP6xIVUWU",
+      "name": "Reforma de baños en Sabadell y el Vallès Occidental: así quedan",
+      "description": "Reel de Modela y Reforma con un baño reformado en Sabadell y el Vallès Occidental.",
+      "thumbnailUrl": "https://modelayreforma.com/images/instagram/reforma-de-banos-asi-quedan.webp",
+      "uploadDate": "2026-11-04",
+      "embedUrl": "https://www.instagram.com/reel/DfVDlGSutrE/embed/",
       "publisher": {
         "@type": "Organization",
         "name": "Modela y Reforma",
@@ -240,14 +217,15 @@
 </head>
 
 <body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ============================================================
-       NAVIGATION
+       NAVEGACIÓN
        ============================================================ -->
-  <nav class="nav" id="main-nav" role="navigation" aria-label="Menú principal">
+  <nav class="nav" id="main-nav" aria-label="Menú principal">
     <div class="nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Modela y Reforma - Inicio">
-        <img src="images/Logo modela.webp" alt="Modela y Reforma - Tu empresa de reformas" width="180" height="50">
+        <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma - Tu empresa de reformas" width="112" height="56">
       </a>
 
       <ul class="nav__links" role="list">
@@ -262,6 +240,10 @@
         <li><a class="nav__link" href="#contacto">Contacto</a></li>
       </ul>
 
+      <a class="nav__tel" href="tel:+34680917536">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        680 917 536
+      </a>
       <a class="nav__cta" href="#contacto">Pide presupuesto</a>
 
       <button type="button" class="nav__toggle" id="nav-toggle"
@@ -271,7 +253,7 @@
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
+  <!-- MENÚ MÓVIL -->
   <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
     <nav aria-label="Menú móvil">
       <ul class="nav__mobile-links" role="list">
@@ -285,843 +267,346 @@
         <li><a class="nav__mobile-link" href="#proceso">Proceso</a></li>
         <li><a class="nav__mobile-link" href="#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn--primary btn--block" href="#contacto">Pide presupuesto</a>
+      <a class="btn btn--white btn--lg btn--block" href="#contacto">Pide presupuesto</a>
     </nav>
   </div>
 
-  <main>
+  <main id="contenido">
 
     <!-- ============================================================
          HERO
          ============================================================ -->
-    <section class="hero" id="inicio" aria-label="Presentación">
-      <div class="hero__bg">
-        <img src="images/IMG_0057.webp"
-             alt="Salón moderno con panel decorativo de lamas de madera y mueble de TV - Modela y Reforma"
-             width="1920" height="1080" fetchpriority="high">
-        <div class="hero__overlay"></div>
-      </div>
-      <div class="container hero__content">
-        <span class="hero__label" data-animate="fade-down">Tu empresa de reformas en el Vallès</span>
-        <h1 class="hero__title" data-animate="fade-up">
-          Reformas integrales en Sabadell<br>
-          <span class="hero__title--accent">Transformamos tu hogar en el espacio que mereces</span>
-        </h1>
-        <p class="hero__desc" data-animate="fade-up" data-animate-delay="100">
-          Reformas integrales de cocinas, baños y viviendas en Sabadell y el Vallès Occidental.
-          Diseño 3D incluido. Un equipo con más de 5 años de experiencia avala nuestro trabajo.
-        </p>
-        <div class="hero__actions" data-animate="fade-up" data-animate-delay="200">
-          <a class="btn btn--primary btn--lg" href="#contacto">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-            Pide presupuesto gratis
-          </a>
-          <a class="btn btn--outline-white btn--lg" href="#proyectos">
-            Ver proyectos
-          </a>
+    <section class="hero" id="inicio" aria-labelledby="hero-title" data-enter>
+      <div class="hero__text">
+        <div class="hero__inner">
+          <h1 class="hero__title" id="hero-title">Reformas de cocinas, baños y viviendas completas en Sabadell</h1>
+          <p class="hero__lead">Un solo equipo para la obra, las instalaciones y los acabados. Y diseño 3D para ver cómo quedará tu reforma antes de empezar.</p>
+          <div class="hero__actions">
+            <a class="btn btn--white btn--lg" href="#contacto">Pide presupuesto</a>
+            <a class="btn btn--outline-white btn--lg" href="tel:+34680917536">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+              Llama al 680 917 536
+            </a>
+          </div>
+          <p class="hero__fact">Equipo con más de 5 años de experiencia en reformas.</p>
         </div>
       </div>
-      <div class="hero__scroll" aria-hidden="true">
-        <span>Scroll</span>
-        <div class="hero__scroll-line"></div>
+      <div class="hero__media">
+        <figure>
+          <img src="images/IMG_0057.webp"
+               alt="Salón reformado con panel de lamas de madera y mueble de televisión suspendido"
+               width="810" height="1080" fetchpriority="high">
+        </figure>
+        <figure>
+          <img src="images/bano-madera-marmol-01.webp"
+               alt="Baño reformado con revestimiento de madera, mármol, espejo redondo con luz y ducha negra"
+               width="1086" height="1448">
+        </figure>
       </div>
     </section>
 
     <!-- ============================================================
-         TRUST STATS
-         ============================================================ -->
-    <section class="stats" aria-label="Cifras destacadas">
-      <div class="container">
-        <div class="stats__grid">
-          <div class="stats__item" data-animate="fade-up">
-            <span class="stats__number" data-count="5">0</span><span class="stats__plus">+</span>
-            <span class="stats__label">Años de experiencia del equipo</span>
-          </div>
-          <div class="stats__item" data-animate="fade-up" data-animate-delay="100">
-            <span class="stats__number" data-count="150">0</span><span class="stats__plus">+</span>
-            <span class="stats__label">Proyectos completados</span>
-          </div>
-          <div class="stats__item" data-animate="fade-up" data-animate-delay="200">
-            <span class="stats__number" data-count="98">0</span><span class="stats__plus">%</span>
-            <span class="stats__label">Clientes satisfechos</span>
-          </div>
-          <div class="stats__item" data-animate="fade-up" data-animate-delay="300">
-            <span class="stats__number" data-count="6">0</span>
-            <span class="stats__label">Servicios profesionales</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         ABOUT / NOSOTROS
+         SOBRE NOSOTROS
          ============================================================ -->
     <section class="section section--white" id="nosotros" aria-labelledby="nosotros-title">
       <div class="container">
         <div class="about__grid">
-          <div class="about__image" data-animate="fade-right">
+          <div class="about__image">
             <img src="images/IMG_0065.webp"
-                 alt="Cocina moderna con muebles blancos, encimera de mármol y grifo negro - Modela y Reforma"
-                 width="600" height="400" loading="lazy">
-            <div class="about__image-badge">
-              <span class="about__badge-number">5+</span>
-              <span class="about__badge-text">años de experiencia del equipo</span>
-            </div>
+                 alt="Cocina reformada con muebles blancos, encimera de piedra clara y grifo negro"
+                 width="810" height="1080" loading="lazy" decoding="async">
           </div>
-          <div class="about__content" data-animate="fade-left">
-            <span class="section__label">Sobre nosotros</span>
-            <h2 class="section__title" id="nosotros-title">
-              Reformas con diseño,<br>calidad y compromiso
-            </h2>
+          <div class="about__content">
+            <h2 class="section__title" id="nosotros-title">El equipo de Modela y Reforma</h2>
             <p class="about__text">
-              En <strong>Modela y Reforma</strong> contamos con un equipo con más de 5 años de experiencia transformando hogares
-              en el Vallès Occidental. Somos especialistas en reformas integrales de cocinas, baños
-              y viviendas completas, siempre con un enfoque en el diseño moderno y los acabados de
-              primera calidad.
+              En <strong>Modela y Reforma</strong> reformamos cocinas, baños y viviendas completas en Sabadell
+              y el Vallès Occidental. El equipo suma más de 5 años de experiencia en obra y trabaja con diseño
+              moderno y acabados cuidados.
             </p>
             <p class="about__text">
-              Nuestro equipo de profesionales te acompaña en todo el proceso: desde el diseño 3D
-              de tu proyecto hasta la entrega final, asegurando que cada detalle quede perfecto.
+              Te acompañamos en todo el proceso, desde el diseño 3D de tu proyecto hasta la entrega final,
+              para que cada detalle quede como lo imaginaste. Más de 150 proyectos completados y un 98 % de
+              clientes satisfechos respaldan nuestro trabajo.
             </p>
-            <ul class="about__features">
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Presupuesto sin compromiso
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Diseño 3D incluido
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Materiales de primera calidad
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Cumplimiento de plazos
-              </li>
-            </ul>
-            <a class="btn btn--primary" href="#contacto">Conócenos mejor</a>
+            <a class="btn btn--primary" href="#contacto">Pide presupuesto</a>
           </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         SERVICES / SERVICIOS
+         SERVICIOS
          ============================================================ -->
     <section class="section section--light" id="servicios" aria-labelledby="servicios-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Nuestros servicios</span>
-          <h2 class="section__title" id="servicios-title">Todo lo que necesitas para tu reforma</h2>
-          <p class="section__subtitle">
-            Ofrecemos un servicio integral para que no tengas que preocuparte de nada.
-            Desde el diseño hasta la ejecución, todo en una sola empresa.
-          </p>
+        <div class="section__header">
+          <h2 class="section__title" id="servicios-title">Servicios de reforma</h2>
+          <p class="section__subtitle">Del diseño en 3D a la entrega de llaves: la obra, las instalaciones y los acabados los coordinamos nosotros.</p>
         </div>
 
-        <div class="services__grid">
-
-          <!-- Service 1: Reformas integrales -->
-          <article class="service-card" data-animate="fade-up">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+        <div class="services">
+          <article class="service service--wide service--stretch">
+            <div class="service__media">
+              <img src="images/copenhaguen-277-07.webp" alt="Vivienda reformada con cocina lineal blanca e iluminación LED" width="1200" height="800" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Reformas integrales</h3>
-            <p class="service-card__desc">
-              Transformación completa de tu vivienda: derribos, tabiquería, instalaciones,
-              acabados y decoración. Nos encargamos de todo el proceso.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para reformas integrales">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Reformas integrales</h3>
+              <p class="service__text">Renovamos la vivienda completa: derribos, tabiquería, instalaciones, acabados y decoración. Un único equipo para todo el proceso.</p>
+              <div class="service__link"><a class="link-arrow" href="reformas-integrales-sabadell.html">Ver reformas integrales
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
 
-          <!-- Service 2: Cocinas -->
-          <article class="service-card" data-animate="fade-up" data-animate-delay="100">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="15" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+          <article class="service service--narrow service--stretch">
+            <div class="service__media">
+              <img src="images/cocina-madera-negro-01.webp" alt="Cocina reformada con muebles de madera, zona negra y electrodomésticos integrados" width="1080" height="1080" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Reforma de cocinas</h3>
-            <p class="service-card__desc">
-              Cocinas modernas y funcionales. Diseñamos y ejecutamos tu cocina ideal
-              con los mejores materiales y electrodomésticos integrados.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para reforma de cocinas">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Reforma de cocinas</h3>
+              <p class="service__text">Cocinas modernas y funcionales: las diseñamos y ejecutamos con los materiales y electrodomésticos integrados que elijas.</p>
+              <div class="service__link"><a class="link-arrow" href="reforma-de-cocinas-sabadell.html">Ver reforma de cocinas
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
 
-          <!-- Service 3: Baños -->
-          <article class="service-card" data-animate="fade-up" data-animate-delay="200">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h16a1 1 0 0 1 1 1v3a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4v-3a1 1 0 0 1 1-1z"/><path d="M6 12V5a2 2 0 0 1 2-2h3v2.25a.75.75 0 0 0 1.5 0V3H15a2 2 0 0 1 2 2"/><line x1="6" y1="20" x2="6" y2="22"/><line x1="18" y1="20" x2="18" y2="22"/></svg>
+          <article class="service service--narrow service--stretch">
+            <div class="service__media">
+              <img src="images/bano-marmol-oro-03.webp" alt="Baño reformado con ducha de cristal, revestimiento de mármol y nicho iluminado" width="1080" height="1080" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Reforma de baños</h3>
-            <p class="service-card__desc">
-              Baños modernos con iluminación LED, platos de ducha a ras de suelo,
-              muebles suspendidos y acabados premium.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para reforma de baños">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Reforma de baños</h3>
+              <p class="service__text">Baños con iluminación LED, platos de ducha a ras de suelo, muebles suspendidos y acabados cuidados.</p>
+              <div class="service__link"><a class="link-arrow" href="reforma-de-banos-sabadell.html">Ver reforma de baños
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
 
-          <!-- Service 4: Diseño 3D -->
-          <article class="service-card" data-animate="fade-up">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+          <article class="service service--wide service--stretch">
+            <div class="service__media">
+              <img src="images/IMG_0086.webp" alt="Render 3D de una cocina blanca con zona de comedor" width="1200" height="653" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Diseño 3D</h3>
-            <p class="service-card__desc">
-              Visualiza tu reforma antes de empezar. Creamos renders 3D realistas
-              para que veas exactamente cómo quedará tu espacio.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para diseño 3D">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Diseño 3D</h3>
+              <p class="service__text">Visualiza tu reforma antes de empezar. Creamos renders 3D realistas para que veas cómo quedará tu espacio.</p>
+              <div class="service__link"><a class="link-arrow" href="diseno-3d-reformas-sabadell.html">Ver diseño 3D
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
 
-          <!-- Service 5: Suelos -->
-          <article class="service-card" data-animate="fade-up" data-animate-delay="100">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/><line x1="9" y1="3" x2="9" y2="9"/><line x1="15" y1="9" x2="15" y2="15"/><line x1="9" y1="15" x2="9" y2="21"/></svg>
+          <article class="service service--half service--stretch">
+            <div class="service__media service__media--floor">
+              <img src="images/bano-marmol-oro-02.webp" alt="Suelo de tarima de madera y mueble de baño de lamas blancas" width="1080" height="1080" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Suelos y pavimentos</h3>
-            <p class="service-card__desc">
-              Instalación de todo tipo de pavimentos: porcelánico, tarima flotante,
-              vinílico, microcemento y más. Acabados impecables.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para suelos y pavimentos">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Suelos y pavimentos</h3>
+              <p class="service__text">Instalación de todo tipo de pavimentos: porcelánico, tarima flotante, vinílico, microcemento y más.</p>
+              <div class="service__link"><a class="link-arrow" href="#contacto">Pedir presupuesto de suelos
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
 
-          <!-- Service 6: Albañilería -->
-          <article class="service-card" data-animate="fade-up" data-animate-delay="200">
-            <div class="service-card__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+          <article class="service service--half service--stretch">
+            <div class="service__media service__media--obra">
+              <img src="images/videos/derribo-bano-antes-reforma.webp" alt="Baño en obra durante el derribo, antes de la reforma" width="540" height="960" loading="lazy" decoding="async">
             </div>
-            <h3 class="service-card__title">Albañilería y obra</h3>
-            <p class="service-card__desc">
-              Trabajos de albañilería, fontanería, electricidad e instalaciones.
-              Todo el equipo profesional que tu reforma necesita.
-            </p>
-            <a class="service-card__link" href="#contacto" aria-label="Solicitar presupuesto para albañilería">
-              Solicitar presupuesto
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-            </a>
+            <div class="service__body">
+              <h3 class="service__title">Albañilería y obra</h3>
+              <p class="service__text">Albañilería, fontanería, electricidad e instalaciones: el trabajo de obra que tu reforma necesita.</p>
+              <div class="service__link"><a class="link-arrow" href="#contacto">Pedir presupuesto de obra
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a></div>
+            </div>
           </article>
-
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         PROJECTS / GALLERY
+         PROYECTOS
          ============================================================ -->
     <section class="section section--white" id="proyectos" aria-labelledby="proyectos-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Nuestros proyectos</span>
-          <h2 class="section__title" id="proyectos-title">Reformas que hablan por sí solas</h2>
-          <p class="section__subtitle">
-            Cada proyecto es único. Descubre cómo hemos transformado hogares en toda la comarca.
-          </p>
+        <div class="gallery__top">
+          <div class="section__header">
+            <h2 class="section__title" id="proyectos-title">Proyectos de reforma realizados</h2>
+          </div>
+          <div class="gallery__filters" role="tablist" aria-label="Filtrar proyectos">
+            <button type="button" class="gallery__filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
+            <button type="button" class="gallery__filter" data-filter="cocinas" role="tab" aria-selected="false">Cocinas</button>
+            <button type="button" class="gallery__filter" data-filter="banos" role="tab" aria-selected="false">Baños</button>
+            <button type="button" class="gallery__filter" data-filter="integrales" role="tab" aria-selected="false">Integrales</button>
+            <button type="button" class="gallery__filter" data-filter="diseno" role="tab" aria-selected="false">Diseño 3D</button>
+          </div>
         </div>
 
-        <!-- Gallery filters -->
-        <div class="gallery__filters" data-animate="fade-up" role="tablist" aria-label="Filtrar proyectos">
-          <button type="button" class="gallery__filter is-active" data-filter="all" role="tab" aria-selected="true">Todos</button>
-          <button type="button" class="gallery__filter" data-filter="cocinas" role="tab" aria-selected="false">Cocinas</button>
-          <button type="button" class="gallery__filter" data-filter="banos" role="tab" aria-selected="false">Baños</button>
-          <button type="button" class="gallery__filter" data-filter="integrales" role="tab" aria-selected="false">Integrales</button>
-          <button type="button" class="gallery__filter" data-filter="diseno" role="tab" aria-selected="false">Diseño 3D</button>
-        </div>
-
-        <!-- Gallery grid -->
         <div class="gallery__grid" id="gallery-grid">
-
-          <!-- COCINAS -->
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/IMG_0065.webp"
-                 alt="Cocina moderna con muebles blancos, encimera de mármol y grifo negro mate"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="integrales">
+            <img src="images/IMG_0057.webp" alt="Salón con panel decorativo de lamas de madera y mueble de TV a medida" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0066.webp"
-                 alt="Cocina con muebles superiores de madera y encimera de mármol blanco"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-madera-marmol-01.webp" alt="Reforma de baño en el Vallès con pared de lamas de madera, espejo redondo LED, ducha de mármol y grifería negra" width="1086" height="1448" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0067.webp"
-                 alt="Cocina con muebles de madera, horno y microondas integrados Teka"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-07.webp" alt="Reforma integral de cocina lineal blanca con iluminación LED y grifo extraíble" width="1200" height="800" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/IMG_0068.webp"
-                 alt="Cocina con muebles superiores de madera y doble fregadero negro integrado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-gris-espejos-01.webp" alt="Reforma integral de baño en el Vallès con espejo redondo LED, mueble de madera, ducha de obra y estantería de madera iluminada" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0070.webp"
-                 alt="Cocina con encimera de piedra natural, muebles superiores de madera y fregadero integrado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/cocina-madera-negro-01.webp" alt="Reforma de cocina en el Vallès con muebles de madera y frente negro mate, electrodomésticos Bosch y encimera de mármol" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0071.webp"
-                 alt="Detalle de cocina con placa de inducción y encimera de piedra natural"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-marmol-oro-01.webp" alt="Reforma de baño en Sabadell con revestimiento de mármol blanco, ducha a ras de suelo con grifería dorada e iluminación LED" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- BAÑOS -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/IMG_0055.webp"
-                 alt="Baño con paredes de mármol, ducha a ras de suelo con iluminación LED y suelo de madera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-03.webp" alt="Reforma de cocina blanca en línea con salida a terraza y suelo de tarima en el Vallès" width="800" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0058.webp"
-                 alt="Baño moderno con espejo redondo LED retroiluminado y mueble suspendido de madera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-marmol-oro-03.webp" alt="Ducha a ras de suelo con revestimiento de mármol, columna de ducha dorada y hornacina iluminada" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0063.webp"
-                 alt="Baño con mampara negra, espejo LED redondo, mueble de madera y lavabo sobre encimera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/cocina-u-vistas-01.webp" alt="Reforma de cocina en U en Sabadell con muebles de madera y negro, encimera de mármol y suelo porcelánico gris" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/IMG_0059.webp"
-                 alt="Baño completo con espejo LED, mueble suspendido, ducha con columna y WC"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-gris-espejos-03.webp" alt="Ducha de obra con mampara, grifería negra mate, hornacinas iluminadas y estantería de madera a medida" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0061.webp"
-                 alt="Baño con revestimiento de mármol blanco, ducha a ras de suelo y hornacina iluminada"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/cocina-cuarcita-01.webp" alt="Reforma de cocina blanca en Sabadell con encimera de cuarcita, placa de inducción negra y campana de acero inoxidable" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/WhatsApp Image 2026-04-11 at 21.45.01.webp"
-                 alt="Ducha con revestimiento de mármol veteado y espejo LED ovalado retroiluminado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0065.webp" alt="Cocina moderna con muebles blancos, encimera de mármol y grifo negro mate" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/WhatsApp Image 2026-04-11 at 21.45.17.webp"
-                 alt="Baño con grifería negra mate, lavabo sobre encimera de madera y espejo circular"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0066.webp" alt="Cocina con muebles superiores de madera y encimera de mármol blanco" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0062.webp"
-                 alt="Baño con ducha de obra, columna de ducha cromada y toallero radiador"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0067.webp" alt="Cocina con muebles de madera, horno y microondas integrados Teka" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0064.webp"
-                 alt="Baño con suelo de madera, mueble suspendido y azulejo texturizado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0068.webp" alt="Cocina con muebles superiores de madera y doble fregadero negro integrado" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- INTEGRALES -->
-          <div class="gallery__item" data-category="integrales" data-animate="fade-up">
-            <img src="images/IMG_0057.webp"
-                 alt="Salón con panel decorativo de lamas de madera y mueble de TV a medida"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma integral</span>
-              <span class="gallery__category">Salón</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0070.webp" alt="Cocina con encimera de piedra natural, muebles superiores de madera y fregadero integrado" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="integrales" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0060.webp"
-                 alt="Pasillo reformado con puertas lacadas blancas y suelo de madera natural"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma integral</span>
-              <span class="gallery__category">Pasillo</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/IMG_0071.webp" alt="Detalle de cocina con placa de inducción y encimera de piedra natural" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="integrales" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0056.webp"
-                 alt="Zona de paso con barra de madera, armario empotrado y suelo de madera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma integral</span>
-              <span class="gallery__category">Espacio</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0055.webp" alt="Baño con paredes de mármol, ducha a ras de suelo con iluminación LED y suelo de madera" width="607" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="integrales" data-animate="fade-up">
-            <img src="images/NOSTRALLAR/53.webp"
-                 alt="Salón reformado con suelo de madera, terraza y mueble de TV"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma integral</span>
-              <span class="gallery__category">Salón</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0058.webp" alt="Baño moderno con espejo redondo LED retroiluminado y mueble suspendido de madera" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- DISEÑO 3D -->
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up">
-            <img src="images/IMG_0086.webp"
-                 alt="Diseño 3D de cocina en L con electrodomésticos integrados"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0063.webp" alt="Baño con mampara negra, espejo LED redondo, mueble de madera y lavabo sobre encimera" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/IMG_0096.webp"
-                 alt="Diseño 3D de cocina con vista frontal y electrodomésticos"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0059.webp" alt="Baño completo con espejo LED, mueble suspendido, ducha con columna y WC" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/IMG_0097.webp"
-                 alt="Diseño 3D de cocina en perspectiva con distribución en L"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0061.webp" alt="Baño con revestimiento de mármol blanco, ducha a ras de suelo y hornacina iluminada" width="607" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up">
-            <img src="images/PHOTO-2025-02-10-16-36-07.webp"
-                 alt="Diseño 3D de cocina con electrodomésticos integrados - vista frontal"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/WhatsApp Image 2026-04-11 at 21.45.01.webp" alt="Ducha con revestimiento de mármol veteado y espejo LED ovalado retroiluminado" width="360" height="640" loading="lazy" decoding="async">
           </div>
-
-          <!-- ============================================================
-               NUEVOS PROYECTOS (añadidos vía SKILL-gallery-update.md)
-               ============================================================ -->
-
-          <!-- Proyecto Copenhague (repartido en las categorías existentes: cocinas, baños e integrales) -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/copenhaguen-277-01.webp"
-                 alt="Reforma de baño en Sabadell con ducha de mampara corredera negra, espejo redondo y mueble de madera con lavabo negro"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/WhatsApp Image 2026-04-11 at 21.45.17.webp" alt="Baño con grifería negra mate, lavabo sobre encimera de madera y espejo circular" width="800" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/copenhaguen-277-02.webp"
-                 alt="Baño reformado con columna de ducha negra mate y mampara corredera de cristal"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0062.webp" alt="Baño con ducha de obra, columna de ducha cromada y toallero radiador" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/copenhaguen-277-03.webp"
-                 alt="Reforma de cocina blanca en línea con salida a terraza y suelo de tarima en el Vallès"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/IMG_0064.webp" alt="Baño con suelo de madera, mueble suspendido y azulejo texturizado" width="960" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/copenhaguen-277-04.webp"
-                 alt="Detalle de cocina moderna sin tiradores con frente porcelánico y encimera de piedra"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="integrales">
+            <img src="images/IMG_0060.webp" alt="Pasillo reformado con puertas lacadas blancas y suelo de madera natural" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/copenhaguen-277-05.webp"
-                 alt="Cocina reformada con muebles altos de madera, campana de acero inoxidable y fregadero bajo encimera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="integrales">
+            <img src="images/IMG_0056.webp" alt="Zona de paso con barra de madera, armario empotrado y suelo de madera" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/copenhaguen-277-06.webp"
-                 alt="Encimera de cocina con placa de inducción, frente porcelánico y fregadero integrado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="integrales">
+            <img src="images/NOSTRALLAR/53.webp" alt="Salón reformado con suelo de madera, terraza y mueble de TV" width="480" height="640" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/copenhaguen-277-07.webp"
-                 alt="Reforma integral de cocina lineal blanca con iluminación LED y grifo extraíble"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/IMG_0086.webp" alt="Diseño 3D de cocina en L con electrodomésticos integrados" width="1200" height="653" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/copenhaguen-277-08.webp"
-                 alt="Cocina con columna de horno y microondas Teka integrados y frigorífico de acero inoxidable"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/IMG_0096.webp" alt="Diseño 3D de cocina con vista frontal y electrodomésticos" width="1080" height="568" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/copenhaguen-285-01.webp"
-                 alt="Reforma de cocina abierta al salón con office, encimera blanca y placa de inducción"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/IMG_0097.webp" alt="Diseño 3D de cocina en perspectiva con distribución en L" width="1079" height="590" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="integrales" data-animate="fade-up">
-            <img src="images/copenhaguen-285-02.webp"
-                 alt="Pasillo reformado con suelo de parquet de roble y puertas lacadas en blanco"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma integral</span>
-              <span class="gallery__category">Pasillo</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/PHOTO-2025-02-10-16-36-07.webp" alt="Diseño 3D de cocina con electrodomésticos integrados - vista frontal" width="1200" height="778" loading="lazy" decoding="async">
           </div>
-
-          <!-- DISEÑOS 3D ADICIONALES -->
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/extra-01.webp"
-                 alt="Diseño 3D de cocina en L con campana decorativa y armarios a medida"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/copenhaguen-277-01.webp" alt="Reforma de baño en Sabadell con ducha de mampara corredera negra, espejo redondo y mueble de madera con lavabo negro" width="800" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/extra-02.webp"
-                 alt="Render 3D en planta de cocina con office y distribución optimizada"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/copenhaguen-277-02.webp" alt="Baño reformado con columna de ducha negra mate y mampara corredera de cristal" width="800" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up">
-            <img src="images/extra-03.webp"
-                 alt="Diseño 3D de cocina con placa de inducción, fregadero y campana central"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-04.webp" alt="Detalle de cocina moderna sin tiradores con frente porcelánico y encimera de piedra" width="1200" height="800" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/extra-04.webp"
-                 alt="Diseño 3D de zona de office con barra, taburetes y armario empotrado"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Office</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-05.webp" alt="Cocina reformada con muebles altos de madera, campana de acero inoxidable y fregadero bajo encimera" width="1200" height="800" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="diseno" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/extra-06.webp"
-                 alt="Plano técnico acotado de cocina para proyecto de reforma a medida"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Diseño 3D</span>
-              <span class="gallery__category">Plano</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-06.webp" alt="Encimera de cocina con placa de inducción, frente porcelánico y fregadero integrado" width="1200" height="800" loading="lazy" decoding="async">
           </div>
-
-          <!-- MÁS REFORMAS - COCINAS -->
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/extra-05.webp"
-                 alt="Reforma de cocina con muebles de madera de nogal y encimera de mármol blanco"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-277-08.webp" alt="Cocina con columna de horno y microondas Teka integrados y frigorífico de acero inoxidable" width="1200" height="800" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/extra-08.webp"
-                 alt="Reforma de cocina en L con muebles de madera y blanco, encimera clara y fregadero negro"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/copenhaguen-285-01.webp" alt="Reforma de cocina abierta al salón con office, encimera blanca y placa de inducción" width="675" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/extra-09.webp"
-                 alt="Cocina reformada con horno y microondas integrados, fregadero negro y campana de acero"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="integrales">
+            <img src="images/copenhaguen-285-02.webp" alt="Pasillo reformado con suelo de parquet de roble y puertas lacadas en blanco" width="675" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <!-- MÁS REFORMAS - BAÑOS -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/extra-07.webp"
-                 alt="Reforma de baño en blanco con plato de ducha a ras de suelo, mampara y espejo LED redondo"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/extra-01.webp" alt="Diseño 3D de cocina en L con campana decorativa y armarios a medida" width="1200" height="884" loading="lazy" decoding="async">
           </div>
-
-          <!-- ============================================================
-               PROYECTOS NUEVOS (jul. 2026) — añadidos vía SKILL-gallery-update.md
-               Agrupados por proyecto: cada bloque mantiene sus fotos juntas
-               ============================================================ -->
-
-          <!-- Proyecto: Cocina blanca con encimera de cuarcita -->
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/cocina-cuarcita-01.webp"
-                 alt="Reforma de cocina blanca en Sabadell con encimera de cuarcita, placa de inducción negra y campana de acero inoxidable"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/extra-02.webp" alt="Render 3D en planta de cocina con office y distribución optimizada" width="1200" height="630" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/cocina-cuarcita-02.webp"
-                 alt="Detalle de cocina con fregadero negro bajo encimera de cuarcita veteada y grifo extraíble negro mate"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/extra-03.webp" alt="Diseño 3D de cocina con placa de inducción, fregadero y campana central" width="1200" height="632" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Cocina de madera y frente negro mate -->
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/cocina-madera-negro-01.webp"
-                 alt="Reforma de cocina en el Vallès con muebles de madera y frente negro mate, electrodomésticos Bosch y encimera de mármol"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/extra-04.webp" alt="Diseño 3D de zona de office con barra, taburetes y armario empotrado" width="1200" height="631" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up">
-            <img src="images/cocina-madera-negro-02.webp"
-                 alt="Cocina reformada con columna de horno y microondas Bosch integrados, muebles de madera y frigorífico negro"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="diseno">
+            <img src="images/extra-06.webp" alt="Plano técnico acotado de cocina para proyecto de reforma a medida" width="864" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Cocina en U con vistas -->
-          <div class="gallery__item" data-category="cocinas" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/cocina-u-vistas-01.webp"
-                 alt="Reforma de cocina en U en Sabadell con muebles de madera y negro, encimera de mármol y suelo porcelánico gris"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de cocina</span>
-              <span class="gallery__category">Cocina</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/extra-05.webp" alt="Reforma de cocina con muebles de madera de nogal y encimera de mármol blanco" width="810" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Baño de mármol blanco con grifería dorada -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/bano-marmol-oro-01.webp"
-                 alt="Reforma de baño en Sabadell con revestimiento de mármol blanco, ducha a ras de suelo con grifería dorada e iluminación LED"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/extra-08.webp" alt="Reforma de cocina en L con muebles de madera y blanco, encimera clara y fregadero negro" width="1200" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/bano-marmol-oro-02.webp"
-                 alt="Baño reformado con mueble suspendido de líneas verticales, grifería dorada y revestimiento de mármol blanco"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/extra-09.webp" alt="Cocina reformada con horno y microondas integrados, fregadero negro y campana de acero" width="1200" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/bano-marmol-oro-03.webp"
-                 alt="Ducha a ras de suelo con revestimiento de mármol, columna de ducha dorada y hornacina iluminada"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/extra-07.webp" alt="Reforma de baño en blanco con plato de ducha a ras de suelo, mampara y espejo LED redondo" width="1200" height="1200" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Baño gris con espejos redondos y estanterías de madera -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/bano-gris-espejos-01.webp"
-                 alt="Reforma integral de baño en el Vallès con espejo redondo LED, mueble de madera, ducha de obra y estantería de madera iluminada"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/cocina-cuarcita-02.webp" alt="Detalle de cocina con fregadero negro bajo encimera de cuarcita veteada y grifo extraíble negro mate" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/bano-gris-espejos-03.webp"
-                 alt="Ducha de obra con mampara, grifería negra mate, hornacinas iluminadas y estantería de madera a medida"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="cocinas">
+            <img src="images/cocina-madera-negro-02.webp" alt="Cocina reformada con columna de horno y microondas Bosch integrados, muebles de madera y frigorífico negro" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="200">
-            <img src="images/bano-gris-espejos-04.webp"
-                 alt="Detalle de ducha con revestimiento de porcelánico gris, hornacinas con marco negro iluminadas y estantería de madera"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-marmol-oro-02.webp" alt="Baño reformado con mueble suspendido de líneas verticales, grifería dorada y revestimiento de mármol blanco" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Aseo con suelo hidráulico -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up">
-            <img src="images/aseo-hidraulico-01.webp"
-                 alt="Reforma de aseo en Sabadell con suelo hidráulico, mueble de madera, espejo LED y azulejo blanco de relieve"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de aseo</span>
-              <span class="gallery__category">Aseo</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/bano-gris-espejos-04.webp" alt="Detalle de ducha con revestimiento de porcelánico gris, hornacinas con marco negro iluminadas y estantería de madera" width="1080" height="1080" loading="lazy" decoding="async">
           </div>
-
-          <!-- Proyecto: Baño con pared de madera y ducha de mármol -->
-          <div class="gallery__item" data-category="banos" data-animate="fade-up" data-animate-delay="100">
-            <img src="images/bano-madera-marmol-01.webp"
-                 alt="Reforma de baño en el Vallès con pared de lamas de madera, espejo redondo LED, ducha de mármol y grifería negra"
-                 width="600" height="400" loading="lazy">
-            <div class="gallery__overlay">
-              <span class="gallery__project">Reforma de baño</span>
-              <span class="gallery__category">Baño</span>
-            </div>
+          <div class="gallery__item" data-category="banos">
+            <img src="images/aseo-hidraulico-01.webp" alt="Reforma de aseo en Sabadell con suelo hidráulico, mueble de madera, espejo LED y azulejo blanco de relieve" width="900" height="1200" loading="lazy" decoding="async">
           </div>
-
+        </div>
+        <div class="gallery__more" hidden>
+          <button type="button" class="btn btn--outline" id="gallery-more">Ver todos los proyectos</button>
         </div>
       </div>
     </section>
@@ -1129,8 +614,7 @@
     <!-- videos:home:start -->
     <section class="section section--light" id="videos" aria-labelledby="videos-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Vídeos</span>
+        <div class="section__header">
           <h2 class="section__title" id="videos-title">Nuestras reformas en vídeo</h2>
           <p class="section__subtitle">
             Obras reales en Sabadell, del derribo al resultado final.
@@ -1143,50 +627,50 @@
           <div class="video-carousel__viewport" role="region" aria-roledescription="carrusel" aria-label="Vídeos destacados de reformas en Sabadell" tabindex="0">
             <div class="video-carousel__track">
               <article class="video-card">
-                <div class="video-facade video-facade--ar-15-26" data-video-id="mWLYtcfAShw" data-video-title="Reforma integral de piso en Sabadell: del derribo al resultado">
-                  <img class="video-facade__thumb" src="images/videos/reforma-integral-piso-antes-despues.webp" alt="Miniatura del vídeo: Reforma integral de piso en Sabadell: del derribo al resultado" width="480" height="832" loading="lazy" decoding="async">
-                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Reforma integral de piso en Sabadell: del derribo al resultado">
+                <div class="video-facade video-facade--ar-9-16" data-video-id="DfP8M5MuJK8" data-video-title="Reformas en Sabadell y el Vallès Occidental: del derribo al resultado">
+                  <img class="video-facade__thumb" src="images/instagram/del-derribo-al-resultado.webp" alt="Miniatura del vídeo: baño con azulejos antiguos y el texto «¿Vas a reformar tu casa?»" width="540" height="960" loading="lazy" decoding="async">
+                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Reformas en Sabadell y el Vallès Occidental: del derribo al resultado">
                     <span class="video-facade__icon" aria-hidden="true">
                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 20 12 8 19 8 5"/></svg>
                     </span>
                   </button>
                 </div>
                 <div class="video-card__body">
-                  <h3 class="video-card__title">Reforma integral de piso en Sabadell: del derribo al resultado</h3>
+                  <h3 class="video-card__title">Reformas en Sabadell y el Vallès Occidental: del derribo al resultado</h3>
                   <p class="video-card__links">
-                    <a href="https://www.youtube.com/watch?v=mWLYtcfAShw" target="_blank" rel="noopener noreferrer">Ver en YouTube<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
+                    <a href="https://www.instagram.com/reel/DfP8M5MuJK8/" target="_blank" rel="noopener noreferrer">Ver en Instagram<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
                   </p>
                 </div>
               </article>
               <article class="video-card">
-                <div class="video-facade video-facade--ar-29-52" data-video-id="78oxbNa0qCo" data-video-title="Reforma integral en Sabadell: obra y resultado final">
-                  <img class="video-facade__thumb" src="images/videos/reforma-integral-piso-obra-resultado.webp" alt="Miniatura del vídeo: Reforma integral en Sabadell: obra y resultado final" width="464" height="832" loading="lazy" decoding="async">
-                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Reforma integral en Sabadell: obra y resultado final">
+                <div class="video-facade video-facade--ar-9-16" data-video-id="DfSe_V4uku8" data-video-title="Reforma de cocinas en Sabadell y el Vallès Occidental: así quedan">
+                  <img class="video-facade__thumb" src="images/instagram/reforma-de-cocinas-asi-quedan.webp" alt="Miniatura del vídeo: cocina en forma de L con muebles de madera y zona oscura, y el texto «¿Vas a reformar tu cocina?»" width="540" height="960" loading="lazy" decoding="async">
+                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Reforma de cocinas en Sabadell y el Vallès Occidental: así quedan">
                     <span class="video-facade__icon" aria-hidden="true">
                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 20 12 8 19 8 5"/></svg>
                     </span>
                   </button>
                 </div>
                 <div class="video-card__body">
-                  <h3 class="video-card__title">Reforma integral en Sabadell: obra y resultado final</h3>
+                  <h3 class="video-card__title">Reforma de cocinas en Sabadell y el Vallès Occidental: así quedan</h3>
                   <p class="video-card__links">
-                    <a href="https://www.youtube.com/watch?v=78oxbNa0qCo" target="_blank" rel="noopener noreferrer">Ver en YouTube<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
+                    <a href="https://www.instagram.com/reel/DfSe_V4uku8/" target="_blank" rel="noopener noreferrer">Ver en Instagram<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
                   </p>
                 </div>
               </article>
               <article class="video-card">
-                <div class="video-facade video-facade--ar-9-16" data-video-id="SKkP6xIVUWU" data-video-title="Vivienda reformada en Sabadell: recorrido del resultado">
-                  <img class="video-facade__thumb" src="images/videos/vivienda-reformada-recorrido.webp" alt="Miniatura del vídeo: Vivienda reformada en Sabadell: recorrido del resultado" width="540" height="960" loading="lazy" decoding="async">
-                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Vivienda reformada en Sabadell: recorrido del resultado">
+                <div class="video-facade video-facade--ar-9-16" data-video-id="DfVDlGSutrE" data-video-title="Reforma de baños en Sabadell y el Vallès Occidental: así quedan">
+                  <img class="video-facade__thumb" src="images/instagram/reforma-de-banos-asi-quedan.webp" alt="Miniatura del vídeo: baño con mampara de cristal, espejo redondo y mueble de madera, y el texto «¿Vas a reformar tu baño?»" width="540" height="960" loading="lazy" decoding="async">
+                  <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: Reforma de baños en Sabadell y el Vallès Occidental: así quedan">
                     <span class="video-facade__icon" aria-hidden="true">
                       <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><polygon points="8 5 20 12 8 19 8 5"/></svg>
                     </span>
                   </button>
                 </div>
                 <div class="video-card__body">
-                  <h3 class="video-card__title">Vivienda reformada en Sabadell: recorrido del resultado</h3>
+                  <h3 class="video-card__title">Reforma de baños en Sabadell y el Vallès Occidental: así quedan</h3>
                   <p class="video-card__links">
-                    <a href="https://www.youtube.com/watch?v=SKkP6xIVUWU" target="_blank" rel="noopener noreferrer">Ver en YouTube<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
+                    <a href="https://www.instagram.com/reel/DfVDlGSutrE/" target="_blank" rel="noopener noreferrer">Ver en Instagram<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
                   </p>
                 </div>
               </article>
@@ -1196,356 +680,249 @@
             <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
           </button>
         </div>
-        <p class="video-note">Al pulsar play se carga contenido de YouTube (Google). Más información en la <a href="politica-cookies.html">política de cookies</a>.</p>
+        <p class="video-note">Al pulsar play se carga contenido de Instagram (Meta). Más información en la <a href="politica-cookies.html">política de cookies</a>.</p>
         <p class="video-more"><a class="btn btn--primary" href="videos.html">Ver todos los vídeos</a></p>
       </div>
     </section>
     <!-- videos:home:end -->
 
     <!-- ============================================================
-         PROCESS / PROCESO
+         PROCESO
          ============================================================ -->
     <section class="section section--dark" id="proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <div class="section__header section__header--light" data-animate="fade-up">
-          <span class="section__label section__label--light">Cómo trabajamos</span>
-          <h2 class="section__title section__title--light" id="proceso-title">
-            Tu reforma en 4 pasos sencillos
-          </h2>
-          <p class="section__subtitle section__subtitle--light">
-            Un proceso claro y transparente de principio a fin.
-          </p>
-        </div>
-
-        <div class="process__grid">
-          <div class="process__item" data-animate="fade-up">
-            <div class="process__number">01</div>
-            <div class="process__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        <div class="process" id="process">
+          <div class="process__side">
+            <div class="section__header">
+              <h2 class="section__title" id="proceso-title">Tu reforma en cuatro pasos</h2>
+              <p class="section__subtitle">De la primera visita a la entrega, siempre sabes en qué punto está tu obra.</p>
             </div>
-            <h3 class="process__title">Contacto</h3>
-            <p class="process__desc">
-              Cuéntanos tu idea. Visitamos tu vivienda para tomar medidas y entender
-              exactamente lo que necesitas.
-            </p>
-          </div>
-
-          <div class="process__item" data-animate="fade-up" data-animate-delay="100">
-            <div class="process__number">02</div>
-            <div class="process__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+            <a class="btn btn--white btn--lg" href="#contacto">Pide presupuesto</a>
+            <div class="process__photo">
+              <img src="images/IMG_0059.webp" alt="Baño reformado con espejo redondo con luz, mueble de madera y ducha con mampara negra" width="810" height="1080" loading="lazy" decoding="async">
             </div>
-            <h3 class="process__title">Diseño 3D</h3>
-            <p class="process__desc">
-              Creamos un diseño 3D personalizado para que visualices el resultado final
-              antes de empezar la obra.
-            </p>
           </div>
-
-          <div class="process__item" data-animate="fade-up" data-animate-delay="200">
-            <div class="process__number">03</div>
-            <div class="process__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-            </div>
-            <h3 class="process__title">Ejecución</h3>
-            <p class="process__desc">
-              Nuestro equipo profesional ejecuta la reforma con los mejores materiales,
-              cumpliendo plazos y presupuesto.
-            </p>
-          </div>
-
-          <div class="process__item" data-animate="fade-up" data-animate-delay="300">
-            <div class="process__number">04</div>
-            <div class="process__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h3 class="process__title">Entrega</h3>
-            <p class="process__desc">
-              Entregamos tu hogar renovado, listo para disfrutar.
-              Limpieza final y revisión de cada detalle incluidas.
-            </p>
-          </div>
+          <ol class="process__list">
+            <li class="step">
+              <span class="step__num" aria-hidden="true">01</span>
+              <h3 class="step__title">Visita y medidas</h3>
+              <p class="step__text">Cuéntanos tu idea. Visitamos tu vivienda para tomar medidas y entender qué necesitas.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">02</span>
+              <h3 class="step__title">Diseño 3D de tu reforma</h3>
+              <p class="step__text">Preparamos un diseño 3D personalizado para que veas el resultado antes de empezar la obra.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">03</span>
+              <h3 class="step__title">Obra de la reforma</h3>
+              <p class="step__text">Nuestro equipo ejecuta la reforma con los materiales acordados y coordina a todos los gremios.</p>
+            </li>
+            <li class="step">
+              <span class="step__num" aria-hidden="true">04</span>
+              <h3 class="step__title">Entrega de la vivienda</h3>
+              <p class="step__text">Entregamos tu hogar renovado, listo para disfrutar, con limpieza final y revisión de cada detalle.</p>
+            </li>
+          </ol>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         TESTIMONIALS
+         OPINIONES
          ============================================================ -->
-    <section class="section section--white" id="testimonios" aria-labelledby="testimonios-title">
+    <section class="section section--light" id="opiniones" aria-labelledby="opiniones-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Opiniones de clientes</span>
-          <h2 class="section__title" id="testimonios-title">Lo que dicen nuestros clientes</h2>
-        </div>
-
-        <div class="testimonials__grid">
-          <article class="testimonial" data-animate="fade-up">
-            <div class="testimonial__stars" role="img" aria-label="5 estrellas">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        <div class="quotes-layout">
+          <div class="quotes-layout__media">
+            <img src="images/cocina-u-vistas-01.webp" alt="Cocina reformada en forma de U con muebles de madera y zona negra" width="1080" height="1080" loading="lazy" decoding="async">
+          </div>
+          <div>
+            <div class="section__header">
+              <h2 class="section__title" id="opiniones-title">Opiniones sobre nuestras reformas</h2>
             </div>
-            <blockquote class="testimonial__text">
-              &ldquo;Reformaron nuestra cocina por completo y el resultado es espectacular.
-              El diseño 3D nos ayudó a decidir exactamente lo que queríamos. Muy profesionales
-              y cumplieron con el plazo acordado.&rdquo;
-            </blockquote>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar">MC</div>
-              <div>
-                <cite class="testimonial__name">María C.</cite>
-                <span class="testimonial__location">Sabadell</span>
-              </div>
+            <div class="quotes">
+              <figure class="quote">
+                <blockquote class="quote__text">&ldquo;Hicieron la reforma integral de nuestro piso y quedó increíble. El equipo fue muy limpio y ordenado durante toda la obra. Sin duda los recomendaría a cualquiera.&rdquo;</blockquote>
+                <figcaption class="quote__author"><cite class="quote__name">Jordi L.</cite><span class="quote__place">Terrassa</span></figcaption>
+              </figure>
+              <figure class="quote">
+                <blockquote class="quote__text">&ldquo;Nos reformaron el baño y quedó mejor de lo que imaginábamos. La iluminación LED y los acabados son de revista. Además el precio fue muy competitivo comparado con otros presupuestos.&rdquo;</blockquote>
+                <figcaption class="quote__author"><cite class="quote__name">Ana P.</cite><span class="quote__place">Barberà del Vallès</span></figcaption>
+              </figure>
             </div>
-          </article>
-
-          <article class="testimonial" data-animate="fade-up" data-animate-delay="100">
-            <div class="testimonial__stars" role="img" aria-label="5 estrellas">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote class="testimonial__text">
-              &ldquo;Hicieron la reforma integral de nuestro piso y quedó increíble.
-              El equipo fue muy limpio y ordenado durante toda la obra. Sin duda
-              los recomendaría a cualquiera.&rdquo;
-            </blockquote>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar">JL</div>
-              <div>
-                <cite class="testimonial__name">Jordi L.</cite>
-                <span class="testimonial__location">Terrassa</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="testimonial" data-animate="fade-up" data-animate-delay="200">
-            <div class="testimonial__stars" role="img" aria-label="5 estrellas">
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-              <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-            </div>
-            <blockquote class="testimonial__text">
-              &ldquo;Nos reformaron el baño y quedó mejor de lo que imaginábamos.
-              La iluminación LED y los acabados son de revista. Además el precio
-              fue muy competitivo comparado con otros presupuestos.&rdquo;
-            </blockquote>
-            <div class="testimonial__author">
-              <div class="testimonial__avatar">AP</div>
-              <div>
-                <cite class="testimonial__name">Ana P.</cite>
-                <span class="testimonial__location">Barberà del Vallès</span>
-              </div>
-            </div>
-          </article>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============================================================
-         CONTACT / CONTACTO
+         PREGUNTAS FRECUENTES
+         ============================================================ -->
+    <section class="section section--white" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="faq-layout">
+          <div class="faq-layout__side">
+            <div class="section__header">
+              <h2 class="section__title" id="faq-title">Preguntas frecuentes sobre reformas</h2>
+              <p class="section__subtitle">Lo que más nos preguntan en Sabadell y el Vallès Occidental.</p>
+            </div>
+            <div class="faq-layout__photo">
+              <img src="images/bano-gris-espejos-04.webp" alt="Baño reformado con ducha de cristal y hornacinas de madera iluminadas" width="1080" height="1080" loading="lazy" decoding="async">
+            </div>
+          </div>
+          <div class="faq">
+            <details class="faq__item">
+              <summary class="faq__question">¿Cuánto cuesta reformar una cocina en Sabadell?</summary>
+              <p class="faq__answer">El precio depende del tamaño de la cocina, los materiales y los electrodomésticos elegidos. Tras una visita gratuita te entregamos un presupuesto cerrado y sin compromiso.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">¿Trabajáis en toda la provincia de Barcelona?</summary>
+              <p class="faq__answer">Trabajamos principalmente en Sabadell y el Vallès Occidental: Terrassa, Barberà del Vallès, Cerdanyola del Vallès, Sant Cugat y poblaciones cercanas. Para proyectos en otras zonas de la provincia de Barcelona, consúltanos sin compromiso.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">¿Hacéis presupuesto sin compromiso?</summary>
+              <p class="faq__answer">Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso. Tú decides con total libertad.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">¿Podéis hacer la reforma mientras vivimos en casa?</summary>
+              <p class="faq__answer">En muchos casos sí, especialmente en reformas parciales o ejecutadas por fases. Planificamos la obra para minimizar las molestias y, cuando hay más de un baño, procuramos dejar siempre uno operativo.</p>
+            </details>
+            <details class="faq__item">
+              <summary class="faq__question">¿Gestionáis los permisos y licencias?</summary>
+              <p class="faq__answer">Sí. Te asesoramos y nos encargamos de la tramitación de las comunicaciones y licencias de obra necesarias ante el ayuntamiento cuando el proyecto lo requiere.</p>
+            </details>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACTO
          ============================================================ -->
     <section class="section section--light" id="contacto" aria-labelledby="contacto-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Contacto</span>
-          <h2 class="section__title" id="contacto-title">Pide tu presupuesto sin compromiso</h2>
-          <p class="section__subtitle">
-            Cuéntanos tu proyecto y te responderemos en menos de 24 horas.
-          </p>
-        </div>
-
-        <!-- Contact info cards -->
-        <div class="contact__cards" data-animate="fade-up">
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            </div>
-            <div>
-              <p class="contact-item__label">Teléfono</p>
-              <p class="contact-item__value"><a href="tel:+34680917536">680 917 536</a></p>
+        <div class="contact">
+          <div class="contact__panel">
+            <h2 id="contacto-title">Presupuesto de tu reforma sin compromiso</h2>
+            <a class="contact__phone" href="tel:+34680917536">680 917 536</a>
+            <div class="contact__list">
+              <p class="contact__line"><span class="contact__label">Email</span><span class="contact__value"><a href="mailto:modelayreforma@gmail.com">modelayreforma@gmail.com</a></span></p>
+              <p class="contact__line"><span class="contact__label">Horario</span><span class="contact__value">Lunes a viernes, de 8:00 a 17:30</span></p>
+              <p class="contact__line"><span class="contact__label">Dirección</span><span class="contact__value">Plaza Vallès 21, 08201 Sabadell (Barcelona)</span></p>
+              <p class="contact__line"><span class="contact__label">Zona de servicio</span><span class="contact__value">Sabadell · Vallès Occidental</span></p>
             </div>
           </div>
 
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div>
-              <p class="contact-item__label">Email</p>
-              <p class="contact-item__value"><a href="mailto:modelayreforma@gmail.com">modelayreforma@gmail.com</a></p>
-            </div>
-          </div>
+          <div class="contact__form">
+            <h3 class="form__title">Solicita presupuesto de reforma</h3>
+            <p class="form__subtitle">Cuéntanos qué quieres reformar.</p>
 
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="contact-item__label">Zona de servicio</p>
-              <p class="contact-item__value">Sabadell · Vallès Occidental</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div>
-              <p class="contact-item__label">Horario</p>
-              <p class="contact-item__value">Lun–Vie: 8:00–20:00</p>
-            </div>
-          </div>
-
-          <div class="contact-item">
-            <div class="contact-item__icon">
-              <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            </div>
-            <div>
-              <p class="contact-item__label">Dirección</p>
-              <p class="contact-item__value">Plaza Vallès 21, 08201 Sabadell (Barcelona)</p>
-            </div>
-          </div>
-        </div>
-
-        <!-- Form + Map grid -->
-        <div class="contacto-grid">
-          <!-- FORM -->
-          <div data-animate="fade-right">
-            <div class="form-wrapper">
-              <h3 class="form__title">Solicita tu presupuesto</h3>
-              <p class="form__subtitle">Responderemos en menos de 24 horas laborables.</p>
-
-              <form
-                action="https://formspree.io/f/xaqlrkel"
-                method="POST"
-                data-ajax
-                aria-label="Formulario de contacto y solicitud de presupuesto"
-              >
-                <!-- Honeypot anti-spam -->
-                <div class="form__honeypot" aria-hidden="true">
-                  <label for="gotcha-contact">No rellenar</label>
-                  <input type="text" id="gotcha-contact" name="_gotcha" tabindex="-1" autocomplete="off">
-                </div>
-                <input type="hidden" name="_subject" value="Solicitud de presupuesto - Modela y Reforma">
-
-                <div class="form__grid">
-                  <div class="form__group">
-                    <label class="form__label" for="c-nombre">Nombre <span aria-hidden="true">*</span></label>
-                    <input class="form__input" type="text" id="c-nombre" name="nombre"
-                      placeholder="Tu nombre" required autocomplete="given-name" maxlength="100">
-                    <span class="form__error" role="alert" aria-live="polite"></span>
-                  </div>
-
-                  <div class="form__group">
-                    <label class="form__label" for="c-telefono">Teléfono <span aria-hidden="true">*</span></label>
-                    <input class="form__input" type="tel" id="c-telefono" name="telefono"
-                      placeholder="680 917 536" required autocomplete="tel" maxlength="20">
-                    <span class="form__error" role="alert" aria-live="polite"></span>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <label class="form__label" for="c-email">Email <span aria-hidden="true">*</span></label>
-                    <input class="form__input" type="email" id="c-email" name="email"
-                      placeholder="tu@email.com" required autocomplete="email" maxlength="150">
-                    <span class="form__error" role="alert" aria-live="polite"></span>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <label class="form__label" for="c-servicio">Tipo de reforma <span aria-hidden="true">*</span></label>
-                    <select class="form__select" id="c-servicio" name="servicio" required>
-                      <option value="" disabled selected>Selecciona el tipo de reforma</option>
-                      <option value="integral">Reforma integral de vivienda</option>
-                      <option value="cocina">Reforma de cocina</option>
-                      <option value="bano">Reforma de baño</option>
-                      <option value="suelos">Suelos y pavimentos</option>
-                      <option value="diseno-3d">Diseño 3D</option>
-                      <option value="albanileria">Albañilería y obra</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                    <span class="form__error" role="alert" aria-live="polite"></span>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <label class="form__label" for="c-mensaje">Descripción del proyecto</label>
-                    <textarea class="form__textarea" id="c-mensaje" name="mensaje"
-                      placeholder="Cuéntanos los detalles: tipo de vivienda, metros cuadrados, estilo deseado, presupuesto orientativo..."
-                      rows="5" maxlength="2000"></textarea>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <p class="form__legal" id="c-rgpd-info">
-                      <strong>Información básica sobre protección de datos.</strong>
-                      <strong>Responsable:</strong> MODELA Y REFORMA S.L.
-                      <strong>Finalidad:</strong> atender tu solicitud de presupuesto.
-                      <strong>Destinatario:</strong> Formspree, Inc., proveedor del formulario, con servidores en
-                      Estados Unidos (transferencia internacional de datos).
-                      <strong>Derechos:</strong> acceso, rectificación, supresión, oposición, limitación,
-                      portabilidad y retirada del consentimiento, escribiendo a modelayreforma@gmail.com.
-                      Más información en la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.
-                    </p>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <div class="form__checkbox-group">
-                      <input class="form__checkbox" type="checkbox" id="c-rgpd" name="rgpd" required
-                        aria-describedby="c-rgpd-info c-rgpd-error">
-                      <label class="form__checkbox-label" for="c-rgpd">
-                        He leído y acepto la
-                        <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
-                        y consiento el tratamiento de mis datos para atender mi solicitud. <span aria-hidden="true" class="form__required">*</span>
-                      </label>
-                    </div>
-                    <span class="form__error" id="c-rgpd-error" role="alert" aria-live="polite"></span>
-                  </div>
-
-                  <div class="form__group form__group--full">
-                    <button class="form__submit" type="submit">
-                      <span class="spinner" aria-hidden="true"></span>
-                      <span class="btn-text">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                        Enviar solicitud
-                      </span>
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-
-          <!-- MAP -->
-          <div data-animate="fade-left">
-            <div class="zone-intro">
-              <h3 class="zone-title" id="zona-servicio-title">
-                Zona de servicio
-              </h3>
-              <p class="text-body">
-                Operamos en <strong>Sabadell</strong>, <strong>Terrassa</strong>,
-                <strong>Barberà del Vallès</strong>, <strong>Cerdanyola</strong>
-                y todo el <strong>Vallès Occidental</strong>.
-              </p>
-            </div>
-
-            <div class="map-wrapper map-facade" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.52684948055!2d2.0753897!3d41.5440369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49564a38bbbbb%3A0xba53edd58a4af0c7!2sSabadell%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
-                 data-map-title="Mapa de Sabadell - Zona de servicio de Modela y Reforma">
-              <div class="map-facade__body">
-                <svg class="map-facade__pin" xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                <p class="map-facade__title">Mapa de la zona de servicio: Sabadell y Vallès Occidental</p>
-                <button class="btn btn--primary map-facade__btn" type="button">Ver mapa</button>
-                <p class="map-facade__note">
-                  Al pulsar «Ver mapa» se carga contenido de Google Maps (Google LLC), que recibe datos de tu navegador.
-                </p>
-                <a class="map-facade__link" href="https://www.google.com/maps/place/Sabadell,+Barcelona" target="_blank" rel="noopener noreferrer">Abrir en Google Maps</a>
+            <form
+              action="https://formspree.io/f/xaqlrkel"
+              method="POST"
+              data-ajax
+              aria-label="Formulario de contacto y solicitud de presupuesto"
+            >
+              <!-- Honeypot anti-spam -->
+              <div class="form__honeypot" aria-hidden="true">
+                <label for="gotcha-contact">No rellenar</label>
+                <input type="text" id="gotcha-contact" name="_gotcha" tabindex="-1" autocomplete="off">
               </div>
-            </div>
+              <input type="hidden" name="_subject" value="Solicitud de presupuesto - Modela y Reforma">
 
+              <div class="form__grid">
+                <div class="form__group">
+                  <label class="form__label" for="c-nombre">Nombre <span aria-hidden="true">*</span></label>
+                  <input class="form__input" type="text" id="c-nombre" name="nombre"
+                    placeholder="Tu nombre" required autocomplete="given-name" maxlength="100">
+                  <span class="form__error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group">
+                  <label class="form__label" for="c-telefono">Teléfono <span aria-hidden="true">*</span></label>
+                  <input class="form__input" type="tel" id="c-telefono" name="telefono"
+                    placeholder="680 917 536" required autocomplete="tel" maxlength="20">
+                  <span class="form__error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <label class="form__label" for="c-email">Email <span aria-hidden="true">*</span></label>
+                  <input class="form__input" type="email" id="c-email" name="email"
+                    placeholder="tu@email.com" required autocomplete="email" maxlength="150">
+                  <span class="form__error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <label class="form__label" for="c-servicio">Tipo de reforma <span aria-hidden="true">*</span></label>
+                  <select class="form__select" id="c-servicio" name="servicio" required>
+                    <option value="" disabled selected>Selecciona el tipo de reforma</option>
+                    <option value="integral">Reforma integral de vivienda</option>
+                    <option value="cocina">Reforma de cocina</option>
+                    <option value="bano">Reforma de baño</option>
+                    <option value="suelos">Suelos y pavimentos</option>
+                    <option value="diseno-3d">Diseño 3D</option>
+                    <option value="albanileria">Albañilería y obra</option>
+                    <option value="otro">Otro</option>
+                  </select>
+                  <span class="form__error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <label class="form__label" for="c-mensaje">Descripción del proyecto</label>
+                  <textarea class="form__textarea" id="c-mensaje" name="mensaje"
+                    placeholder="Cuéntanos los detalles: tipo de vivienda, metros cuadrados, estilo deseado, presupuesto orientativo..."
+                    rows="5" maxlength="2000"></textarea>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <p class="form__legal" id="c-rgpd-info">
+                    <strong>Información básica sobre protección de datos.</strong>
+                    <strong>Responsable:</strong> MODELA Y REFORMA S.L.
+                    <strong>Finalidad:</strong> atender tu solicitud de presupuesto.
+                    <strong>Destinatario:</strong> Formspree, Inc., proveedor del formulario, con servidores en
+                    Estados Unidos (transferencia internacional de datos).
+                    <strong>Derechos:</strong> acceso, rectificación, supresión, oposición, limitación,
+                    portabilidad y retirada del consentimiento, escribiendo a modelayreforma@gmail.com.
+                    Más información en la <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>.
+                  </p>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <div class="form__checkbox-group">
+                    <input class="form__checkbox" type="checkbox" id="c-rgpd" name="rgpd" required
+                      aria-describedby="c-rgpd-info c-rgpd-error">
+                    <label class="form__checkbox-label" for="c-rgpd">
+                      He leído y acepto la
+                      <a href="privacidad.html" target="_blank" rel="noopener">política de privacidad</a>
+                      y consiento el tratamiento de mis datos para atender mi solicitud. <span aria-hidden="true" class="form__required">*</span>
+                    </label>
+                  </div>
+                  <span class="form__error" id="c-rgpd-error" role="alert" aria-live="polite"></span>
+                </div>
+
+                <div class="form__group form__group--full">
+                  <button class="form__submit" type="submit">
+                    <span class="spinner" aria-hidden="true"></span>
+                    <span class="btn-text">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                      Enviar solicitud
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        <div class="zone">
+          <div>
+            <h3 class="zone__title" id="zona-servicio-title">Zona de servicio en el Vallès Occidental</h3>
+            <p class="zone__text">
+              Operamos en <strong>Sabadell</strong>, <strong>Terrassa</strong>,
+              <strong>Barberà del Vallès</strong>, <strong>Cerdanyola</strong>
+              y todo el <strong>Vallès Occidental</strong>.
+            </p>
             <div class="tag-list">
               <span class="tag">Sabadell</span>
               <span class="tag">Terrassa</span>
@@ -1554,86 +931,19 @@
               <span class="tag">Sant Cugat</span>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- ============================================================
-         CTA FINAL
-         ============================================================ -->
-    <section class="cta-section" aria-label="Llamada a la acción">
-      <div class="container">
-        <div class="cta__content" data-animate="fade-up">
-          <h2 class="cta__title">¿Listo para transformar tu hogar?</h2>
-          <p class="cta__desc">
-            Pide tu presupuesto gratuito y sin compromiso. Te asesoramos en todo el proceso.
-          </p>
-          <div class="cta__actions">
-            <a class="btn btn--white btn--lg" href="#contacto">
-              Pide presupuesto gratis
-            </a>
-            <a class="btn btn--outline-white btn--lg" href="tel:+34680917536">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llámanos
-            </a>
+          <div class="map-wrapper map-facade" data-map-src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d47990.52684948055!2d2.0753897!3d41.5440369!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a49564a38bbbbb%3A0xba53edd58a4af0c7!2sSabadell%2C%20Barcelona!5e0!3m2!1ses!2ses!4v1700000000000!5m2!1ses!2ses"
+               data-map-title="Mapa de Sabadell - Zona de servicio de Modela y Reforma">
+            <div class="map-facade__body">
+              <svg class="map-facade__pin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              <p class="map-facade__title">Mapa de la zona de servicio: Sabadell y Vallès Occidental</p>
+              <button class="btn btn--primary map-facade__btn" type="button">Ver mapa</button>
+              <p class="map-facade__note">
+                Al pulsar «Ver mapa» se carga contenido de Google Maps (Google LLC), que recibe datos de tu navegador.
+              </p>
+              <a class="map-facade__link" href="https://share.google/HfESZU33AaqXhA6Zc" target="_blank" rel="noopener noreferrer">Abrir la ficha de Modela y Reforma en Google</a>
+            </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================
-         FAQ / PREGUNTAS FRECUENTES
-         ============================================================ -->
-    <section class="section section--white" id="faq" aria-labelledby="faq-title">
-      <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Preguntas frecuentes</span>
-          <h2 class="section__title" id="faq-title">Resolvemos tus dudas sobre la reforma</h2>
-          <p class="section__subtitle">
-            Las preguntas que más nos hacen nuestros clientes en Sabadell y el Vallès Occidental.
-          </p>
-        </div>
-
-        <div class="faq faq--narrow" data-animate="fade-up">
-          <details class="faq__item">
-            <summary class="faq__question">¿Cuánto cuesta reformar una cocina en Sabadell?</summary>
-            <p class="faq__answer">El precio depende del tamaño de la cocina, los materiales y los electrodomésticos elegidos. Tras una visita gratuita te entregamos un presupuesto cerrado y sin compromiso.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Cuánto tiempo tarda una reforma de baño?</summary>
-            <p class="faq__answer">Una reforma de baño completa suele tardar entre 1 y 2 semanas, según el alcance y los acabados. Antes de empezar la obra te facilitamos un calendario con la fecha de entrega prevista.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Trabajáis en toda la provincia de Barcelona?</summary>
-            <p class="faq__answer">Trabajamos principalmente en Sabadell y el Vallès Occidental: Terrassa, Barberà del Vallès, Cerdanyola del Vallès, Sant Cugat y poblaciones cercanas. Para proyectos en otras zonas de la provincia de Barcelona, consúltanos sin compromiso.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Hacéis presupuesto sin compromiso?</summary>
-            <p class="faq__answer">Sí. Visitamos tu vivienda, tomamos medidas y te entregamos un presupuesto detallado y sin compromiso, junto con el diseño 3D de tu proyecto. Tú decides con total libertad.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Qué garantía tienen las reformas?</summary>
-            <p class="faq__answer">Todas nuestras reformas incluyen garantía sobre los trabajos realizados y los materiales instalados. Trabajamos con contrato y presupuesto cerrado, sin partidas ocultas ni sorpresas.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Podéis hacer la reforma mientras vivimos en casa?</summary>
-            <p class="faq__answer">En muchos casos sí, especialmente en reformas parciales o ejecutadas por fases. Planificamos la obra para minimizar las molestias y, cuando hay más de un baño, procuramos dejar siempre uno operativo.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Incluye el diseño 3D en el presupuesto?</summary>
-            <p class="faq__answer">Sí, el diseño 3D va incluido en el presupuesto. Así puedes ver el resultado final de tu reforma y hacer todos los cambios que quieras antes de iniciar la obra.</p>
-          </details>
-
-          <details class="faq__item">
-            <summary class="faq__question">¿Gestionáis los permisos y licencias?</summary>
-            <p class="faq__answer">Sí. Te asesoramos y nos encargamos de la tramitación de las comunicaciones y licencias de obra necesarias ante el ayuntamiento cuando el proyecto lo requiere.</p>
-          </details>
         </div>
       </div>
     </section>
@@ -1641,16 +951,16 @@
   </main>
 
   <!-- ============================================================
-       FOOTER
+       PIE
        ============================================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="images/Logo modela.webp" alt="Modela y Reforma" class="footer__logo" width="180" height="50" loading="lazy">
+          <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma" class="footer__logo" width="140" height="70" loading="lazy">
           <p class="footer__brand-desc">
-            Empresa de reformas integrales en el Vallès Occidental.
-            Cocinas, baños, suelos y diseño 3D. Equipo con más de 5 años de experiencia.
+            Reformas de cocinas, baños y viviendas completas en Sabadell y el Vallès Occidental.
+            Equipo con más de 5 años de experiencia.
           </p>
         </div>
         <div>
@@ -1679,20 +989,28 @@
         <div>
           <p class="footer__col-title">Contacto</p>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+34680917536">680 917 536</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="mailto:modelayreforma@gmail.com">modelayreforma@gmail.com</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Sabadell · Vallès Occidental</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
-            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lunes a viernes, de 8:00 a 17:30</span>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6" fill="currentColor"/></svg>
+            <a href="https://www.instagram.com/modelayreforma/" target="_blank" rel="noopener noreferrer">@modelayreforma en Instagram<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
+          </div>
+          <div class="footer__contact-item">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <a href="https://share.google/HfESZU33AaqXhA6Zc" target="_blank" rel="noopener noreferrer">Modela y Reforma en Google<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
           </div>
         </div>
       </div>
@@ -1707,18 +1025,29 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- WHATSAPP (escritorio) -->
   <a class="whatsapp-btn" href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer"
      aria-label="Contactar por WhatsApp" title="Escríbenos por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.86L.054 23.25a.75.75 0 0 0 .916.916l5.44-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.702 9.702 0 0 1-4.964-1.362l-.356-.212-3.668.995.994-3.61-.232-.374A9.702 9.702 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   </a>
 
-  <!-- SCROLL TO TOP -->
-  <button type="button" class="scroll-top" id="scroll-top" aria-label="Volver arriba">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+  <!-- BARRA DE ACCIONES (móvil) -->
+  <nav class="action-bar" aria-label="Contacto rápido">
+    <a href="tel:+34680917536">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a class="action-bar__main" href="#contacto">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Presupuesto
+    </a>
+  </nav>
 
-  <!-- LIGHTBOX -->
+  <!-- VISOR DE IMÁGENES -->
   <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visor de imagen" hidden>
     <button type="button" class="lightbox__close" aria-label="Cerrar visor">
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
@@ -1731,8 +1060,8 @@
     </button>
     <div class="lightbox__content">
       <img class="lightbox__img" id="lightbox-img" src="" alt="">
+      <div class="lightbox__caption" id="lightbox-caption"></div>
     </div>
-    <div class="lightbox__caption" id="lightbox-caption"></div>
   </div>
 
   <script src="js/main.js" defer></script>

@@ -11,7 +11,7 @@
  *   node scripts/build-videos.mjs --preview D copy the site to D and build it with
  *                                             FAKE ids (for local testing only)
  *
- * While "published" is false, or no video has both youtubeId and uploadDate,
+ * While "published" is false, or no video has both instagramId and uploadDate,
  * every block stays empty, videos.html is not written and the sitemap is untouched.
  */
 import fs from 'node:fs';
@@ -27,10 +27,6 @@ const DATE_RE = /^\d{4}-\d{2}-\d{2}$/;
 const esc = (s) => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const jsonLd = (obj) => JSON.stringify(obj, null, 2).replace(/</g, '\\u003c');
 
-function isoDuration(sec) {
-  const m = Math.floor(sec / 60), s = sec % 60;
-  return 'PT' + (m ? `${m}M` : '') + (s || !m ? `${s}S` : '');
-}
 const gcd = (a, b) => (b ? gcd(b, a % b) : a);
 /** CSS class holding the exact display aspect ratio of a video, e.g. video-facade--ar-9-16 */
 function ratioClass(v) {
@@ -57,10 +53,10 @@ function loadVideos(data, preview) {
   // "hidden": true keeps the entry in data/videos.json but removes it from the whole site
   const list = data.videos.filter((v) => !v.hidden).map((v) => ({ ...v }));
   if (preview) {
-    list.forEach((v, i) => { v.youtubeId = `PREVIEW${String(i).padStart(4, '0')}`; v.uploadDate = '2026-01-01'; });
+    list.forEach((v, i) => { v.instagramId = `PREVIEW${String(i).padStart(4, '0')}`; v.uploadDate = '2026-01-01'; });
   }
   const live = data.published || preview
-    ? list.filter((v) => ID_RE.test(v.youtubeId || '') && DATE_RE.test(v.uploadDate || ''))
+    ? list.filter((v) => ID_RE.test(v.instagramId || '') && DATE_RE.test(v.uploadDate || ''))
     : [];
   const skipped = (data.published || preview) ? list.filter((v) => !live.includes(v)) : [];
   return { live, skipped };
@@ -75,8 +71,7 @@ function videoLd(v, site) {
     description: v.description,
     thumbnailUrl: `${site}/${v.thumbnail}`,
     uploadDate: v.uploadDate,
-    duration: isoDuration(v.durationSeconds),
-    embedUrl: `https://www.youtube-nocookie.com/embed/${v.youtubeId}`,
+    embedUrl: `https://www.instagram.com/reel/${v.instagramId}/embed/`,
     publisher: { '@type': 'Organization', name: 'Modela y Reforma', url: site },
   };
 }
@@ -85,7 +80,7 @@ const ldScript = (obj) => `<script type="application/ld+json">\n${indent(jsonLd(
 function card(v, { level = 3, showText = false } = {}) {
   const h = `h${level}`;
   return `<article class="video-card">
-  <div class="video-facade ${ratioClass(v)}" data-video-id="${esc(v.youtubeId)}" data-video-title="${esc(v.title)}">
+  <div class="video-facade ${ratioClass(v)}" data-video-id="${esc(v.instagramId)}" data-video-title="${esc(v.title)}">
     <img class="video-facade__thumb" src="${esc(v.thumbnail)}" alt="${esc(v.thumbnailAlt)}" width="${v.thumbnailWidth}" height="${v.thumbnailHeight}" loading="lazy" decoding="async">
     <button class="video-facade__play" type="button" aria-label="Reproducir vídeo: ${esc(v.title)}">
       <span class="video-facade__icon" aria-hidden="true">
@@ -97,7 +92,7 @@ function card(v, { level = 3, showText = false } = {}) {
     <${h} class="video-card__title">${esc(v.title)}</${h}>${showText ? `
     <p class="video-card__text">${esc(v.description)}</p>` : ''}
     <p class="video-card__links">
-      <a href="https://www.youtube.com/watch?v=${esc(v.youtubeId)}" target="_blank" rel="noopener noreferrer">Ver en YouTube<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
+      <a href="https://www.instagram.com/reel/${esc(v.instagramId)}/" target="_blank" rel="noopener noreferrer">Ver en Instagram<span class="video-card__ext"> (se abre en otra pestaña)</span></a>
     </p>
   </div>
 </article>`;
@@ -106,7 +101,7 @@ function card(v, { level = 3, showText = false } = {}) {
 const CHEVRON = (d) => `<svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="${d}"/></svg>`;
 
 /** One horizontal carousel (native scroll-snap; prev/next buttons are enhanced by js/main.js)
- *  followed by the single YouTube notice of the block. */
+ *  followed by the single Instagram notice of the block. */
 function carousel(videos, label, opts) {
   return `<div class="video-carousel">
   <button class="video-carousel__btn video-carousel__btn--prev" type="button" aria-label="Vídeos anteriores" disabled>
@@ -121,7 +116,7 @@ ${indent(videos.map((v) => card(v, opts)).join('\n'), '      ')}
     ${CHEVRON('9 18 15 12 9 6')}
   </button>
 </div>
-<p class="video-note">Al pulsar play se carga contenido de YouTube (Google). Más información en la <a href="politica-cookies.html">política de cookies</a>.</p>`;
+<p class="video-note">Al pulsar play se carga contenido de Instagram (Meta). Más información en la <a href="politica-cookies.html">política de cookies</a>.</p>`;
 }
 
 function homeSection(live, data) {
@@ -129,8 +124,7 @@ function homeSection(live, data) {
   if (!featured.length) return '';
   return `<section class="section section--light" id="videos" aria-labelledby="videos-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
-      <span class="section__label">Vídeos</span>
+    <div class="section__header">
       <h2 class="section__title" id="videos-title">Nuestras reformas en vídeo</h2>
       <p class="section__subtitle">
         Obras reales en Sabadell, del derribo al resultado final.
@@ -148,8 +142,7 @@ function serviceSection(live, data, serviceKey) {
   const svc = data.services[serviceKey];
   return `<section class="section section--white" id="videos" aria-labelledby="videos-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
-      <span class="section__label">Vídeos</span>
+    <div class="section__header">
       <h2 class="section__title" id="videos-title">${esc(svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(svc.sectionIntro)}</p>
     </div>
@@ -167,7 +160,7 @@ function videosMain(live, data) {
     .join(' y ');
   return `<section class="section section--white" aria-labelledby="videos-all-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
+    <div class="section__header">
       <h2 class="section__title" id="videos-all-title">${esc(all.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(all.sectionIntro)} Más información sobre ${links}.</p>
     </div>
@@ -200,7 +193,7 @@ export function build(root, { preview = false } = {}) {
   }
   const active = live.length > 0;
   const out = new Map(); // relative path -> new content (null = must not exist)
-  const warnings = skipped.map((v) => `skipped (needs youtubeId + uploadDate): ${v.slug}`);
+  const warnings = skipped.map((v) => `skipped (needs instagramId + uploadDate): ${v.slug}`);
 
   const links = {
     nav: active ? '<li><a class="nav__link" href="videos.html">Vídeos</a></li>' : '',

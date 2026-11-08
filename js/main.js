@@ -1,12 +1,12 @@
 /**
  * MODELA Y REFORMA — main.js
- * Navigation, scroll animations, gallery filters, lightbox, counter, scroll-to-top
+ * Navigation, gallery filters, lightbox, process moment, map and video facades, video carousel.
  */
 
 'use strict';
 
 /* ============================================================
-   NAVIGATION — sticky, scroll state, mobile toggle
+   NAVIGATION — mobile menu toggle, active link
    ============================================================ */
 function initNav() {
   const nav = document.getElementById('main-nav');
@@ -14,155 +14,98 @@ function initNav() {
   const mobile = document.getElementById('nav-mobile');
   if (!nav) return;
 
-  // Scroll state
-  function updateNavScroll() {
-    nav.classList.toggle('is-scrolled', window.scrollY > 50);
+  function setMenu(open) {
+    if (!toggle || !mobile) return;
+    mobile.classList.toggle('is-open', open);
+    toggle.classList.toggle('is-active', open);
+    toggle.setAttribute('aria-expanded', String(open));
+    toggle.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    mobile.setAttribute('aria-hidden', String(!open));
+    document.body.style.overflow = open ? 'hidden' : '';
   }
-  window.addEventListener('scroll', updateNavScroll, { passive: true });
-  updateNavScroll();
 
-  // Mobile toggle
   if (toggle && mobile) {
-    toggle.addEventListener('click', () => {
-      const isOpen = mobile.classList.toggle('is-open');
-      toggle.classList.toggle('is-active', isOpen);
-      toggle.setAttribute('aria-expanded', String(isOpen));
-      mobile.setAttribute('aria-hidden', String(!isOpen));
-      document.body.style.overflow = isOpen ? 'hidden' : '';
+    toggle.addEventListener('click', () => setMenu(!mobile.classList.contains('is-open')));
+    mobile.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && mobile.classList.contains('is-open')) {
+        setMenu(false);
+        toggle.focus();
+      }
     });
-
-    // Close on link click
-    mobile.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobile.classList.remove('is-open');
-        toggle.classList.remove('is-active');
-        toggle.setAttribute('aria-expanded', 'false');
-        mobile.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = '';
-      });
+    // Leaving the mobile layout with the menu open must not leave the page locked
+    window.matchMedia('(min-width: 1100px)').addEventListener('change', (e) => {
+      if (e.matches) setMenu(false);
     });
   }
 
-  // Active link highlighting
-  const sections = document.querySelectorAll('section[id]');
-  const navLinks = document.querySelectorAll('.nav__link');
+  // Active link highlighting (home page anchors only)
+  const sections = Array.from(document.querySelectorAll('main section[id]'));
+  const navLinks = Array.from(document.querySelectorAll('.nav__link'));
+  if (!sections.length || !navLinks.length) return;
 
   function updateActiveLink() {
-    const scrollY = window.scrollY + 120;
+    const y = window.scrollY + 140;
+    let current = null;
     sections.forEach(section => {
-      const top = section.offsetTop;
-      const height = section.offsetHeight;
-      const id = section.getAttribute('id');
-
-      if (scrollY >= top && scrollY < top + height) {
-        navLinks.forEach(link => {
-          link.classList.toggle('nav__link--active',
-            link.getAttribute('href') === '#' + id);
-        });
-      }
+      if (y >= section.offsetTop && y < section.offsetTop + section.offsetHeight) current = section.id;
+    });
+    navLinks.forEach(link => {
+      link.classList.toggle('nav__link--active', current !== null && link.getAttribute('href') === '#' + current);
     });
   }
   window.addEventListener('scroll', updateActiveLink, { passive: true });
+  updateActiveLink();
 }
 
 /* ============================================================
-   SCROLL ANIMATIONS — Intersection Observer
-   ============================================================ */
-function initAnimations() {
-  const elements = document.querySelectorAll('[data-animate]');
-  if (!elements.length) return;
-
-  // Respect prefers-reduced-motion
-  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-    elements.forEach(el => el.classList.add('is-visible'));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const delay = parseInt(entry.target.dataset.animateDelay) || 0;
-        setTimeout(() => {
-          entry.target.classList.add('is-visible');
-        }, delay);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1,
-    rootMargin: '0px 0px -40px 0px'
-  });
-
-  elements.forEach(el => observer.observe(el));
-}
-
-/* ============================================================
-   COUNTER ANIMATION — stats numbers
-   ============================================================ */
-function initCounters() {
-  const counters = document.querySelectorAll('[data-count]');
-  if (!counters.length) return;
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        animateCounter(entry.target);
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  counters.forEach(el => observer.observe(el));
-}
-
-function animateCounter(el) {
-  const target = parseInt(el.dataset.count);
-  const duration = 1500;
-  const startTime = performance.now();
-
-  function update(currentTime) {
-    const elapsed = currentTime - startTime;
-    const progress = Math.min(elapsed / duration, 1);
-    // Ease-out
-    const eased = 1 - Math.pow(1 - progress, 3);
-    el.textContent = Math.round(target * eased);
-
-    if (progress < 1) {
-      requestAnimationFrame(update);
-    }
-  }
-
-  requestAnimationFrame(update);
-}
-
-/* ============================================================
-   GALLERY FILTERS
+   GALLERY — category filters + "show all" (first batch only at first)
    ============================================================ */
 function initGallery() {
   const filters = document.querySelectorAll('.gallery__filter');
-  const items = document.querySelectorAll('.gallery__item');
+  const items = Array.from(document.querySelectorAll('.gallery__item'));
   if (!filters.length || !items.length) return;
+
+  const BATCH = 12;
+  const moreWrap = document.querySelector('.gallery__more');
+  const moreBtn = document.getElementById('gallery-more');
+  let filter = 'all';
+  let expanded = false;
+
+  function apply() {
+    let matching = 0;
+    items.forEach(item => {
+      const match = filter === 'all' || item.dataset.category === filter;
+      if (match) matching++;
+      item.classList.toggle('is-hidden', !match || (!expanded && matching > BATCH));
+    });
+    if (moreWrap && moreBtn) {
+      moreWrap.hidden = expanded || matching <= BATCH;
+      moreBtn.textContent = 'Ver los ' + matching + ' proyectos';
+    }
+  }
 
   filters.forEach(btn => {
     btn.addEventListener('click', () => {
-      const filter = btn.dataset.filter;
-
-      // Update active state
       filters.forEach(f => {
         f.classList.remove('is-active');
         f.setAttribute('aria-selected', 'false');
       });
       btn.classList.add('is-active');
       btn.setAttribute('aria-selected', 'true');
-
-      // Filter items
-      items.forEach(item => {
-        const category = item.dataset.category;
-        const show = filter === 'all' || category === filter;
-        item.classList.toggle('is-hidden', !show);
-      });
+      filter = btn.dataset.filter;
+      expanded = false;
+      apply();
     });
   });
+
+  if (moreBtn) {
+    moreBtn.addEventListener('click', () => {
+      expanded = true;
+      apply();
+    });
+  }
+  apply();
 }
 
 /* ============================================================
@@ -180,6 +123,7 @@ function initLightbox() {
 
   let currentImages = [];
   let currentIndex = 0;
+  let opener = null;
 
   function getVisibleImages() {
     return Array.from(
@@ -187,13 +131,14 @@ function initLightbox() {
     );
   }
 
-  function openLightbox(index) {
+  function openLightbox(index, from) {
     currentImages = getVisibleImages();
     if (!currentImages.length) return;
     currentIndex = index;
+    opener = from || null;
     updateLightboxImage();
     lightbox.hidden = false;
-    // Force reflow for animation
+    // Force reflow so the opacity transition runs
     lightbox.offsetHeight;
     lightbox.classList.add('is-open');
     document.body.style.overflow = 'hidden';
@@ -203,7 +148,8 @@ function initLightbox() {
   function closeLightbox() {
     lightbox.classList.remove('is-open');
     document.body.style.overflow = '';
-    setTimeout(() => { lightbox.hidden = true; }, 300);
+    setTimeout(() => { lightbox.hidden = true; }, 220);
+    if (opener) opener.focus();
   }
 
   function updateLightboxImage() {
@@ -219,13 +165,12 @@ function initLightbox() {
     updateLightboxImage();
   }
 
-  // Click on gallery items
-  document.querySelectorAll('.gallery__item').forEach((item, _i) => {
+  document.querySelectorAll('.gallery__item').forEach(item => {
     item.addEventListener('click', () => {
       const visibleImages = getVisibleImages();
       const img = item.querySelector('img');
       const idx = visibleImages.indexOf(img);
-      openLightbox(idx >= 0 ? idx : 0);
+      openLightbox(idx >= 0 ? idx : 0, item);
     });
 
     item.addEventListener('keydown', (e) => {
@@ -237,21 +182,20 @@ function initLightbox() {
 
     item.setAttribute('tabindex', '0');
     item.setAttribute('role', 'button');
+    const img = item.querySelector('img');
+    if (img) item.setAttribute('aria-label', 'Ampliar imagen: ' + img.alt);
   });
 
-  // Controls
   closeBtn?.addEventListener('click', closeLightbox);
   prevBtn?.addEventListener('click', () => navigate(-1));
   nextBtn?.addEventListener('click', () => navigate(1));
 
-  // Close on backdrop click
   lightbox.addEventListener('click', (e) => {
     if (e.target === lightbox || e.target.classList.contains('lightbox__content')) {
       closeLightbox();
     }
   });
 
-  // Keyboard navigation
   document.addEventListener('keydown', (e) => {
     if (!lightbox.classList.contains('is-open')) return;
     if (e.key === 'Escape') closeLightbox();
@@ -261,45 +205,29 @@ function initLightbox() {
 }
 
 /* ============================================================
-   SCROLL TO TOP
+   PROCESS MOMENT — the step in the middle of the screen lights up.
+   Without JS (or with reduced motion) all four steps stay at full strength.
    ============================================================ */
-function initScrollTop() {
-  const btn = document.getElementById('scroll-top');
-  if (!btn) return;
+function initProcess() {
+  const process = document.getElementById('process');
+  if (!process || !('IntersectionObserver' in window)) return;
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-  function toggleVisibility() {
-    btn.classList.toggle('is-visible', window.scrollY > 400);
-  }
+  const steps = Array.from(process.querySelectorAll('.step'));
+  if (!steps.length) return;
 
-  window.addEventListener('scroll', toggleVisibility, { passive: true });
+  process.classList.add('has-moment');
+  steps[0].classList.add('is-active');
 
-  btn.addEventListener('click', () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
-}
-
-/* ============================================================
-   SMOOTH SCROLL — offset for fixed nav
-   ============================================================ */
-function initSmoothScroll() {
-  document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener('click', (e) => {
-      const href = link.getAttribute('href');
-      if (href === '#') return;
-
-      const target = document.querySelector(href);
-      if (!target) return;
-
-      e.preventDefault();
-      const navHeight = parseInt(getComputedStyle(document.documentElement)
-        .getPropertyValue('--nav-height')) || 72;
-
-      window.scrollTo({
-        top: target.offsetTop - navHeight,
-        behavior: 'smooth'
-      });
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        steps.forEach(step => step.classList.toggle('is-active', step === entry.target));
+      }
     });
-  });
+  }, { rootMargin: '-42% 0px -42% 0px', threshold: 0 });
+
+  steps.forEach(step => observer.observe(step));
 }
 
 /* ============================================================
@@ -327,7 +255,7 @@ function initMapFacade() {
 }
 
 /* ============================================================
-   VIDEO FACADE — create the YouTube iframe only on click.
+   VIDEO FACADE — create the Instagram embed iframe only on click.
    Only one video plays at a time: starting another restores the
    thumbnail and play button of the previous one.
    ============================================================ */
@@ -348,9 +276,9 @@ function initVideoFacades() {
       document.querySelectorAll('.video-facade.is-playing').forEach(stopVideo);
 
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.instagram.com/reel/' + id + '/embed/';
       iframe.title = box.dataset.videoTitle || 'Vídeo';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allow = 'encrypted-media; fullscreen; picture-in-picture';
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       box._facadeNodes = Array.from(box.childNodes);
@@ -423,12 +351,9 @@ function initVideoCarousels() {
    ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
   initNav();
-  initAnimations();
-  initCounters();
   initGallery();
   initLightbox();
-  initScrollTop();
-  initSmoothScroll();
+  initProcess();
   initMapFacade();
   initVideoFacades();
   initVideoCarousels();
