@@ -82,7 +82,7 @@
       "thumbnailAlt": "Miniatura del vídeo: baño con ducha de cristal y el texto «Tu baño: 3 consejos»",
       "display": { "width": 540, "height": 960 },
       "service": "banos",
-      "featured": false
+      "featured": true
     },
     {
       "slug": "los-detalles-se-notan",
@@ -96,7 +96,7 @@
       "thumbnailAlt": "Miniatura del vídeo: fregadero negro con grifo extraíble sobre encimera clara y el texto «Los detalles se notan»",
       "display": { "width": 540, "height": 960 },
       "service": "cocinas",
-      "featured": false
+      "featured": true
     }
   ]
 }
