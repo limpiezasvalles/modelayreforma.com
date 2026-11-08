@@ -129,8 +129,7 @@ function homeSection(live, data) {
   if (!featured.length) return '';
   return `<section class="section section--light" id="videos" aria-labelledby="videos-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
-      <span class="section__label">Vídeos</span>
+    <div class="section__header">
       <h2 class="section__title" id="videos-title">Nuestras reformas en vídeo</h2>
       <p class="section__subtitle">
         Obras reales en Sabadell, del derribo al resultado final.
@@ -148,8 +147,7 @@ function serviceSection(live, data, serviceKey) {
   const svc = data.services[serviceKey];
   return `<section class="section section--white" id="videos" aria-labelledby="videos-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
-      <span class="section__label">Vídeos</span>
+    <div class="section__header">
       <h2 class="section__title" id="videos-title">${esc(svc.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(svc.sectionIntro)}</p>
     </div>
@@ -167,7 +165,7 @@ function videosMain(live, data) {
     .join(' y ');
   return `<section class="section section--white" aria-labelledby="videos-all-title">
   <div class="container">
-    <div class="section__header" data-animate="fade-up">
+    <div class="section__header">
       <h2 class="section__title" id="videos-all-title">${esc(all.sectionTitle)}</h2>
       <p class="section__subtitle">${esc(all.sectionIntro)} Más información sobre ${links}.</p>
     </div>

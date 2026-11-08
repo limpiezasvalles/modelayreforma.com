@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-type="service">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,7 @@
 
   <!-- SEO META -->
   <title>Diseño 3D para Reformas en Sabadell | Modela y Reforma</title>
-  <meta name="description" content="Diseño 3D para reformas en Sabadell y el Vallès. Visualiza tu cocina, baño o vivienda antes de la obra. Incluido en el presupuesto, sin compromiso.">
-  <meta name="keywords" content="diseño 3D reformas Sabadell, render reforma cocina, infografía 3D vivienda, diseño 3D baño Vallès Occidental, proyecto reforma Terrassa">
+  <meta name="description" content="Diseño 3D para reformas en Sabadell y el Vallès. Visualiza tu cocina, baño o vivienda antes de la obra. Presupuesto sin compromiso.">
   <meta name="author" content="Modela y Reforma">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://modelayreforma.com/diseno-3d-reformas-sabadell.html">
@@ -31,7 +30,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://modelayreforma.com/diseno-3d-reformas-sabadell.html">
   <meta property="og:title" content="Diseño 3D para Reformas en Sabadell | Modela y Reforma">
-  <meta property="og:description" content="Diseño 3D para reformas en Sabadell y el Vallès Occidental. Visualiza el resultado antes de empezar la obra. Incluido en el presupuesto.">
+  <meta property="og:description" content="Diseño 3D para reformas en Sabadell y el Vallès Occidental. Visualiza el resultado y ajusta cambios antes de empezar la obra.">
   <meta property="og:image" content="https://modelayreforma.com/images/extra-01.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Modela y Reforma">
@@ -40,14 +39,14 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Diseño 3D para Reformas en Sabadell | Modela y Reforma">
   <meta name="twitter:description" content="Diseño 3D para reformas en Sabadell y el Vallès. Visualiza el resultado antes de empezar la obra.">
+  <meta name="theme-color" content="#1a3a6b">
   <meta name="twitter:image" content="https://modelayreforma.com/images/extra-01.webp">
 
   <!-- FONT (self-hosted) -->
   <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
 
   <!-- PRELOAD CRITICAL -->
-  <link rel="preload" as="style" href="css/styles.css">
-
+  
   <!-- STYLES -->
   <link rel="stylesheet" href="css/styles.css">
 
@@ -63,7 +62,7 @@
     "@type": "Service",
     "serviceType": "Diseño 3D de reformas",
     "name": "Diseño 3D para reformas en Sabadell",
-    "description": "Diseño 3D y renders para reformas en Sabadell y el Vallès Occidental. Visualiza tu cocina, baño o vivienda antes de la obra. Incluido en el presupuesto.",
+    "description": "Diseño 3D y renders para reformas en Sabadell y el Vallès Occidental. Visita, medidas, propuesta de distribución y materiales, y renders para ajustar cambios antes de la obra.",
     "url": "https://modelayreforma.com/diseno-3d-reformas-sabadell.html",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
@@ -89,14 +88,15 @@
 </head>
 
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ============================================================
-       NAVIGATION
+       NAVEGACIÓN
        ============================================================ -->
-  <nav class="nav" id="main-nav" role="navigation" aria-label="Menú principal">
+  <nav class="nav" id="main-nav" aria-label="Menú principal">
     <div class="nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Modela y Reforma - Inicio">
-        <img src="images/Logo modela.webp" alt="Modela y Reforma - Tu empresa de reformas" width="180" height="50">
+        <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma - Tu empresa de reformas" width="112" height="56">
       </a>
 
       <ul class="nav__links" role="list">
@@ -111,6 +111,10 @@
         <li><a class="nav__link" href="index.html#contacto">Contacto</a></li>
       </ul>
 
+      <a class="nav__tel" href="tel:+34680917536">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        680 917 536
+      </a>
       <a class="nav__cta" href="index.html#contacto">Pide presupuesto</a>
 
       <button type="button" class="nav__toggle" id="nav-toggle"
@@ -120,7 +124,7 @@
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
+  <!-- MENÚ MÓVIL -->
   <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
     <nav aria-label="Menú móvil">
       <ul class="nav__mobile-links" role="list">
@@ -134,160 +138,138 @@
         <li><a class="nav__mobile-link" href="index.html#proceso">Proceso</a></li>
         <li><a class="nav__mobile-link" href="index.html#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn--primary btn--block" href="index.html#contacto">Pide presupuesto</a>
+      <a class="btn btn--white btn--lg btn--block" href="index.html#contacto">Pide presupuesto</a>
     </nav>
   </div>
 
-  <main>
+  <main id="contenido">
 
-    <!-- PAGE HEADER -->
-    <section class="section section--light section--page-header">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Migas de pan">
-          <a href="index.html">Inicio</a>
-          <span> / </span>
-          <span>Diseño 3D</span>
-        </nav>
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Servicio de reformas</span>
-          <h1 class="section__title">Diseño 3D para tu reforma en Sabadell</h1>
-          <p class="section__subtitle">
-            Ve el resultado de tu reforma antes de empezar la obra. Creamos el diseño 3D de tu proyecto en
-            Sabadell y el Vallès Occidental para que decidas con total seguridad.
-          </p>
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero__grid">
+        <div class="page-hero__text">
+          <div class="page-hero__inner">
+            <nav class="breadcrumb" aria-label="Migas de pan"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Diseño 3D</span></nav>
+            <h1 class="page-hero__title" id="page-title">Diseño 3D para tu reforma en Sabadell</h1>
+            <p class="page-hero__lead">Ve cómo quedará tu cocina, tu baño o tu vivienda antes de empezar la obra. Preparamos un diseño 3D de tu reforma en Sabadell y el Vallès Occidental.</p>
+            <div class="page-hero__actions">
+              <a class="btn btn--primary btn--lg" href="index.html#contacto">Pide presupuesto</a>
+              <a class="btn btn--outline btn--lg" href="tel:+34680917536">Llama al 680 917 536</a>
+            </div>
+          </div>
         </div>
+        <div class="page-hero__media"><img src="images/extra-01.webp" alt="Render 3D de una cocina con campana decorativa y armarios a medida" width="1200" height="884" fetchpriority="high"></div>
       </div>
     </section>
 
-    <!-- INTRO + IMAGE -->
     <section class="section section--white">
       <div class="container">
-        <div class="about__grid">
-          <div class="about__image" data-animate="fade-right">
-            <img src="images/extra-01.webp"
-                 alt="Diseño 3D de cocina para una reforma en Sabadell con campana decorativa y armarios a medida"
-                 width="600" height="400" loading="lazy">
-          </div>
-          <div class="about__content" data-animate="fade-left">
-            <span class="section__label">Visualiza antes de reformar</span>
-            <h2 class="section__title">Decide sobre seguro con el diseño 3D</h2>
-            <p class="about__text">
-              El <strong>diseño 3D</strong> es una recreación realista de cómo quedará tu cocina, tu baño o tu
-              vivienda una vez terminada la reforma. Antes de tocar un solo ladrillo, podrás ver la
-              distribución, los materiales, los colores y la iluminación, y hacer cambios sin coste.
-            </p>
-            <p class="about__text">
-              En <strong>Modela y Reforma</strong> el diseño 3D va <strong>incluido en el presupuesto</strong>.
-              Es nuestra forma de asegurarnos de que el resultado final coincide exactamente con lo que tienes
-              en mente.
-            </p>
-            <ul class="about__features">
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Incluido en el presupuesto
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Cambios antes de empezar la obra
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Sin sorpresas en el resultado final
-              </li>
+        <div class="split">
+          <div class="split__body">
+            <h2 class="section__title">Decide con el diseño 3D delante</h2>
+            <p class="about__text">El <strong>diseño 3D</strong> es una recreación realista de cómo quedará tu cocina, tu baño o tu vivienda una vez terminada la reforma. Antes de tocar nada, puedes ver la distribución, los materiales, los colores y la iluminación, y pedir cambios sobre el propio diseño.</p>
+            <p class="about__text">Es la forma de que el resultado final coincida con lo que tienes en mente: lo que ves en el render es lo que luego se construye.</p>
+            <ul class="checklist" role="list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Visita y toma de medidas en tu vivienda</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Propuesta de distribución y materiales</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Cambios antes de empezar la obra</li>
             </ul>
-            <a class="btn btn--primary" href="index.html#contacto">Pide tu diseño 3D</a>
+            <a class="btn btn--primary" href="index.html#contacto">Pide presupuesto</a>
           </div>
+          <div class="split__media"><img src="images/IMG_0086.webp" alt="Render 3D de una reforma de vivienda con distribución y acabados definidos" width="1200" height="653" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </section>
 
-    <!-- CONTENT -->
     <section class="section section--light">
-      <div class="container container--narrow">
-        <h2 class="section__title content-title--first">¿Qué es el diseño 3D de una reforma?</h2>
-        <p class="about__text">
-          El diseño 3D es una <strong>infografía o render</strong> que reproduce tu espacio de forma realista a
-          partir de las medidas reales de tu vivienda. A diferencia de un plano en 2D, te permite ver el
-          ambiente en perspectiva, con volúmenes, texturas y luz, casi como una fotografía del resultado final.
-          Es la mejor herramienta para tomar decisiones sobre distribución, mobiliario y acabados.
-        </p>
-
-        <h2 class="section__title content-title">Cómo te ayuda a visualizar el resultado</h2>
-        <p class="about__text">
-          Muchas dudas desaparecen al ver el proyecto en 3D: si el color de los muebles combina, si la isla de
-          la cocina cabe bien, cómo queda el porcelánico de gran formato o dónde colocar los puntos de luz.
-          Podemos probar <strong>distintas opciones</strong> y compararlas hasta dar con la que más te gusta.
-          Así evitas arrepentimientos y aprovechas al máximo cada metro de tu casa.
-        </p>
-
-        <h2 class="section__title content-title">Herramientas que utilizamos</h2>
-        <p class="about__text">
-          Trabajamos con <strong>software profesional de diseño y modelado 3D</strong> que nos permite recrear
-          cocinas, baños y viviendas completas con un alto nivel de detalle. Elaboramos planos de distribución
-          acotados y vistas en 3D desde diferentes ángulos, integrando los materiales y referencias reales que
-          vamos a instalar en tu reforma.
-        </p>
-
-        <h2 class="section__title content-title">Incluido en tu presupuesto</h2>
-        <p class="about__text">
-          Para nosotros el diseño 3D no es un extra: forma parte de nuestro servicio y va
-          <strong>incluido en el presupuesto</strong> de la reforma. Pide cita y, tras la visita y la toma de
-          medidas, prepararemos la propuesta 3D de tu proyecto en Sabadell o cualquier población del Vallès
-          Occidental, sin compromiso.
-        </p>
+      <div class="container">
+        <div class="split split--flip">
+          <div class="split__body">
+            <h2 class="section__title">El resultado real se parece al diseño</h2>
+            <p class="about__text">El objetivo es que el resultado de la obra se parezca al render que apruebas: mismas proporciones, mismos materiales y misma distribución.</p>
+            <p class="about__text">Por eso el 3D no es un dibujo bonito: es la referencia con la que trabaja el equipo durante la obra.</p>
+          </div>
+          <div class="split__media"><img src="images/IMG_0065.webp" alt="Cocina reformada terminada, con mobiliario a medida y encimera" width="810" height="1080" loading="lazy" decoding="async"></div>
+        </div>
       </div>
     </section>
 
-    <!-- OTROS SERVICIOS (internal links) -->
     <section class="section section--white">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Más servicios</span>
-          <h2 class="section__title">Otros servicios de reforma</h2>
-        </div>
-        <div class="link-row">
-          <a class="btn btn--primary" href="reforma-de-cocinas-sabadell.html">Reforma de cocinas</a>
-          <a class="btn btn--primary" href="reforma-de-banos-sabadell.html">Reforma de baños</a>
-          <a class="btn btn--primary" href="reformas-integrales-sabadell.html">Reformas integrales</a>
-          <a class="btn btn--primary" href="index.html">Volver al inicio</a>
+        <div class="prose-layout">
+          <div class="prose-layout__side">
+            <h2 class="section__title">¿Qué es el diseño 3D de una reforma?</h2>
+          </div>
+          <div class="prose">
+            <p>El diseño 3D es una <strong>infografía o render</strong> que reproduce tu espacio de forma realista a partir de las medidas reales de tu vivienda. A diferencia de un plano en 2D, te permite ver el ambiente en perspectiva, con volúmenes, texturas y luz, casi como una fotografía del resultado final. Es una buena herramienta para decidir distribución, mobiliario y acabados.</p>
+            <h2>Cómo te ayuda a visualizar el resultado</h2>
+            <p>Muchas dudas desaparecen al ver el proyecto en 3D: si el color de los muebles combina, si la isla de la cocina cabe bien, cómo queda el porcelánico de gran formato o dónde colocar los puntos de luz. Podemos probar <strong>distintas opciones</strong> y compararlas hasta dar con la que más te gusta.</p>
+            <h2>Herramientas que utilizamos</h2>
+            <p>Trabajamos con <strong>software profesional de diseño y modelado 3D</strong> que nos permite recrear cocinas, baños y viviendas completas con un alto nivel de detalle. Elaboramos planos de distribución acotados y vistas en 3D desde diferentes ángulos, integrando los materiales y referencias reales que vamos a instalar en tu reforma.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
-    <section class="cta-section" aria-label="Llamada a la acción">
+    <section class="section section--light">
       <div class="container">
-        <div class="cta__content" data-animate="fade-up">
-          <h2 class="cta__title">¿Quieres ver tu reforma en 3D?</h2>
-          <p class="cta__desc">
-            Pide tu presupuesto gratuito y sin compromiso. El diseño 3D va incluido.
-          </p>
-          <div class="cta__actions">
-            <a class="btn btn--white btn--lg" href="index.html#contacto">
-              Pide presupuesto gratis
-            </a>
-            <a class="btn btn--outline-white btn--lg" href="tel:+34680917536">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llámanos: 680 917 536
-            </a>
+        <div class="split">
+          <div class="split__body">
+            <h2 class="section__title">Cómo trabajamos el diseño 3D</h2>
+            <ul class="checklist" role="list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Visita y medidas.</strong> Vamos a tu vivienda, vemos el espacio y tomamos las medidas reales.</span></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Distribución y materiales.</strong> Te proponemos una distribución y una selección de acabados.</span></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Renders.</strong> Preparamos imágenes 3D para que veas el resultado desde distintos ángulos.</span></li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg><span><strong>Ajustes.</strong> Cambiamos lo que haga falta antes de empezar la obra.</span></li>
+            </ul>
+            <p class="about__text">Pide cita y, tras la visita y la toma de medidas, preparamos la propuesta 3D de tu proyecto en Sabadell o en cualquier población del Vallès Occidental. Presupuesto sin compromiso.</p>
           </div>
+          <div class="split__media"><img src="images/extra-06.webp" alt="Render 3D de una cocina en vertical con muebles y encimera" width="864" height="1080" loading="lazy" decoding="async"></div>
         </div>
       </div>
+    </section>
+
+    <section class="section section--white">
+      <div class="container">
+        <div class="split split--flip">
+          <div class="split__body">
+            <h2 class="section__title">También para baños</h2>
+            <p class="about__text">En un baño cada centímetro cuenta: ducha, mueble, revestimientos y grifería. En 3D compruebas cómo encajan las piezas y cómo combinan los materiales antes de pedirlos.</p>
+            <a class="btn btn--primary" href="index.html#contacto">Pide presupuesto</a>
+          </div>
+          <div class="split__media"><img src="images/bano-marmol-oro-01.webp" alt="Baño reformado con revestimiento de mármol y detalles dorados" width="1080" height="1080" loading="lazy" decoding="async"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--light">
+      <div class="container">
+        <div class="section__header"><h2 class="section__title">Otros servicios de reforma</h2></div>
+        <div class="link-row"><a href="reforma-de-cocinas-sabadell.html">Reforma de cocinas</a> <a href="reforma-de-banos-sabadell.html">Reforma de baños</a> <a href="reformas-integrales-sabadell.html">Reformas integrales</a> <a href="index.html">Volver al inicio</a></div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-label="Llamada a la acción">
+      <div class="container"><div class="cta__content">
+        <h2 class="cta__title">¿Quieres ver tu reforma en 3D?</h2>
+        <p class="cta__desc">Pide tu presupuesto sin compromiso. Te asesoramos en todo el proceso.</p>
+        <div class="cta__actions"><a class="btn btn--white btn--lg" href="index.html#contacto">Pide presupuesto</a><a class="btn btn--outline-white btn--lg" href="tel:+34680917536">Llama al 680 917 536</a></div>
+      </div></div>
     </section>
 
   </main>
 
+
   <!-- ============================================================
-       FOOTER
+       PIE
        ============================================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="images/Logo modela.webp" alt="Modela y Reforma" class="footer__logo" width="180" height="50" loading="lazy">
+          <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma" class="footer__logo" width="140" height="70" loading="lazy">
           <p class="footer__brand-desc">
-            Empresa de reformas integrales en el Vallès Occidental.
-            Cocinas, baños, suelos y diseño 3D. Equipo con más de 5 años de experiencia.
+            Reformas de cocinas, baños y viviendas completas en Sabadell y el Vallès Occidental.
+            Equipo con más de 5 años de experiencia.
           </p>
         </div>
         <div>
@@ -316,20 +298,20 @@
         <div>
           <p class="footer__col-title">Contacto</p>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+34680917536">680 917 536</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="mailto:modelayreforma@gmail.com">modelayreforma@gmail.com</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Sabadell · Vallès Occidental</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
-            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lunes a viernes, de 8:00 a 17:30</span>
           </div>
         </div>
       </div>
@@ -344,16 +326,27 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- WHATSAPP (escritorio) -->
   <a class="whatsapp-btn" href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer"
      aria-label="Contactar por WhatsApp" title="Escríbenos por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.86L.054 23.25a.75.75 0 0 0 .916.916l5.44-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.702 9.702 0 0 1-4.964-1.362l-.356-.212-3.668.995.994-3.61-.232-.374A9.702 9.702 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   </a>
 
-  <!-- SCROLL TO TOP -->
-  <button type="button" class="scroll-top" id="scroll-top" aria-label="Volver arriba">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+  <!-- BARRA DE ACCIONES (móvil) -->
+  <nav class="action-bar" aria-label="Contacto rápido">
+    <a href="tel:+34680917536">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a class="action-bar__main" href="index.html#contacto">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Presupuesto
+    </a>
+  </nav>
 
   <script src="js/main.js" defer></script>
 </body>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-type="service">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,8 +21,8 @@
 
   <!-- SEO META -->
   <title>Reformas Integrales en Sabadell | Modela y Reforma</title>
-  <meta name="description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano, gestión completa y garantía. Presupuesto sin compromiso.">
-  <meta name="keywords" content="reformas integrales Sabadell, reforma de piso Vallès Occidental, reforma vivienda Terrassa, reforma llave en mano, empresa de reformas Sabadell">
+  <meta name="description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano y gestión completa. Presupuesto sin compromiso.">
+  <meta name="theme-color" content="#1a3a6b">
   <meta name="author" content="Modela y Reforma">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://modelayreforma.com/reformas-integrales-sabadell.html">
@@ -31,7 +31,7 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://modelayreforma.com/reformas-integrales-sabadell.html">
   <meta property="og:title" content="Reformas Integrales en Sabadell | Modela y Reforma">
-  <meta property="og:description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano con gestión completa y garantía.">
+  <meta property="og:description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano con gestión completa.">
   <meta property="og:image" content="https://modelayreforma.com/images/copenhaguen-277-07.webp">
   <meta property="og:locale" content="es_ES">
   <meta property="og:site_name" content="Modela y Reforma">
@@ -39,14 +39,11 @@
   <!-- TWITTER CARD -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Reformas Integrales en Sabadell | Modela y Reforma">
-  <meta name="twitter:description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano y garantía.">
+  <meta name="twitter:description" content="Reformas integrales de viviendas en Sabadell y el Vallès Occidental. Proyecto llave en mano con gestión completa.">
   <meta name="twitter:image" content="https://modelayreforma.com/images/copenhaguen-277-07.webp">
 
   <!-- FONT (self-hosted) -->
   <link rel="preload" href="fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-
-  <!-- PRELOAD CRITICAL -->
-  <link rel="preload" as="style" href="css/styles.css">
 
   <!-- STYLES -->
   <link rel="stylesheet" href="css/styles.css">
@@ -63,7 +60,7 @@
     "@type": "Service",
     "serviceType": "Reforma integral de viviendas",
     "name": "Reformas integrales en Sabadell",
-    "description": "Reformas integrales de viviendas y pisos en Sabadell y el Vallès Occidental: proyecto llave en mano, coordinación de todos los gremios, diseño 3D y garantía.",
+    "description": "Reformas integrales de viviendas y pisos en Sabadell y el Vallès Occidental: proyecto llave en mano, coordinación de todos los gremios y diseño 3D.",
     "url": "https://modelayreforma.com/reformas-integrales-sabadell.html",
     "provider": {
       "@type": "HomeAndConstructionBusiness",
@@ -176,14 +173,15 @@
 </head>
 
 <body>
+<a class="skip-link" href="#contenido">Saltar al contenido</a>
 
   <!-- ============================================================
-       NAVIGATION
+       NAVEGACIÓN
        ============================================================ -->
-  <nav class="nav" id="main-nav" role="navigation" aria-label="Menú principal">
+  <nav class="nav" id="main-nav" aria-label="Menú principal">
     <div class="nav__inner">
       <a class="nav__logo" href="index.html" aria-label="Modela y Reforma - Inicio">
-        <img src="images/Logo modela.webp" alt="Modela y Reforma - Tu empresa de reformas" width="180" height="50">
+        <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma - Tu empresa de reformas" width="112" height="56">
       </a>
 
       <ul class="nav__links" role="list">
@@ -198,6 +196,10 @@
         <li><a class="nav__link" href="index.html#contacto">Contacto</a></li>
       </ul>
 
+      <a class="nav__tel" href="tel:+34680917536">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        680 917 536
+      </a>
       <a class="nav__cta" href="index.html#contacto">Pide presupuesto</a>
 
       <button type="button" class="nav__toggle" id="nav-toggle"
@@ -207,7 +209,7 @@
     </div>
   </nav>
 
-  <!-- MOBILE NAV -->
+  <!-- MENÚ MÓVIL -->
   <div class="nav__mobile" id="nav-mobile" aria-hidden="true">
     <nav aria-label="Menú móvil">
       <ul class="nav__mobile-links" role="list">
@@ -221,118 +223,75 @@
         <li><a class="nav__mobile-link" href="index.html#proceso">Proceso</a></li>
         <li><a class="nav__mobile-link" href="index.html#contacto">Contacto</a></li>
       </ul>
-      <a class="btn btn--primary btn--block" href="index.html#contacto">Pide presupuesto</a>
+      <a class="btn btn--white btn--lg btn--block" href="index.html#contacto">Pide presupuesto</a>
     </nav>
   </div>
 
-  <main>
+  <main id="contenido">
 
-    <!-- PAGE HEADER -->
-    <section class="section section--light section--page-header">
-      <div class="container">
-        <nav class="breadcrumb" aria-label="Migas de pan">
-          <a href="index.html">Inicio</a>
-          <span> / </span>
-          <span>Reformas integrales</span>
-        </nav>
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Servicio de reformas</span>
-          <h1 class="section__title">Reformas integrales en Sabadell y el Vallès Occidental</h1>
-          <p class="section__subtitle">
-            Reformamos tu vivienda completa de principio a fin. Un único interlocutor, un proyecto claro y
-            la tranquilidad de trabajar con profesionales en Sabadell, Terrassa, Barberà y todo el Vallès.
-          </p>
+    <!-- HERO -->
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="page-hero__grid">
+        <div class="page-hero__text">
+          <div class="page-hero__inner">
+            <nav class="breadcrumb" aria-label="Migas de pan"><a href="index.html">Inicio</a><span aria-hidden="true">/</span><span aria-current="page">Reformas integrales</span></nav>
+            <h1 class="page-hero__title" id="page-title">Reformas integrales en Sabadell y el Vallès Occidental</h1>
+            <p class="page-hero__lead">Reformamos tu vivienda completa de principio a fin, con un único interlocutor y un proyecto claro. Trabajamos en Sabadell, Terrassa, Barberà y todo el Vallès.</p>
+            <div class="page-hero__actions">
+              <a class="btn btn--primary btn--lg" href="index.html#contacto">Pide presupuesto</a>
+              <a class="btn btn--outline btn--lg" href="tel:+34680917536">Llama al 680 917 536</a>
+            </div>
+          </div>
         </div>
+        <div class="page-hero__media"><img src="images/copenhaguen-277-07.webp" alt="Cocina lineal blanca con iluminación LED en una vivienda reformada en Sabadell" width="1200" height="800" fetchpriority="high"></div>
       </div>
     </section>
 
-    <!-- INTRO + IMAGE -->
+    <!-- INTRO -->
     <section class="section section--white">
       <div class="container">
-        <div class="about__grid">
-          <div class="about__image" data-animate="fade-right">
-            <img src="images/copenhaguen-277-07.webp"
-                 alt="Reforma integral de vivienda en Sabadell con cocina lineal blanca, iluminación LED y acabados de calidad"
-                 width="600" height="400" loading="lazy">
-          </div>
-          <div class="about__content" data-animate="fade-left">
-            <span class="section__label">Llave en mano</span>
-            <h2 class="section__title">Tu reforma completa, sin preocupaciones</h2>
-            <p class="about__text">
-              Una <strong>reforma integral</strong> consiste en renovar la vivienda por completo: distribución,
-              instalaciones, suelos, cocina, baños, carpintería, pintura e iluminación. En
-              <strong>Modela y Reforma</strong> lo gestionamos todo bajo un mismo equipo, para que tú solo
-              tengas que tomar las decisiones importantes.
-            </p>
-            <p class="about__text">
-              Trabajamos en modalidad <strong>llave en mano</strong>: te entregamos la vivienda terminada y
-              lista para entrar a vivir, con un presupuesto cerrado y un plazo definido desde el inicio.
-            </p>
-            <ul class="about__features">
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Un único interlocutor
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Presupuesto cerrado y plazos definidos
-              </li>
-              <li class="about__feature">
-                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
-                Garantía sobre la obra ejecutada
-              </li>
+        <div class="split split--flip">
+          <div class="split__body">
+            <h2 class="section__title">Tu reforma completa, con un solo equipo</h2>
+            <p class="about__text">Una <strong>reforma integral</strong> consiste en renovar la vivienda por completo: distribución, instalaciones, suelos, cocina, baños, carpintería, pintura e iluminación. En <strong>Modela y Reforma</strong> lo gestionamos todo bajo un mismo equipo, para que tú solo tengas que tomar las decisiones importantes.</p>
+            <p class="about__text">Trabajamos en modalidad <strong>llave en mano</strong>: te entregamos la vivienda terminada y lista para entrar a vivir, con un presupuesto cerrado desde el inicio.</p>
+            <ul class="checklist" role="list">
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Un único interlocutor</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Presupuesto cerrado</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Visita gratuita a tu vivienda</li>
+              <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>Equipo con más de 5 años de experiencia</li>
             </ul>
-            <a class="btn btn--primary" href="index.html#contacto">Pide presupuesto gratis</a>
+            <a class="btn btn--primary" href="index.html#contacto">Pide presupuesto</a>
           </div>
+          <div class="split__media"><img src="images/copenhaguen-285-02.webp" alt="Pasillo de una vivienda reformada con suelo de parquet, puertas y paredes blancas" width="675" height="1200" loading="lazy" decoding="async"></div>
         </div>
       </div>
     </section>
 
-    <!-- CONTENT -->
+    <!-- CONTENIDO -->
     <section class="section section--light">
-      <div class="container container--narrow">
-        <h2 class="section__title content-title--first">Qué incluye una reforma integral</h2>
-        <p class="about__text">
-          Una reforma integral con nosotros incluye todo lo necesario para dejar tu vivienda como nueva:
-          <strong>derribos y albañilería</strong>, redistribución de espacios, renovación de
-          <strong>fontanería y electricidad</strong>, instalación de <strong>suelos y pavimentos</strong>,
-          reforma de <strong>cocina y baños</strong>, carpintería interior (puertas y armarios), pintura,
-          falsos techos e iluminación. También nos ocupamos de la retirada de escombros y la limpieza final.
-          El objetivo es que recibas la casa terminada y lista para disfrutar.
-        </p>
-
-        <h2 class="section__title content-title">Fases del proyecto</h2>
-        <p class="about__text">
-          Seguimos un proceso ordenado en cuatro fases. Primero, la <strong>visita y toma de medidas</strong>
-          gratuita en tu vivienda. Después, el <strong>diseño 3D y el presupuesto</strong> detallado, donde
-          definimos materiales, calidades y distribución. A continuación, la <strong>ejecución de la obra</strong>,
-          con un calendario y la coordinación de todos los gremios. Y por último, la <strong>entrega</strong>,
-          con una revisión final contigo para comprobar que todo está perfecto.
-        </p>
-
-        <h2 class="section__title content-title">Gestión y coordinación</h2>
-        <p class="about__text">
-          La gran ventaja de una reforma integral con una sola empresa es la <strong>coordinación</strong>. Nos
-          encargamos de planificar los tiempos de cada gremio para que la obra avance sin paradas ni
-          imprevistos, manteniendo la comunicación contigo en todo momento. Cuidamos el orden y la limpieza
-          durante todo el proceso para reducir las molestias al máximo.
-        </p>
-
-        <h2 class="section__title content-title">Garantías</h2>
-        <p class="about__text">
-          Todas nuestras reformas cuentan con <strong>garantía</strong> sobre los trabajos realizados y los
-          materiales instalados. Trabajamos con contratos claros y presupuestos cerrados, sin sorpresas ni
-          partidas ocultas. Nuestro objetivo es que quedes plenamente satisfecho y que recomiendes
-          Modela y Reforma a tu familia y amigos del Vallès Occidental.
-        </p>
+      <div class="container">
+        <div class="prose-layout">
+          <div class="prose-layout__side">
+            <h2 class="section__title">Qué incluye una reforma integral</h2>
+          </div>
+          <div class="prose">
+            <p>Una reforma integral con nosotros incluye todo lo necesario para dejar tu vivienda como nueva: <strong>derribos y albañilería</strong>, redistribución de espacios, renovación de <strong>fontanería y electricidad</strong>, instalación de <strong>suelos y pavimentos</strong>, reforma de <strong>cocina y baños</strong>, carpintería interior (puertas y armarios), pintura, falsos techos e iluminación. También nos ocupamos de la retirada de escombros y la limpieza final. El objetivo es que recibas la casa terminada y lista para disfrutar.</p>
+            <h2>Fases del proyecto</h2>
+            <p>Seguimos un proceso ordenado en cuatro fases. Primero, la <strong>visita y toma de medidas</strong> gratuita en tu vivienda. Después, el <strong>diseño 3D y el presupuesto</strong> detallado, donde definimos materiales, calidades y distribución. A continuación, la <strong>ejecución de la obra</strong>, con la coordinación de todos los gremios. Y por último, la <strong>entrega</strong>, con una revisión final contigo para comprobar que todo está como acordamos.</p>
+            <h2>Gestión y coordinación</h2>
+            <p>La gran ventaja de una reforma integral con una sola empresa es la <strong>coordinación</strong>. Nos encargamos de organizar el trabajo de cada gremio para que la obra avance sin paradas ni imprevistos, manteniendo la comunicación contigo en todo momento. Cuidamos el orden y la limpieza durante todo el proceso para reducir las molestias al máximo.</p>
+            <h2>Presupuesto claro</h2>
+            <p>Trabajamos con presupuestos cerrados, sin sorpresas ni partidas ocultas. Si quieres reformar tu vivienda en Sabadell o el Vallès Occidental, cuéntanos tu caso y te preparamos un presupuesto sin compromiso.</p>
+          </div>
+        </div>
       </div>
     </section>
 
     <!-- videos:service:start -->
     <section class="section section--white" id="videos" aria-labelledby="videos-title">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Vídeos</span>
+        <div class="section__header">
           <h2 class="section__title" id="videos-title">Vídeos de reformas integrales en Sabadell</h2>
           <p class="section__subtitle">Obras reales de pisos y oficinas en Sabadell, desde el derribo hasta el resultado final.</p>
         </div>
@@ -434,18 +393,17 @@
     </section>
     <!-- videos:service:end -->
 
-    <!-- OTROS SERVICIOS (internal links) -->
-    <section class="section section--white">
+    <!-- OTROS SERVICIOS -->
+    <section class="section section--light">
       <div class="container">
-        <div class="section__header" data-animate="fade-up">
-          <span class="section__label">Más servicios</span>
+        <div class="section__header">
           <h2 class="section__title">Otros servicios de reforma</h2>
         </div>
         <div class="link-row">
-          <a class="btn btn--primary" href="reforma-de-cocinas-sabadell.html">Reforma de cocinas</a>
-          <a class="btn btn--primary" href="reforma-de-banos-sabadell.html">Reforma de baños</a>
-          <a class="btn btn--primary" href="diseno-3d-reformas-sabadell.html">Diseño 3D</a>
-          <a class="btn btn--primary" href="index.html">Volver al inicio</a>
+          <a href="reforma-de-cocinas-sabadell.html">Reforma de cocinas</a>
+          <a href="reforma-de-banos-sabadell.html">Reforma de baños</a>
+          <a href="diseno-3d-reformas-sabadell.html">Diseño 3D</a>
+          <a href="index.html">Volver al inicio</a>
         </div>
       </div>
     </section>
@@ -453,19 +411,12 @@
     <!-- CTA FINAL -->
     <section class="cta-section" aria-label="Llamada a la acción">
       <div class="container">
-        <div class="cta__content" data-animate="fade-up">
-          <h2 class="cta__title">¿Listo para reformar tu vivienda?</h2>
-          <p class="cta__desc">
-            Pide tu presupuesto gratuito y sin compromiso. Te asesoramos en todo el proceso.
-          </p>
+        <div class="cta__content">
+          <h2 class="cta__title">Cuéntanos qué vivienda quieres reformar</h2>
+          <p class="cta__desc">Pide tu presupuesto sin compromiso. Te asesoramos en todo el proceso.</p>
           <div class="cta__actions">
-            <a class="btn btn--white btn--lg" href="index.html#contacto">
-              Pide presupuesto gratis
-            </a>
-            <a class="btn btn--outline-white btn--lg" href="tel:+34680917536">
-              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              Llámanos: 680 917 536
-            </a>
+            <a class="btn btn--white btn--lg" href="index.html#contacto">Pide presupuesto</a>
+            <a class="btn btn--outline-white btn--lg" href="tel:+34680917536">Llama al 680 917 536</a>
           </div>
         </div>
       </div>
@@ -473,17 +424,18 @@
 
   </main>
 
+
   <!-- ============================================================
-       FOOTER
+       PIE
        ============================================================ -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="images/Logo modela.webp" alt="Modela y Reforma" class="footer__logo" width="180" height="50" loading="lazy">
+          <img src="images/logo-modela-recortado.webp" alt="Modela y Reforma" class="footer__logo" width="140" height="70" loading="lazy">
           <p class="footer__brand-desc">
-            Empresa de reformas integrales en el Vallès Occidental.
-            Cocinas, baños, suelos y diseño 3D. Equipo con más de 5 años de experiencia.
+            Reformas de cocinas, baños y viviendas completas en Sabadell y el Vallès Occidental.
+            Equipo con más de 5 años de experiencia.
           </p>
         </div>
         <div>
@@ -512,20 +464,20 @@
         <div>
           <p class="footer__col-title">Contacto</p>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
             <a href="tel:+34680917536">680 917 536</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
             <a href="mailto:modelayreforma@gmail.com">modelayreforma@gmail.com</a>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
-            <span>Sabadell · Vallès Occidental</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
           </div>
           <div class="footer__contact-item">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-3M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
-            <span>Plaza Vallès 21, 08201 Sabadell (Barcelona)</span>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lunes a viernes, de 8:00 a 17:30</span>
           </div>
         </div>
       </div>
@@ -540,16 +492,27 @@
     </div>
   </footer>
 
-  <!-- WHATSAPP FLOATING BUTTON -->
+  <!-- WHATSAPP (escritorio) -->
   <a class="whatsapp-btn" href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer"
      aria-label="Contactar por WhatsApp" title="Escríbenos por WhatsApp">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.127.558 4.122 1.532 5.86L.054 23.25a.75.75 0 0 0 .916.916l5.44-1.476A11.95 11.95 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.75a9.702 9.702 0 0 1-4.964-1.362l-.356-.212-3.668.995.994-3.61-.232-.374A9.702 9.702 0 0 1 2.25 12C2.25 6.615 6.615 2.25 12 2.25S21.75 6.615 21.75 12 17.385 21.75 12 21.75z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
   </a>
 
-  <!-- SCROLL TO TOP -->
-  <button type="button" class="scroll-top" id="scroll-top" aria-label="Volver arriba">
-    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
+  <!-- BARRA DE ACCIONES (móvil) -->
+  <nav class="action-bar" aria-label="Contacto rápido">
+    <a href="tel:+34680917536">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.62 3.38 2 2 0 0 1 3.62 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 8.91a16 16 0 0 0 5.99 5.99l.77-.77a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Llamar
+    </a>
+    <a href="https://wa.me/34680917536" target="_blank" rel="noopener noreferrer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347zM12.05 21.785h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884zm8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413z"/></svg>
+      WhatsApp
+    </a>
+    <a class="action-bar__main" href="index.html#contacto">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+      Presupuesto
+    </a>
+  </nav>
 
   <script src="js/main.js" defer></script>
 </body>
