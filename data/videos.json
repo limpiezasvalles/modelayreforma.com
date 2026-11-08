@@ -1,218 +1,102 @@
 {
-  "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Videos stay hidden until \"published\" is true; only videos with a youtubeId and uploadDate are rendered. A video with \"hidden\": true stays in this file but is not rendered anywhere.",
+  "_comment": "Source of truth for the video section. Run `node scripts/build-videos.mjs` after editing. Reels of https://www.instagram.com/modelayreforma/ : `instagramId` is the shortcode in the reel URL (instagram.com/reel/<instagramId>/). Videos stay hidden until \"published\" is true; only videos with an instagramId and uploadDate are rendered. A video with \"hidden\": true stays in this file but is not rendered anywhere. uploadDate comes from the reel id (Instagram encodes the publication time in the shortcode). The thumbnails are frames of each reel saved locally in images/instagram/.",
   "published": true,
   "siteUrl": "https://modelayreforma.com",
+  "profileUrl": "https://www.instagram.com/modelayreforma/",
   "services": {
     "integrales": {
       "name": "Reformas integrales",
       "url": "reformas-integrales-sabadell.html",
       "sectionTitle": "Vídeos de reformas integrales en Sabadell",
-      "sectionIntro": "Obras reales de pisos y oficinas en Sabadell, desde el derribo hasta el resultado final."
+      "sectionIntro": "Una obra real en Sabadell, del derribo al resultado final."
+    },
+    "cocinas": {
+      "name": "Reforma de cocinas",
+      "url": "reforma-de-cocinas-sabadell.html",
+      "sectionTitle": "Vídeos de reformas de cocinas en Sabadell",
+      "sectionIntro": "Cocinas reformadas en Sabadell y el Vallès Occidental."
     },
     "banos": {
       "name": "Reforma de baños",
       "url": "reforma-de-banos-sabadell.html",
       "sectionTitle": "Vídeos de reformas de baños en Sabadell",
-      "sectionIntro": "Cómo empieza y cómo queda la reforma de un baño en Sabadell."
+      "sectionIntro": "Baños reformados en Sabadell y consejos antes de empezar la obra."
     }
   },
   "allVideos": {
     "sectionTitle": "Todos nuestros vídeos de reformas en Sabadell",
-    "sectionIntro": "Obras reales de pisos, baños y oficinas en Sabadell, desde el derribo hasta el resultado final."
+    "sectionIntro": "Cocinas, baños y viviendas reformadas en Sabadell y el Vallès Occidental, tal y como los publicamos en Instagram."
   },
   "videos": [
     {
-      "sourceFile": "007bf2f5-cea3-4342-8b2e-2a7000e78b01.mov",
-      "slug": "reforma-integral-piso-resultado-final",
-      "youtubeId": "-b69oOa1Xqw",
-      "uploadDate": "2026-10-25",
-      "title": "Resultado final de una reforma integral de piso en Sabadell",
-      "description": "Reforma integral de un piso en Sabadell: el estado inicial de la vivienda y el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-integral-piso-resultado-final.webp",
-      "thumbnailWidth": 464,
-      "thumbnailHeight": 848,
-      "thumbnailAlt": "Miniatura del vídeo: Resultado final de una reforma integral de piso en Sabadell",
-      "durationSeconds": 172,
-      "display": {
-        "width": 464,
-        "height": 848,
-        "rotation": 0,
-        "ratio": 0.5472,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "integrales",
-      "featured": true,
-      "hidden": true,
-      "transcript": ""
-    },
-    {
-      "sourceFile": "0c5ede94-6ca9-4452-9a49-9aba12ab02c1.mov",
-      "slug": "reforma-integral-piso-antes-despues",
-      "youtubeId": "mWLYtcfAShw",
-      "uploadDate": "2026-10-25",
-      "title": "Reforma integral de piso en Sabadell: del derribo al resultado",
-      "description": "Reforma integral de un piso en Sabadell, del derribo al resultado final. El vídeo muestra cómo era la vivienda antes de la obra y cómo quedó. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-integral-piso-antes-despues.webp",
-      "thumbnailWidth": 480,
-      "thumbnailHeight": 832,
-      "thumbnailAlt": "Miniatura del vídeo: Reforma integral de piso en Sabadell: del derribo al resultado",
-      "durationSeconds": 102,
-      "display": {
-        "width": 480,
-        "height": 832,
-        "rotation": 0,
-        "ratio": 0.5769,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "integrales",
-      "featured": true,
-      "transcript": ""
-    },
-    {
-      "sourceFile": "0dd2e1e4-a81b-4a27-b7f9-adc712c569e9.mov",
-      "slug": "reforma-integral-piso-obra-resultado",
-      "youtubeId": "78oxbNa0qCo",
-      "uploadDate": "2026-10-25",
-      "title": "Reforma integral en Sabadell: obra y resultado final",
-      "description": "Reforma integral de una vivienda en Sabadell, desde la obra en marcha hasta el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-integral-piso-obra-resultado.webp",
-      "thumbnailWidth": 464,
-      "thumbnailHeight": 832,
-      "thumbnailAlt": "Miniatura del vídeo: Reforma integral en Sabadell: obra y resultado final",
-      "durationSeconds": 61,
-      "display": {
-        "width": 464,
-        "height": 832,
-        "rotation": 0,
-        "ratio": 0.5577,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "integrales",
-      "featured": true,
-      "transcript": ""
-    },
-    {
-      "sourceFile": "ca81da9f-f912-43e7-bd45-5eb937e07b0f.mov",
-      "slug": "reforma-piso-proceso-obra-resultado",
-      "youtubeId": "n1Eo8S25yzA",
-      "uploadDate": "2026-10-25",
-      "title": "Reforma de piso en Sabadell: proceso de obra y resultado",
-      "description": "Proceso de reforma de un piso en Sabadell, desde la obra hasta el resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-piso-proceso-obra-resultado.webp",
-      "thumbnailWidth": 480,
-      "thumbnailHeight": 640,
-      "thumbnailAlt": "Miniatura del vídeo: Reforma de piso en Sabadell: proceso de obra y resultado",
-      "durationSeconds": 60,
-      "display": {
-        "width": 480,
-        "height": 640,
-        "rotation": 0,
-        "ratio": 0.75,
-        "orientation": "vertical",
-        "nearestStandard": "3:4"
-      },
-      "service": "integrales",
-      "featured": false,
-      "transcript": ""
-    },
-    {
-      "sourceFile": "IMG_0733.MOV",
-      "slug": "derribo-bano-antes-reforma",
-      "youtubeId": "ATQ1mEpkE_4",
-      "uploadDate": "2026-10-25",
-      "title": "Derribo de un baño antes de reformar en Sabadell",
-      "description": "Recorrido por una vivienda en obra en Sabadell, antes de empezar la reforma. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/derribo-bano-antes-reforma.webp",
+      "slug": "reforma-del-derribo-al-resultado",
+      "instagramId": "DfP8M5MuJK8",
+      "uploadDate": "2026-11-02",
+      "title": "Reformas en Sabadell y el Vallès Occidental: del derribo al resultado",
+      "description": "Reel de Modela y Reforma sobre una reforma en Sabadell y el Vallès Occidental, del derribo al resultado.",
+      "thumbnail": "images/instagram/del-derribo-al-resultado.webp",
       "thumbnailWidth": 540,
       "thumbnailHeight": 960,
-      "thumbnailAlt": "Miniatura del vídeo: Derribo de un baño antes de reformar en Sabadell",
-      "durationSeconds": 70,
-      "display": {
-        "width": 1080,
-        "height": 1920,
-        "rotation": 270,
-        "ratio": 0.5625,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "banos",
-      "featured": false,
-      "transcript": ""
+      "thumbnailAlt": "Miniatura del vídeo: baño con azulejos antiguos y el texto «¿Vas a reformar tu casa?»",
+      "display": { "width": 540, "height": 960 },
+      "service": "integrales",
+      "featured": true
     },
     {
-      "sourceFile": "IMG_1206.MOV",
-      "slug": "vivienda-reformada-recorrido",
-      "youtubeId": "SKkP6xIVUWU",
-      "uploadDate": "2026-10-25",
-      "title": "Vivienda reformada en Sabadell: recorrido del resultado",
-      "description": "Recorrido por una vivienda reformada en Sabadell, una vez terminada la obra. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/vivienda-reformada-recorrido.webp",
+      "slug": "reforma-de-cocinas-asi-quedan",
+      "instagramId": "DfSe_V4uku8",
+      "uploadDate": "2026-11-03",
+      "title": "Reforma de cocinas en Sabadell y el Vallès Occidental: así quedan",
+      "description": "Reel de Modela y Reforma con una cocina reformada en Sabadell y el Vallès Occidental.",
+      "thumbnail": "images/instagram/reforma-de-cocinas-asi-quedan.webp",
       "thumbnailWidth": 540,
       "thumbnailHeight": 960,
-      "thumbnailAlt": "Miniatura del vídeo: Vivienda reformada en Sabadell: recorrido del resultado",
-      "durationSeconds": 82,
-      "display": {
-        "width": 2160,
-        "height": 3840,
-        "rotation": 270,
-        "ratio": 0.5625,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "integrales",
-      "featured": true,
-      "transcript": ""
+      "thumbnailAlt": "Miniatura del vídeo: cocina en forma de L con muebles de madera y zona oscura, y el texto «¿Vas a reformar tu cocina?»",
+      "display": { "width": 540, "height": 960 },
+      "service": "cocinas",
+      "featured": true
     },
     {
-      "sourceFile": "IMG_3966.MOV",
-      "slug": "reforma-bano-espejo-led",
-      "youtubeId": "Q1zk0kSTizY",
-      "uploadDate": "2026-10-25",
-      "title": "Reforma de baño moderno en Sabadell con espejo LED",
-      "description": "Reforma de un baño en Sabadell: el resultado final de la obra. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-bano-espejo-led.webp",
-      "thumbnailWidth": 320,
-      "thumbnailHeight": 568,
-      "thumbnailAlt": "Miniatura del vídeo: Reforma de baño moderno en Sabadell con espejo LED",
-      "durationSeconds": 37,
-      "display": {
-        "width": 320,
-        "height": 568,
-        "rotation": 270,
-        "ratio": 0.5634,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
+      "slug": "reforma-de-banos-asi-quedan",
+      "instagramId": "DfVDlGSutrE",
+      "uploadDate": "2026-11-04",
+      "title": "Reforma de baños en Sabadell y el Vallès Occidental: así quedan",
+      "description": "Reel de Modela y Reforma con un baño reformado en Sabadell y el Vallès Occidental.",
+      "thumbnail": "images/instagram/reforma-de-banos-asi-quedan.webp",
+      "thumbnailWidth": 540,
+      "thumbnailHeight": 960,
+      "thumbnailAlt": "Miniatura del vídeo: baño con mampara de cristal, espejo redondo y mueble de madera, y el texto «¿Vas a reformar tu baño?»",
+      "display": { "width": 540, "height": 960 },
       "service": "banos",
-      "featured": false,
-      "transcript": ""
+      "featured": true
     },
     {
-      "sourceFile": "OFICINAS NOSTRALLAR.MP4",
-      "slug": "reforma-oficinas-obra-resultado",
-      "youtubeId": "mdwvkuUbEzY",
-      "uploadDate": "2026-10-25",
-      "title": "Reforma de oficinas en Sabadell: de la obra al resultado",
-      "description": "Reforma de unas oficinas en Sabadell, de la obra al resultado final. Trabajo realizado por el equipo de Modela y Reforma.",
-      "thumbnail": "images/videos/reforma-oficinas-obra-resultado.webp",
-      "thumbnailWidth": 464,
-      "thumbnailHeight": 848,
-      "thumbnailAlt": "Miniatura del vídeo: Reforma de oficinas en Sabadell: de la obra al resultado",
-      "durationSeconds": 120,
-      "display": {
-        "width": 464,
-        "height": 848,
-        "rotation": 0,
-        "ratio": 0.5472,
-        "orientation": "vertical",
-        "nearestStandard": "9:16"
-      },
-      "service": "integrales",
-      "featured": false,
-      "transcript": ""
+      "slug": "tres-cosas-antes-de-reformar-tu-bano",
+      "instagramId": "DfXuNk6xTvH",
+      "uploadDate": "2026-11-05",
+      "title": "Tres cosas a pensar antes de reformar tu baño en Sabadell o el Vallès Occidental",
+      "description": "Reel de Modela y Reforma con tres consejos antes de reformar un baño en Sabadell o el Vallès Occidental.",
+      "thumbnail": "images/instagram/tres-cosas-antes-de-reformar-tu-bano.webp",
+      "thumbnailWidth": 540,
+      "thumbnailHeight": 960,
+      "thumbnailAlt": "Miniatura del vídeo: baño con ducha de cristal y el texto «Tu baño: 3 consejos»",
+      "display": { "width": 540, "height": 960 },
+      "service": "banos",
+      "featured": false
+    },
+    {
+      "slug": "los-detalles-se-notan",
+      "instagramId": "DfcOb15RUoV",
+      "uploadDate": "2026-11-07",
+      "title": "Los detalles se notan: reforma de cocina en Sabadell y el Vallès",
+      "description": "Reel de Modela y Reforma sobre los detalles de una cocina reformada en Sabadell y el Vallès.",
+      "thumbnail": "images/instagram/los-detalles-se-notan.webp",
+      "thumbnailWidth": 540,
+      "thumbnailHeight": 960,
+      "thumbnailAlt": "Miniatura del vídeo: fregadero negro con grifo extraíble sobre encimera clara y el texto «Los detalles se notan»",
+      "display": { "width": 540, "height": 960 },
+      "service": "cocinas",
+      "featured": false
     }
   ]
 }

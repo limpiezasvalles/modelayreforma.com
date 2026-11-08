@@ -255,7 +255,7 @@ function initMapFacade() {
 }
 
 /* ============================================================
-   VIDEO FACADE — create the YouTube iframe only on click.
+   VIDEO FACADE — create the Instagram embed iframe only on click.
    Only one video plays at a time: starting another restores the
    thumbnail and play button of the previous one.
    ============================================================ */
@@ -276,9 +276,9 @@ function initVideoFacades() {
       document.querySelectorAll('.video-facade.is-playing').forEach(stopVideo);
 
       const iframe = document.createElement('iframe');
-      iframe.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0';
+      iframe.src = 'https://www.instagram.com/reel/' + id + '/embed/';
       iframe.title = box.dataset.videoTitle || 'Vídeo';
-      iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+      iframe.allow = 'encrypted-media; fullscreen; picture-in-picture';
       iframe.setAttribute('allowfullscreen', '');
       iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
       box._facadeNodes = Array.from(box.childNodes);
